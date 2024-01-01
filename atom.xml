@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LEI&#39;s Blog</title>
+  
+  <subtitle>Partage de connaissances en développement frontend</subtitle>
+  <link href="https://thecafe75000.github.io.git/atom.xml" rel="self"/>
+  
+  <link href="https://thecafe75000.github.io.git/"/>
+  <updated>2024-01-01T15:38:48.480Z</updated>
+  <id>https://thecafe75000.github.io.git/</id>
+  
+  <author>
+    <name>LEI</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS</title>
+    <link href="https://thecafe75000.github.io.git/2023/12/30/CSS/"/>
+    <id>https://thecafe75000.github.io.git/2023/12/30/CSS/</id>
+    <published>2023-12-30T05:47:29.593Z</published>
+    <updated>2024-01-01T15:38:48.480Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h1&gt;&lt;h2 id=&quot;选择器&quot;&gt;&lt;a href=&quot;#选择器&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML</title>
+    <link href="https://thecafe75000.github.io.git/2023/12/30/HTML/"/>
+    <id>https://thecafe75000.github.io.git/2023/12/30/HTML/</id>
+    <published>2023-12-30T05:45:15.541Z</published>
+    <updated>2024-01-01T15:38:08.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTML&quot;&gt;&lt;a href=&quot;#HTML&quot; class=&quot;headerlink&quot; title=&quot;HTML&quot;&gt;&lt;/a&gt;HTML&lt;/h1&gt;&lt;h2 id=&quot;1-对-HTML-语义化的理解&quot;&gt;&lt;a href=&quot;#1-对-HTML-语义化的理解&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
