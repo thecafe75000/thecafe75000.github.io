@@ -3,11 +3,11 @@
   <title>LEI&#39;s Blog</title>
   
   <subtitle>Partage de connaissances en développement frontend</subtitle>
-  <link href="https://thecafe75000.github.io.git/atom.xml" rel="self"/>
+  <link href="https://github.com/thecafe75000/thecafe75000.github.io.git/atom.xml" rel="self"/>
   
-  <link href="https://thecafe75000.github.io.git/"/>
+  <link href="https://github.com/thecafe75000/thecafe75000.github.io.git/"/>
   <updated>2024-01-01T15:38:48.480Z</updated>
-  <id>https://thecafe75000.github.io.git/</id>
+  <id>https://github.com/thecafe75000/thecafe75000.github.io.git/</id>
   
   <author>
     <name>LEI</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>CSS</title>
-    <link href="https://thecafe75000.github.io.git/2023/12/30/CSS/"/>
-    <id>https://thecafe75000.github.io.git/2023/12/30/CSS/</id>
+    <link href="https://github.com/thecafe75000/thecafe75000.github.io.git/2023/12/30/CSS/"/>
+    <id>https://github.com/thecafe75000/thecafe75000.github.io.git/2023/12/30/CSS/</id>
     <published>2023-12-30T05:47:29.593Z</published>
     <updated>2024-01-01T15:38:48.480Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>HTML</title>
-    <link href="https://thecafe75000.github.io.git/2023/12/30/HTML/"/>
-    <id>https://thecafe75000.github.io.git/2023/12/30/HTML/</id>
+    <link href="https://github.com/thecafe75000/thecafe75000.github.io.git/2023/12/30/HTML/"/>
+    <id>https://github.com/thecafe75000/thecafe75000.github.io.git/2023/12/30/HTML/</id>
     <published>2023-12-30T05:45:15.541Z</published>
     <updated>2024-01-01T15:38:08.007Z</updated>
     
