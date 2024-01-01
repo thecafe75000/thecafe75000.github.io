@@ -6,7 +6,7 @@
   <link href="https://thecafe75000.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://thecafe75000.github.io.git/"/>
-  <updated>2024-01-01T22:10:40.178Z</updated>
+  <updated>2024-01-01T22:38:41.436Z</updated>
   <id>https://thecafe75000.github.io.git/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>About Me</title>
+    <link href="https://thecafe75000.github.io.git/2024/about/"/>
+    <id>https://thecafe75000.github.io.git/2024/about/</id>
+    <published>2024-01-01T19:48:27.000Z</published>
+    <updated>2024-01-01T22:38:41.436Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Je suis une developpeuse front-end&lt;/p&gt;
+&lt;p&gt;Je suis actuellement à la recherche d’un emploi en tant qu’ingénieur</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Auto-présentation" scheme="https://thecafe75000.github.io.git/tags/Auto-presentation/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS</title>
