@@ -6,7 +6,7 @@
   <link href="https://thecafe75000.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://thecafe75000.github.io.git/"/>
-  <updated>2024-01-01T15:38:48.480Z</updated>
+  <updated>2024-01-01T22:10:40.178Z</updated>
   <id>https://thecafe75000.github.io.git/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>CSS</title>
-    <link href="https://thecafe75000.github.io.git/2023/12/30/CSS/"/>
-    <id>https://thecafe75000.github.io.git/2023/12/30/CSS/</id>
+    <link href="https://thecafe75000.github.io.git/2023/CSS/"/>
+    <id>https://thecafe75000.github.io.git/2023/CSS/</id>
     <published>2023-12-30T05:47:29.593Z</published>
-    <updated>2024-01-01T15:38:48.480Z</updated>
+    <updated>2024-01-01T22:10:40.178Z</updated>
     
     
       
@@ -34,15 +34,19 @@
     
     
     
+    <category term="Tech" scheme="https://thecafe75000.github.io.git/categories/Tech/"/>
+    
+    
+    <category term="CSS" scheme="https://thecafe75000.github.io.git/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>HTML</title>
-    <link href="https://thecafe75000.github.io.git/2023/12/30/HTML/"/>
-    <id>https://thecafe75000.github.io.git/2023/12/30/HTML/</id>
+    <link href="https://thecafe75000.github.io.git/2023/HTML/"/>
+    <id>https://thecafe75000.github.io.git/2023/HTML/</id>
     <published>2023-12-30T05:45:15.541Z</published>
-    <updated>2024-01-01T15:38:08.007Z</updated>
+    <updated>2024-01-01T22:08:31.541Z</updated>
     
     
       
@@ -55,6 +59,10 @@
     
     
     
+    <category term="Tech" scheme="https://thecafe75000.github.io.git/categories/Tech/"/>
+    
+    
+    <category term="HTML" scheme="https://thecafe75000.github.io.git/tags/HTML/"/>
     
   </entry>
   
