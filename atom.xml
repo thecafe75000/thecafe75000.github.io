@@ -71,16 +71,23 @@
     <link href="https://thecafe75000.github.io.git/2023/HTML/"/>
     <id>https://thecafe75000.github.io.git/2023/HTML/</id>
     <published>2023-12-30T05:45:15.541Z</published>
-    <updated>2024-01-04T20:26:27.515Z</updated>
+    <updated>2024-01-04T20:45:13.990Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;HTML&quot;&gt;&lt;a href=&quot;#HTML&quot; class=&quot;headerlink&quot; title=&quot;HTML&quot;&gt;&lt;/a&gt;HTML&lt;/h1&gt;&lt;h3 id=&quot;1-Nouvelles-fonctionnalites-de-HTML5&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;HTML&quot;&gt;&lt;a href=&quot;#HTML&quot; class=&quot;headerlink&quot; title=&quot;HTML&quot;&gt;&lt;/a&gt;HTML&lt;/h1&gt;&lt;h3 id=&quot;1-Nouvelles-fonctionnalites-de-HTML5&quot;&gt;&lt;a href=&quot;#1-Nouvelles-fonctionnalites-de-HTML5&quot; class=&quot;headerlink&quot; title=&quot;1. Nouvelles fonctionnalités de HTML5&quot;&gt;&lt;/a&gt;1. Nouvelles fonctionnalités de HTML5&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Nouveaux balises sémantiques : main, footer, header, nav, section&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Nouveaux contrôles de formulaire : date, time, email, url, search&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Nouvelles API :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Média : balises audio et vidéo&lt;/li&gt;
+&lt;li&gt;Graphiques : canvas&lt;/li&gt;
+&lt;li&gt;Stockage local : localStorage, sessionStorage&lt;/li&gt;
+&lt;li&gt;Opérations multithread : Web Worker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     
