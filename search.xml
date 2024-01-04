@@ -28,20 +28,6 @@
       </tags>
   </entry>
   <entry>
-    <title>About Me</title>
-    <url>/2024/about/</url>
-    <content><![CDATA[<blockquote>
-<p>Je suis une developpeuse front-end</p>
-<p>Je suis actuellement à la recherche d’un emploi en tant qu’ingénieur front-end</p>
-</blockquote>
-<p>Lieu de résidence: Paris, France</p>
-<p>Github: <a href="https://github.com/thecafe75000">https://github.com/thecafe75000</a></p>
-]]></content>
-      <tags>
-        <tag>Auto-présentation</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML</title>
     <url>/2023/HTML/</url>
     <content><![CDATA[<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h3 id="1-Nouvelles-fonctionnalites-de-HTML5"><a href="#1-Nouvelles-fonctionnalites-de-HTML5" class="headerlink" title="1. Nouvelles fonctionnalités de HTML5"></a>1. Nouvelles fonctionnalités de HTML5</h3><ol>
@@ -156,6 +142,20 @@
       <tags>
         <tag>HTML</tag>
         <tag>Connaissances basiques</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Me</title>
+    <url>/2024/about/</url>
+    <content><![CDATA[<blockquote>
+<p>Je suis une developpeuse front-end</p>
+<p>Je suis actuellement à la recherche d’un emploi en tant qu’ingénieur front-end</p>
+</blockquote>
+<p>Lieu de résidence: Paris, France</p>
+<p>Github: <a href="https://github.com/thecafe75000">https://github.com/thecafe75000</a></p>
+]]></content>
+      <tags>
+        <tag>Auto-présentation</tag>
       </tags>
   </entry>
 </search>
