@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTML</title>
-    <url>/2023/HTML/</url>
-    <content><![CDATA[<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="1-对-HTML-语义化的理解"><a href="#1-对-HTML-语义化的理解" class="headerlink" title="1. 对 HTML 语义化的理解"></a>1. 对 HTML 语义化的理解</h2><h4 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h4><p>语义化指的是：根据页面内容的结构，选择合适的 HTML 标签</p>
-<h4 id="2-优点"><a href="#2-优点" class="headerlink" title="2. 优点"></a>2. 优点</h4><ol>
-<li><p>对机器友好，带有语义的文字表现力丰富，更适合搜索引擎的爬虫爬取有效信息，有利于 SEO。除此之外，语义类还支持读屏软件，根据文章可以自动生成目录</p>
-</li>
-<li><p>对开发者友好，使用语义类标签增强了可读性，结构更加清晰，开发者能清晰的看出网页的结构，便于团队的开发与维护</p>
-</li>
-</ol>
-<h4 id="3-常见的语义化标签"><a href="#3-常见的语义化标签" class="headerlink" title="3. 常见的语义化标签"></a>3. 常见的语义化标签</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">1 <span class="tag">&lt;<span class="name">header</span>&gt;</span><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">2 <span class="tag">&lt;<span class="name">main</span>&gt;</span><span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">3 <span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">4 <span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS</title>
     <url>/2023/CSS/</url>
     <content><![CDATA[<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>p:first-line段落第一行<br>article &gt; p 初代子元素</p>
@@ -57,6 +39,123 @@
 ]]></content>
       <tags>
         <tag>Auto-présentation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML</title>
+    <url>/2023/HTML/</url>
+    <content><![CDATA[<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h3 id="1-Nouvelles-fonctionnalites-de-HTML5"><a href="#1-Nouvelles-fonctionnalites-de-HTML5" class="headerlink" title="1. Nouvelles fonctionnalités de HTML5"></a>1. Nouvelles fonctionnalités de HTML5</h3><ol>
+<li><p>Nouveaux balises sémantiques : main, footer, header, nav, section</p>
+</li>
+<li><p>Nouveaux contrôles de formulaire : date, time, email, url, search</p>
+</li>
+<li><p>Nouvelles API :</p>
+<ul>
+<li>Média : balises audio et vidéo</li>
+<li>Graphiques : canvas</li>
+<li>Stockage local : localStorage, sessionStorage</li>
+<li>Opérations multithread : Web Worker</li>
+</ul>
+</li>
+</ol>
+<h6 id="Contenu-connexe"><a href="#Contenu-connexe" class="headerlink" title="Contenu connexe :"></a>Contenu connexe :</h6><ol>
+<li><p>Sémantique : définition ? À quoi ça sert ?</p>
+<p>La sémantique signifie le choix des balises HTML appropriées en fonction de la structure du contenu de la page.</p>
+<ul>
+<li><p>Elle aide le référencement (SEO), le code est plus standard et lisible.</p>
+</li>
+<li><p>Le SEO (Search Engine Optimization) vise à améliorer le classement d’un site web sur les moteurs de recherche.</p>
+<ul>
+<li><p>On peut définir les valeurs de description&#x2F;keyword via des balises meta, généralement fournies par les besoins du produit.</p>
+</li>
+<li><p>On peut utiliser des techniques de rendu côté serveur (SSR) telles que react-next ou vue-nuxt.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Canvas </p>
+<ul>
+<li><p>Concept : toile utilisée pour dessiner des graphiques.</p>
+</li>
+<li><p>Principalement utilisé dans les projets pour des fonctions de visualisation des données telles que l’affichage en grand écran de données, l’adaptation et les mises à jour en temps réel etc.</p>
+</li>
+</ul>
+</li>
+<li><p>localStorage &#x2F; sessionStorage</p>
+<ul>
+<li><p>Différences :</p>
+<ul>
+<li><p>localStorage : c’est un stockage permanent, normalement utilisé pour stocker l’identifiant unique de connexion de l’utilisateur (token).</p>
+</li>
+<li><p>sessionStorage : c’est un stockage temporaire de session (le contenu est automatiquement effacé à la fermeture du navigateur).</p>
+</li>
+</ul>
+</li>
+<li><p>Autres solutions de stockage :</p>
+<ul>
+<li><p>cookie : </p>
+<ul>
+<li><p>stockage de petite taille (4 kb)</p>
+</li>
+<li><p>l’envoie automatiquement avec les requêtes.</p>
+</li>
+</ul>
+</li>
+<li><p>webStorage : </p>
+<ul>
+<li><p>capacité de stockage plus importante (2 mb)</p>
+</li>
+<li><p>nécessitant un envoi manuel (encapsulation du paramètre token dans les en-têtes des requêtes avec un intercepteur de requêtes axios).</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Elements-en-ligne-et-elements-bloc-courants-ainsi-que-leurs-differences"><a href="#2-Elements-en-ligne-et-elements-bloc-courants-ainsi-que-leurs-differences" class="headerlink" title="2. Éléments en ligne et éléments bloc courants ainsi que leurs différences :"></a>2. Éléments en ligne et éléments bloc courants ainsi que leurs différences :</h3><ol>
+<li>Éléments en ligne : <code>span</code>, <code>i</code>, <code>a</code></li>
+<li>Éléments bloc : <code>div</code>, <code>p</code>, <code>ul/li</code>, <code>header/footer</code>, <code>form</code></li>
+<li>Éléments de bloc en ligne : <code>img</code>, <code>input</code></li>
+</ol>
+<p>Différences :</p>
+<ol>
+<li>Les éléments en ligne et ceux de bloc en ligne peuvent apparaître sur la même ligne, tandis que les éléments bloc occupent une ligne entière.</li>
+<li>Les éléments en ligne ne peuvent pas définir de <code>width</code>&#x2F;<code>height</code>, tandis que les éléments de bloc en ligne et ceux bloc peuvent le faire.</li>
+</ol>
+<h3 id="3-iframe"><a href="#3-iframe" class="headerlink" title="3. iframe"></a>3. iframe</h3><ol>
+<li><p>Concept : Possibilité d’imbriquer d’autres pages dans la page actuelle (possibilité d’imbriquer d’autres sous-applications dans l’application actuelle).</p>
+</li>
+<li><p>Problématique: </p>
+<ul>
+<li><p>En cas de même origine, il est possible d’obtenir directement des données via la balise iframe.</p>
+</li>
+<li><p>En cas d’origines différentes, la communication se fait à l’aide de la méthode postMessage et de l’événement message.</p>
+<ul>
+<li>La méthode postMessage est utilisée pour envoyer des données.</li>
+<li>L’événement message est utilisé pour recevoir des données.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Concept d’origine commune: </p>
+<ul>
+<li><p>Si l’application principale et l’application enfant n’ont pas la même origine, l’application parentale ne peut pas accéder au contenu de l’application enfant.</p>
+</li>
+<li><p>Origine commune : les noms de protocole, de domaine et de port doivent être parfaitement identiques.</p>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>Connaissances basiques</tag>
       </tags>
   </entry>
 </search>
