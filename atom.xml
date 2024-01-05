@@ -46,16 +46,17 @@
     <link href="https://thecafe75000.github.io.git/2023/CSS/"/>
     <id>https://thecafe75000.github.io.git/2023/CSS/</id>
     <published>2023-12-30T05:47:29.593Z</published>
-    <updated>2024-01-05T11:38:19.331Z</updated>
+    <updated>2024-01-05T11:42:44.888Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h1&gt;&lt;h3 id=&quot;1-Nouvelles-fonctionnalites-de-CSS3&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h1&gt;&lt;h3 id=&quot;1-Nouvelles-fonctionnalites-de-CSS3&quot;&gt;&lt;a href=&quot;#1-Nouvelles-fonctionnalites-de-CSS3&quot; class=&quot;headerlink&quot; title=&quot;1. Nouvelles fonctionnalités de CSS3&quot;&gt;&lt;/a&gt;1. Nouvelles fonctionnalités de CSS3&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Nouveaux sélecteurs&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;:last-child correspond au dernier enfant de l’élément parent.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;:nth-child(n) correspond au n-ième enfant de l’élément parent.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -73,7 +74,7 @@
     <link href="https://thecafe75000.github.io.git/2023/HTML/"/>
     <id>https://thecafe75000.github.io.git/2023/HTML/</id>
     <published>2023-12-30T05:45:15.541Z</published>
-    <updated>2024-01-05T11:22:08.258Z</updated>
+    <updated>2024-01-05T11:43:25.438Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;HTML&quot;&gt;&lt;a href=&quot;#HTML&quot; class=&quot;headerlink&quot; title=&quot;HTML&quot;&gt;&lt;/a&gt;HTML&lt;/h1&gt;&lt;h3 id=&quot;1-Nouvelles-fonctionnalites-de-HTML5&quot;&gt;&lt;a href=&quot;#1-Nouvelles-fonctionnalites-de-HTML5&quot; class=&quot;headerlink&quot; title=&quot;1. Nouvelles fonctionnalités de HTML5&quot;&gt;&lt;/a&gt;1. Nouvelles fonctionnalités de HTML5&lt;/h3&gt;&lt;ol&gt;
@@ -87,9 +88,7 @@
 &lt;li&gt;Graphiques : canvas&lt;/li&gt;
 &lt;li&gt;Stockage local : localStorage, sessionStorage&lt;/li&gt;
 &lt;li&gt;Opérations multithread : Web Worker&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</summary>
+&lt;/ul&gt;</summary>
     
     
     
