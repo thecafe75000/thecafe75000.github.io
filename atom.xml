@@ -6,7 +6,7 @@
   <link href="https://thecafe75000.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://thecafe75000.github.io.git/"/>
-  <updated>2024-01-07T20:30:38.470Z</updated>
+  <updated>2024-01-07T20:45:09.955Z</updated>
   <id>https://thecafe75000.github.io.git/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CSS</title>
+    <link href="https://thecafe75000.github.io.git/2024/CSS/"/>
+    <id>https://thecafe75000.github.io.git/2024/CSS/</id>
+    <published>2024-01-07T20:42:28.000Z</published>
+    <updated>2024-01-07T20:45:09.955Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Tech" scheme="https://thecafe75000.github.io.git/categories/Tech/"/>
+    
+    
+    <category term="Connaissances basiques" scheme="https://thecafe75000.github.io.git/tags/Connaissances-basiques/"/>
+    
+    <category term="CSS" scheme="https://thecafe75000.github.io.git/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript</title>
-    <link href="https://thecafe75000.github.io.git/2024/clr3y8fza0007zwnkc8fqclhz/"/>
-    <id>https://thecafe75000.github.io.git/2024/clr3y8fza0007zwnkc8fqclhz/</id>
+    <link href="https://thecafe75000.github.io.git/2024/JavaScript/"/>
+    <id>https://thecafe75000.github.io.git/2024/JavaScript/</id>
     <published>2024-01-07T20:15:24.000Z</published>
-    <updated>2024-01-07T20:30:38.470Z</updated>
+    <updated>2024-01-07T20:43:59.151Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h1&gt;&lt;h3 id=&quot;1-Les-types-de-donnees-en-JavaScript&quot;&gt;&lt;a href=&quot;#1-Les-types-de-donnees-en-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;1. Les types de données en JavaScript&quot;&gt;&lt;/a&gt;1. Les types de données en JavaScript&lt;/h3&gt;&lt;p&gt;Ils se divisent en types de données fondamentaux et types de données de référence&lt;/p&gt;
@@ -71,34 +98,6 @@
     
     
     <category term="Auto-présentation" scheme="https://thecafe75000.github.io.git/tags/Auto-presentation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS</title>
-    <link href="https://thecafe75000.github.io.git/2023/CSS/"/>
-    <id>https://thecafe75000.github.io.git/2023/CSS/</id>
-    <published>2023-12-30T05:47:29.593Z</published>
-    <updated>2024-01-06T22:02:41.609Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h1&gt;&lt;h3 id=&quot;1-Nouvelles-fonctionnalites-de-CSS3&quot;&gt;&lt;a href=&quot;#1-Nouvelles-fonctionnalites-de-CSS3&quot; class=&quot;headerlink&quot; title=&quot;1. Nouvelles fonctionnalités de CSS3&quot;&gt;&lt;/a&gt;1. Nouvelles fonctionnalités de CSS3&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Nouveaux sélecteurs&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;:last-child correspond au dernier enfant de l’élément parent.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;:nth-child(n) correspond au n-ième enfant de l’élément parent.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="Tech" scheme="https://thecafe75000.github.io.git/categories/Tech/"/>
-    
-    
-    <category term="Connaissaces basiques" scheme="https://thecafe75000.github.io.git/tags/Connaissaces-basiques/"/>
-    
-    <category term="CSS" scheme="https://thecafe75000.github.io.git/tags/CSS/"/>
     
   </entry>
   

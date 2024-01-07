@@ -2,8 +2,10 @@
 <search>
   <entry>
     <title>CSS</title>
-    <url>/2023/CSS/</url>
-    <content><![CDATA[<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h3 id="1-Nouvelles-fonctionnalites-de-CSS3"><a href="#1-Nouvelles-fonctionnalites-de-CSS3" class="headerlink" title="1. Nouvelles fonctionnalités de CSS3"></a>1. Nouvelles fonctionnalités de CSS3</h3><ol>
+    <url>/2024/CSS/</url>
+    <content><![CDATA[<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">CSS</span></span><br><span class="line"><span class="attr">date:</span> </span><br><span class="line"><span class="attr">id:</span> <span class="string">CSS</span></span><br><span class="line"><span class="attr">tags:</span>   <span class="bullet">-</span> <span class="string">Connaissaces</span> <span class="string">basiques</span>  <span class="bullet">-</span> <span class="string">CSS</span></span><br><span class="line"><span class="attr">categories:</span>   <span class="bullet">-</span> <span class="string">Tech</span></span><br><span class="line"><span class="attr">no_toc:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h3 id="1-Nouvelles-fonctionnalites-de-CSS3"><a href="#1-Nouvelles-fonctionnalites-de-CSS3" class="headerlink" title="1. Nouvelles fonctionnalités de CSS3"></a>1. Nouvelles fonctionnalités de CSS3</h3><ol>
 <li><p>Nouveaux sélecteurs</p>
 <ul>
 <li><p>:last-child correspond au dernier enfant de l’élément parent.</p>
@@ -11,7 +13,6 @@
 <li><p>:nth-child(n) correspond au n-ième enfant de l’élément parent.</p>
 </li>
 </ul>
-<span id="more"></span>
 </li>
 <li><p>Caractéristiques de la bordure</p>
 <ul>
@@ -118,7 +119,7 @@
 <li><p>Les navigateurs CSS analysent les sélecteurs <strong>de droite à gauche</strong></p>
 </li>
 </ul>
-<h3 id="5-Preprocesseur-CSS"><a href="#5-Preprocesseur-CSS" class="headerlink" title="5. Préprocesseur CSS"></a>5. Préprocesseur CSS</h3><p>Les préprocesseurs CSS définissent un nouveau langage qui permet une maintenance et une gestion plus aisées du code CSS. Ils sont principalement: </p>
+<h3 id="5-Preprocesseur-CSS"><a href="#5-Preprocesseur-CSS" class="headerlink" title="5. Préprocesseur CSS"></a>5. Préprocesseur CSS</h3><p>Les préprocesseurs CSS définissent un nouveau langage qui permet une maintenance et une gestion plus aisées du code CSS. Ils sont principalement:</p>
 <ul>
 <li><p>Sass</p>
 </li>
@@ -190,20 +191,20 @@
 </ol>
 <h3 id="8-Centrer-un-element-horizontalement-et-verticalement"><a href="#8-Centrer-un-element-horizontalement-et-verticalement" class="headerlink" title="8. Centrer un élément horizontalement et verticalement"></a>8. Centrer un élément horizontalement et verticalement</h3><ol>
 <li><p>En utilisant la position absolue, avec les dimensions (largeur et hauteur) inconnues pour les sous-éléments</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"><span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>En utilisant la position absolue, les dimensions des sous-éléments doivent être explicitement définies</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: -<span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">margin-top</span>: -<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"><span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line"><span class="attribute">margin-left</span>: -<span class="number">100px</span>;</span><br><span class="line"><span class="attribute">margin-top</span>: -<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>En utilisant Flex</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line"><span class="attribute">justify-content</span>: center;</span><br><span class="line"><span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <categories>
         <category>Tech</category>
       </categories>
       <tags>
-        <tag>Connaissaces basiques</tag>
+        <tag>Connaissances basiques</tag>
         <tag>CSS</tag>
       </tags>
   </entry>
@@ -330,7 +331,7 @@
   </entry>
   <entry>
     <title>JavaScript</title>
-    <url>/2024/clr3y8fza0007zwnkc8fqclhz/</url>
+    <url>/2024/JavaScript/</url>
     <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h3 id="1-Les-types-de-donnees-en-JavaScript"><a href="#1-Les-types-de-donnees-en-JavaScript" class="headerlink" title="1. Les types de données en JavaScript"></a>1. Les types de données en JavaScript</h3><p>Ils se divisent en types de données fondamentaux et types de données de référence</p>
 <ol>
 <li><p>Types de données fondamentaux:</p>
