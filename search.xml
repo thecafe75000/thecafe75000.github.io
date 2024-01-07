@@ -342,4 +342,43 @@
         <tag>Auto-présentation</tag>
       </tags>
   </entry>
+  <entry>
+    <title>JavaScript</title>
+    <url>/2024/clr3xywdw00004knk6wdp8jhh/</url>
+    <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h3 id="1-Les-types-de-donnees-en-JavaScript"><a href="#1-Les-types-de-donnees-en-JavaScript" class="headerlink" title="1. Les types de données en JavaScript"></a>1. Les types de données en JavaScript</h3><ul>
+<li><p>Types de données fondamentaux:</p>
+<ul>
+<li>number (nombre)</li>
+<li>string (chaîne de caractères)</li>
+<li>boolean (booléen)</li>
+<li>null (null)</li>
+<li>undefined (non défini)</li>
+<li>symbol (symbole)<ul>
+<li>Utilisé pour attribuer une valeur unique à une variable</li>
+<li>Utilisé pour attribuer un nom de propriété unique à un objet (le type de nom de propriété d’objet doit être soit string, soit symbol)</li>
+</ul>
+</li>
+<li>bigint (entier bigint)<ul>
+<li>Lorsque les calculs avec le type number dépassent la valeur maximale (Number.MAX_SAFE_INTEGER) ou tombent en dessous de la valeur minimale, des problèmes de calcul peuvent survenir. Dans ce cas, on peut utiliser bigint (rarement utilisé en développement pratique).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Types de données de référence:</p>
+<ul>
+<li>object (objet)</li>
+<li>function (fonction)</li>
+<li>array (tableau)</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Connaissances basiques</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
 </search>
