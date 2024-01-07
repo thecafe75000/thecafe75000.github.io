@@ -329,22 +329,8 @@
       </tags>
   </entry>
   <entry>
-    <title>About Me</title>
-    <url>/2024/about/</url>
-    <content><![CDATA[<blockquote>
-<p>Je suis une developpeuse front-end</p>
-<p>Je suis actuellement à la recherche d’un emploi en tant qu’ingénieur front-end</p>
-</blockquote>
-<p>Lieu de résidence: Paris, France</p>
-<p>Github: <a href="https://github.com/thecafe75000">https://github.com/thecafe75000</a></p>
-]]></content>
-      <tags>
-        <tag>Auto-présentation</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript</title>
-    <url>/2024/clr3xywdw00004knk6wdp8jhh/</url>
+    <url>/2024/clr3y8fza0007zwnkc8fqclhz/</url>
     <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h3 id="1-Les-types-de-donnees-en-JavaScript"><a href="#1-Les-types-de-donnees-en-JavaScript" class="headerlink" title="1. Les types de données en JavaScript"></a>1. Les types de données en JavaScript</h3><p>Ils se divisent en types de données fondamentaux et types de données de référence</p>
 <ol>
 <li><p>Types de données fondamentaux:</p>
@@ -358,7 +344,8 @@
 <li><p>null (null)</p>
 </li>
 <li><p>undefined (non défini)</p>
-<span id="more"></span></li>
+<span id="more"></span>
+</li>
 <li><p>symbol (symbole)</p>
 <ul>
 <li>Utilisé pour attribuer une valeur unique à une variable</li>
@@ -387,6 +374,20 @@
       <tags>
         <tag>Connaissances basiques</tag>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Me</title>
+    <url>/2024/about/</url>
+    <content><![CDATA[<blockquote>
+<p>Je suis une developpeuse front-end</p>
+<p>Je suis actuellement à la recherche d’un emploi en tant qu’ingénieur front-end</p>
+</blockquote>
+<p>Lieu de résidence: Paris, France</p>
+<p>Github: <a href="https://github.com/thecafe75000">https://github.com/thecafe75000</a></p>
+]]></content>
+      <tags>
+        <tag>Auto-présentation</tag>
       </tags>
   </entry>
 </search>
