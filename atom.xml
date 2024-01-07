@@ -6,7 +6,7 @@
   <link href="https://thecafe75000.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://thecafe75000.github.io.git/"/>
-  <updated>2024-01-07T20:23:11.346Z</updated>
+  <updated>2024-01-07T20:27:28.318Z</updated>
   <id>https://thecafe75000.github.io.git/</id>
   
   <author>
@@ -21,16 +21,22 @@
     <link href="https://thecafe75000.github.io.git/2024/clr3xywdw00004knk6wdp8jhh/"/>
     <id>https://thecafe75000.github.io.git/2024/clr3xywdw00004knk6wdp8jhh/</id>
     <published>2024-01-07T20:15:24.000Z</published>
-    <updated>2024-01-07T20:23:11.346Z</updated>
+    <updated>2024-01-07T20:27:28.318Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h1&gt;&lt;h3</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h1&gt;&lt;h3 id=&quot;1-Les-types-de-donnees-en-JavaScript&quot;&gt;&lt;a href=&quot;#1-Les-types-de-donnees-en-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;1. Les types de données en JavaScript&quot;&gt;&lt;/a&gt;1. Les types de données en JavaScript&lt;/h3&gt;&lt;p&gt;Ils se divisent en types de données fondamentaux et types de données de référence&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Types de données fondamentaux:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;number (nombre)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;string (chaîne de caractères)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;boolean (booléen)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;null (null)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;undefined (non défini)&lt;/p&gt;</summary>
     
     
     
