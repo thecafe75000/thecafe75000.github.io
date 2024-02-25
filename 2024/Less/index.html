@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+
+<html lang="fr">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="HTML,CSS,JavaScript,React,Programmation,Modules" />
+       
+      <meta name="description" content="Site Personnel Technique" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Less |  LEI&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Less"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Less
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/Less/" class="article-date">
+  <time datetime="2024-02-03T20:27:04.000Z" itemprop="datePublished">2024-02-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tech/">Tech</a> / <a class="article-category-link" href="/categories/Tech/Less/">Less</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Nombre de mots:</span>
+            <span class="post-count">2.8k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Temps de lecture≈</span>
+            <span class="post-count">17 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h1><h3 id="1-Qu’est-ce-que-Less"><a href="#1-Qu’est-ce-que-Less" class="headerlink" title="1. Qu’est-ce que Less ?"></a>1. Qu’est-ce que Less ?</h3><p>Less est un langage de style dynamique appartenant à la catégorie des préprocesseurs CSS. </p>
+<p>Il étend les fonctionnalités du langage CSS en ajoutant des caractéristiques telles que les variables, les mixins, les fonctions, etc., facilitant ainsi la maintenance et l’extension des feuilles de style. </p>
+<p>Less peut être exécuté côté client et également côté serveur en utilisant Node.js.</p>
+<span id="more"></span>
+
+<ul>
+<li><p>Styles dynamiques : Le CSS est un langage non programmable nécessitant la rédaction de nombreuses lignes de code sans logique, ce qui le rend difficile à entretenir, à étendre et peu propice à la réutilisation. </p>
+<p>C’est pourquoi des outils et des frameworks ont été développés pour traiter le CSS.</p>
+</li>
+<li><p>Préprocesseur : Un programme de traitement d’une syntaxe donnée avant la génération du CSS.</p>
+</li>
+</ul>
+<blockquote>
+<p>Depuis sa création, le CSS n’a pas subi de changements fondamentaux au niveau de sa syntaxe de base et de son mécanisme central. Son développement s’est principalement concentré sur l’amélioration de son expressivité. À ses débuts, le rôle du CSS sur les pages web était simplement décoratif et accessoire, avec une demande majeure pour la simplicité et la facilité d’apprentissage. Cependant, avec la complexité croissante des sites web d’aujourd’hui, le CSS natif a atteint ses limites, laissant les développeurs parfois dépassés.</p>
+<p>Lorsqu’une langue n’a pas les capacités nécessaires et que l’environnement d’exécution des utilisateurs ne prend pas en charge d’autres choix, cette langue devient une “langue cible de compilation”. Les développeurs optent alors pour une langue plus avancée pour le développement, puis la compilent vers le langage de base pour une exécution réelle.</p>
+<p>Ainsi, dans le domaine du développement frontal, les préprocesseurs CSS ont vu le jour. Cette vieille langue qu’est le CSS a “réadapté” les besoins du développement web d’une autre manière</p>
+</blockquote>
+<ul>
+<li><p>Site officiel: <a target="_blank" rel="noopener" href="http://lesscss.org/">http://lesscss.org</a></p>
+</li>
+<li><p>Code source de Less:  <a target="_blank" rel="noopener" href="https://github.com/cloudhead/less.js">https://github.com/cloudhead/less.js</a></p>
+</li>
+</ul>
+<p><strong>Utilisation de Less</strong>:</p>
+<ul>
+<li><p>Utilisation basique</p>
+<ul>
+<li><p><code>&lt;style type=&quot;text/less&quot;&gt;</code> : Le type de balise style doit être modifié en <code>less</code></p>
+</li>
+<li><p>Selon le site officiel, nous avons besoin d’un fichier <code>less.js</code> pour la compilation Less, et il doit être  importé en bas de la page. Cela est nécessaire car il doit lire tous les fichiers Less liés à la page pour effectuer la compilation.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet/less&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;styles.less&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/less&quot;</span>&gt;</span></span><br><span class="line">        @num:200px;</span><br><span class="line">        .box&#123;</span><br><span class="line">            border: 1px solid #000;</span><br><span class="line">            .content&#123;</span><br><span class="line">                width: @num;</span><br><span class="line">                height: @num;</span><br><span class="line">                background:red;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./less.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Compilation personnalisée de Less dans VSCode</p>
+<ul>
+<li><p>Ouvrez l’éditeur VSCode, et installer l’extension <code>Easy LESS</code>.</p>
+</li>
+<li><p>Créer un nouveau fichier Less dans le dossier, puis enregistrer-le. Cela permettra de compiler le fichier CSS correspondant dans le même dossier.</p>
+</li>
+</ul>
+</li>
+<li><p>Installation globale de Less pour la compilation</p>
+<ul>
+<li><p>Utiliser <code>npm i less -g</code> pour installer l’environnement Less global (il est nécessaire d’installer l’environnement Node, qui inclut automatiquement l’outil npm)</p>
+</li>
+<li><p>Utiliser la commande <code>lessc</code> pour effectuer la compilation</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="selector-class">.content</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: pink;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-La-syntaxe-de-Less"><a href="#2-La-syntaxe-de-Less" class="headerlink" title="2. La syntaxe de Less"></a>2. La syntaxe de Less</h3><ol>
+<li><p><strong>Les commentaires en Less</strong></p>
+<ul>
+<li><p>Les commentaires commençant par <code>//</code> ne seront pas inclus dans le fichier CSS généré</p>
+</li>
+<li><p>Les commentaires enveloppés par <code>/* */</code> seront inclus dans le fichier CSS généré</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Il existe 2 types de commentaires, le 1er type de commentaires ne peut être vu que dans le fichier Less</span></span><br><span class="line"><span class="comment">//Le deuxième type de commentaires sera compilé dans le fichier CSS</span></span><br><span class="line"><span class="selector-class">.tab</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="comment">/* Voici comment définir la couleur de fond */</span></span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Les variables en Less</strong></p>
+<p>Less nous permet de définir des variables pour gérer le CSS </p>
+<blockquote>
+<p>les variables doivent commencer par @</p>
+</blockquote>
+<p>Il est important de noter que dans Less, les variables sont considérées comme des <code>constantes</code> et ne peuvent être définies qu’une seule fois. Leur portée est locale et elles sont recherchées dans l’objet parent.</p>
+<ul>
+<li><p>Les variables en tant que valeurs d’attributs normaux</p>
+<p>Utilisation comme valeur d’attribut normal : utiliser directement <code>@pink</code></p>
+</li>
+<li><p>Utilisation en tant que sélecteur et nom de propriété</p>
+<ul>
+<li><p>La forme du sélecteur <code>#@&#123;valeur of the selector&#125;</code></p>
+</li>
+<li><p><code>@&#123;valeur of the selector&#125; Nom de propriété</code></p>
+</li>
+</ul>
+</li>
+<li><p>Utilisation en tant qu’URL</p>
+<ul>
+<li><code>@url</code></li>
+</ul>
+</li>
+<li><p>Chargement différé des variables</p>
+<p>Il charge la variable avant le chargement du style dans la portée actuelle, de l’intérieur vers l’extérieur. Il recherche d’abord les variables dans la portée actuelle, puis à l’extérieur de la portée si elles ne sont pas trouvées.</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Déclarer une variable représentant la couleur globale</span></span><br><span class="line"><span class="variable">@mainColor:</span>red;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable représentant une valeur</span></span><br><span class="line"><span class="variable">@zero:</span><span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable représentant le nom du sélecteur</span></span><br><span class="line"><span class="variable">@a:</span>outer;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable représentant le nom de l&#x27;attribut</span></span><br><span class="line"><span class="variable">@p:</span>position;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable pour enregistrer l&#x27;image</span></span><br><span class="line"><span class="variable">@url1:</span><span class="string">&quot;http://www.google.com/images/pic_new/logo.png&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable pour sauvegarder l&#x27;image</span></span><br><span class="line"><span class="variable">@url2:</span>url(<span class="string">&quot;http://www.google.com/images/pic_new/logo.png&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// variables peuvent contenir d&#x27;autres variables, mais elles doivent être précédées du symbole &#x27;@&#x27; complet</span></span><br><span class="line"><span class="variable">@z:</span><span class="variable">@zero</span>;</span><br><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="variable">@z</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="variable">@z</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 2.Utilisation d&#x27;une variable en tant que sélecteur nécessite l&#x27;ajout de crochets</span></span><br><span class="line"><span class="selector-class">.@&#123;a&#125;</span>&#123;</span><br><span class="line">    <span class="comment">//1.Utilisation d&#x27;une variable en tant que valeur d&#x27;attribut ordinaire nécessite l&#x27;ajout du symbole &#x27;@&#x27;</span></span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="variable">@mainColor</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="comment">//3.Utilisation d&#x27;une variable en tant que nom d&#x27;attribut nécessite l&#x27;ajout de crochets</span></span><br><span class="line">    @&#123;p&#125;: <span class="selector-tag">relative</span>;</span><br><span class="line">    <span class="selector-class">.box</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">        @&#123;p&#125;: <span class="selector-tag">absolute</span>;</span><br><span class="line">        <span class="attribute">left</span>: <span class="variable">@zero</span>;</span><br><span class="line">        <span class="attribute">top</span>: <span class="variable">@zero</span>;</span><br><span class="line">        <span class="attribute">right</span>: <span class="variable">@zero</span>;</span><br><span class="line">        <span class="attribute">bottom</span>: <span class="variable">@zero</span>;</span><br><span class="line">        <span class="attribute">margin</span>: auto;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="variable">@mainColor</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.logo</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="comment">//4.Utilisation d&#x27;une variable en tant qu&#x27;adresse URL</span></span><br><span class="line">        <span class="comment">// background: url(@url1) 0 0 no-repeat;</span></span><br><span class="line">        <span class="attribute">background</span>: <span class="variable">@url2</span> <span class="number">0</span> <span class="number">0</span> no-repeat;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">@var:</span> <span class="number">0</span>;</span><br><span class="line"><span class="selector-class">.class</span> &#123;</span><br><span class="line"><span class="variable">@var:</span> <span class="number">1</span>;</span><br><span class="line">    <span class="selector-class">.brass</span> &#123;</span><br><span class="line">      <span class="variable">@var:</span> <span class="number">2</span>;</span><br><span class="line">      three: @var;</span><br><span class="line">      <span class="variable">@var:</span> <span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  one: @var;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>Les règles de nesting en Less</strong></p>
+<ul>
+<li><p>Nesting de base</p>
+<p>Lors de l’utilisation du CSS standard, il est nécessaire de définir les styles pour des éléments imbriqués sur plusieurs niveaux en utilisant soit des sélecteurs descendants pour définir l’imbrication de l’extérieur vers l’intérieur, soit en attribuant une classe ou un identifiant à cet élément. </p>
+<p>Bien que cette méthode soit facile à comprendre, elle est peu pratique à maintenir, car elle ne permet pas de comprendre clairement les relations entre les styles.</p>
+<p>Dans Less, les règles d’imbrication résolvent ce problème. </p>
+<p>Les règles d’imbrication permettent de nester un sélecteur dans un autre, facilitant la conception de code concis, avec une relation claire entre les styles.</p>
+</li>
+<li><p>Référence parentale</p>
+<p>L’utilisation de <code>&amp;</code>: représente tous les éléments parents précédents, souvent utilisé dans les besoins de pseudo-éléments, pseudo-classes, structures CSS, etc.</p>
+<p>Le symbole <code>&amp;</code> placé avant un sélecteur interne représente une référence au sélecteur parent. </p>
+<p>Si aucun symbole <code>&amp;</code> n’est présent avant un sélecteur interne, il est interprété comme un descendant du sélecteur parent ; s’il y a un symbole <code>&amp;</code>, il est alors interprété comme un élément parent</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#outer</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="selector-class">.content</span>&#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">        <span class="selector-class">.nav</span>&#123;</span><br><span class="line">            <span class="attribute">background-color</span>: pink;</span><br><span class="line">            <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">            <span class="attribute">list-style</span>: none;</span><br><span class="line">            <span class="selector-tag">li</span>&#123;</span><br><span class="line">                <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">                <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">                <span class="attribute">font-size</span>: <span class="number">28px</span>;</span><br><span class="line">                <span class="attribute">color</span>: royalblue;</span><br><span class="line">                <span class="comment">// symbole &amp; placé devant un sélecteur représente une référence au sélecteur parent</span></span><br><span class="line">                <span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>)&#123;</span><br><span class="line">                    <span class="attribute">color</span>:yellow;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">                    <span class="attribute">color</span>: green;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="selector-class">.active</span>&#123;</span><br><span class="line">                <span class="attribute">color</span>:red;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.box</span>&#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: yellowgreen;</span><br><span class="line">        <span class="selector-tag">h2</span>&#123;</span><br><span class="line">            <span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">p</span>&#123;</span><br><span class="line">            <span class="attribute">color</span>: <span class="number">#ccc</span>;</span><br><span class="line">            <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">            <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.clearFix</span>&#123;</span><br><span class="line">        <span class="comment">// css Hack</span></span><br><span class="line">        *zoom:1;<span class="comment">// Activer hasLayout dans les anciennes versions d&#x27;IE</span></span><br><span class="line">        <span class="selector-tag">div</span>&#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: red;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">&amp;</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">            <span class="attribute">content</span>:<span class="string">&quot;\200B&quot;</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">            <span class="attribute">display</span>: block;</span><br><span class="line">            <span class="attribute">clear</span>:both;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Opération en Less</strong></p>
+<ul>
+<li><p>Toute valeur, couleur ou variable peut être opérée</p>
+</li>
+<li><p>Less calculera automatiquement l’unité pour vous, donc tu n’as pas besoin d’ajouter une unité à chaque élément, mais assurez-vous qu’au moins un élément a une unité</p>
+</li>
+<li><p>Les opérateurs doivent être séparés des valeurs par un espace, et lorsqu’il s’agit de priorités, utilisez des parenthèses () pour les calculs de priorité</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@num1 :</span> <span class="number">30</span>;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">30px</span> * <span class="variable">@num1</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1000px</span> / <span class="number">3</span>;</span><br><span class="line">    <span class="selector-class">.con</span>&#123;</span><br><span class="line">        <span class="comment">// l&#x27;addition et la soustraction des valeurs </span></span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span> - <span class="number">30%</span>;</span><br><span class="line">        <span class="attribute">height</span>: (<span class="number">100px</span> + <span class="number">10</span>) * <span class="number">20</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.inner</span>&#123;</span><br><span class="line">        <span class="comment">// manipulation des couleurs consiste à les convertir en valeurs rgba décimales, </span></span><br><span class="line">        <span class="comment">// puis à effectuer le calcul, avant de les reconvertir en valeurs hexadécimales</span></span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#fff</span>-<span class="number">55</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>L’héritage dans Less (Extend)</strong></p>
+<p>Il permet à un sélecteur d’hériter du style d’un autre sélecteur. </p>
+<p>L’héritage a deux formats de syntaxe :</p>
+<ul>
+<li><p><code>Sélecteur actuel:extend(sélecteur à hériter) &#123;styles du sélecteur actuel&#125;</code></p>
+</li>
+<li><p><code>Sélecteur actuel &#123;&amp;:extend(sélecteur à hériter);&#125;</code></p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Sachant que .public est le sélecteur hérité, #box est le sélecteur actuel</span></span><br><span class="line"><span class="comment">// Mode d&#x27;héritage N°1</span></span><br><span class="line"><span class="selector-id">#box</span>:<span class="selector-tag">extend</span>(.public)&#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Mode d&#x27;héritage N°2</span></span><br><span class="line"><span class="selector-id">#box</span>&#123;</span><br><span class="line">    <span class="selector-tag">&amp;</span>:<span class="selector-tag">extend</span>(.public);</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Mixin de Less</strong></p>
+<p>En LESS, nous pouvons définir un ensemble de propriétés génériques comme une classe, puis l’appeler dans une autre classe. </p>
+<p>Le mélange consiste à introduire une série de propriétés d’une règle à une autre.</p>
+<ul>
+<li><p>Mixin ordinaire</p>
+<ul>
+<li><p>Définition du mixin : utilisez <code>.+nom_du_mixin+()+&#123;ensemble_de_propriétés&#125;</code></p>
+</li>
+<li><p>Utilisation du mixin : <code>.+nom_du_mixin+();</code></p>
+</li>
+<li><p>Lors de la définition et de l’appel d’un mixin, il est possible de ne pas ajouter des parenthèses (), mais pour faciliter la distinction entre le mixin et le style ordinaire, et aussi pour faciliter la transmission de paramètres, il est généralement conseillé d’ajouter des parenthèses ()</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Si une classe utilisée comme mixin n&#x27;a pas de parenthèses, elle peut être compilée</span></span><br><span class="line"><span class="comment">// Si des parenthèses sont ajoutées, elle ne peut pas être compilée et peut seulement être appelée</span></span><br><span class="line"><span class="selector-class">.mine</span>()&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="comment">// </span></span><br><span class="line">    <span class="selector-class">.mine</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.con</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="selector-class">.mine</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Mixin avec des paramètres</p>
+<p>Lors de la déclaration d’un mixin, il est possible de déclarer des paramètres formels entre parenthèses.</p>
+<p>Les paramètres sont définis par <code>@+nom_variable</code>.  </p>
+<p>Les arguments concrets peuvent être transmis lors de l’appel</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Les paramètres sont déclarés de la même manière que les variables lors de leur définition</span></span><br><span class="line"><span class="selector-class">.center</span>(<span class="variable">@w</span>,<span class="variable">@h</span>,<span class="variable">@bg</span>)&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">@w</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="variable">@h</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="variable">@bg</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.outer</span>&#123;</span><br><span class="line">    <span class="comment">// Transmettre les arguments</span></span><br><span class="line">    <span class="selector-class">.center</span>(<span class="number">500px</span>,<span class="number">500px</span>,red);</span><br><span class="line">    <span class="selector-class">.inner</span>&#123;</span><br><span class="line">       <span class="selector-class">.center</span>(<span class="number">300px</span>,<span class="number">300px</span>,green);</span><br><span class="line">        <span class="selector-class">.content</span>&#123;</span><br><span class="line">            <span class="selector-class">.center</span>(<span class="number">100px</span>,<span class="number">100px</span>,pink);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Mixin de paramètres avec des valeurs par défaut</p>
+<p>Il est possible de définir directement des paramètres avec des valeurs par défaut lors de la déclaration d’un mixin, par exemple (@color: rouge).</p>
+<p>Lors de l’utilisation du mixin, si des arguments concrets sont transmis, les valeurs des arguments sont utilisées, sinon les valeurs par défaut des paramètres sont utilisées.</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Si l&#x27;utilisateur ne spécifie pas la largeur et la hauteur, </span></span><br><span class="line"><span class="comment">// les valeurs par défaut seront de 500 pixels. </span></span><br><span class="line"><span class="comment">// Cependant, en fournissant des arguments, les valeurs par défaut seront remplacées</span></span><br><span class="line"><span class="selector-class">.center</span>(<span class="variable">@w</span>:<span class="number">500px</span>,<span class="variable">@h</span>:<span class="number">500px</span>,<span class="variable">@bg</span>)&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">@w</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="variable">@h</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="variable">@bg</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.border</span>(<span class="variable">@w</span>,<span class="variable">@s</span>,<span class="variable">@c</span>)&#123;</span><br><span class="line">    <span class="comment">// border:@w @s @c;</span></span><br><span class="line">    <span class="comment">// Dans un mixin, il est possible d&#x27;utiliser @arguments pour représenter les arguments fournis</span></span><br><span class="line">    <span class="attribute">border</span>:<span class="variable">@arguments</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.outer</span>&#123;</span><br><span class="line">    <span class="comment">// Paramètres nommés : lors de la transmission des arguments, </span></span><br><span class="line">    <span class="comment">// il est possible de spécifier des valeurs pour les paramètres correspondants</span></span><br><span class="line">    <span class="selector-class">.center</span>(<span class="variable">@bg</span>:yellow,<span class="variable">@h</span>:<span class="number">600px</span>);</span><br><span class="line">    <span class="selector-class">.inner</span>&#123;</span><br><span class="line">       <span class="selector-class">.center</span>(<span class="number">300px</span>,<span class="number">300px</span>,green);</span><br><span class="line">        <span class="selector-class">.con</span>&#123;</span><br><span class="line">            <span class="selector-class">.center</span>(<span class="number">100px</span>,<span class="number">100px</span>,pink);</span><br><span class="line">            <span class="selector-class">.border</span>(<span class="number">10px</span>,dotted,yellow)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Paramètres nommés</p>
+<p>Lors de l’utilisation d’un mixin, si tu souhaites spécifier à quel paramètre formel correspond un argument donné, tu peux nommer les arguments</p>
+</li>
+<li><p>La variable <code>arguments</code></p>
+<p>La variable <code>@arguments</code> représente l’ensemble de tous les paramètres. </p>
+<p>Si tu ne souhaites pas traiter chaque paramètre individuellement, tu peux utiliser <code>@arguments</code> en remplacement. </p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border</span>(<span class="variable">@w</span>:<span class="number">1px</span>,<span class="variable">@t</span>:solid,<span class="variable">@c</span>:<span class="number">#333</span>)&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="variable">@arguments</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>Correspondance de motifs, surcharge et gardes</strong></p>
+<ul>
+<li><p>correspondance de motif</p>
+<p>Dans Less, essayer d’utiliser la correspondance de motif à la place de if&#x2F;else, dont le fonctionnement est similaire à switch&#x2F;case. </p>
+<p>Étant donné qu’un mixin peut avoir plusieurs formes, Less offre un mécanisme permettant de changer le comportement du mixin en fonction de la valeur des paramètres. </p>
+<p>Lorsque les paramètres commencent par @_ , cela est obligatoire lors de l’appel de ce mixin.</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Lors de la correspondance de motifs, les mixins avec des paramètres commençant par @_ sont obligatoires</span></span><br><span class="line"><span class="selector-class">.mine</span>(<span class="variable">@_</span>)&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Autoriser à changer le comportement du mixin en fonction de la valeur des paramètres</span></span><br><span class="line"><span class="comment">// Ce paramètre n&#x27;est pas utilisé pour transmettre des informations à l&#x27;intérieur du mixin, mais plutôt pour identifier les correspondances</span></span><br><span class="line"><span class="selector-class">.mine</span>(color1)&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mine</span>(color2)&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="comment">// La relation de correspondance est similaire à une déclaration switch</span></span><br><span class="line">    <span class="selector-class">.mine</span>(color1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>surcharge </p>
+<p>Le même mixin, des comportements différents, peuvent être sélectionnés en fonction du nombre d’arguments réels passés lors de l’appel</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@a</span>,<span class="variable">@b</span>)&#123;</span><br><span class="line">  <span class="attribute">background-color</span>:<span class="variable">@a</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1000px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@a</span>)&#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="variable">@a</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="selector-class">.mixin</span>(pink,red);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>gardes</p>
+<p>Sélectionner le comportement d’un mixin en fonction des conditions, similaire à if&#x2F;else en JavaScript, en utilisant la syntaxe when. Les gardes (Guards) nous permettent d’utiliser les opérateurs &gt;, &gt;&#x3D;, &lt;, &lt;&#x3D;, &#x3D;, le mot clé true (qui correspond uniquement au mot clé true, tout ce qui n’est pas true ne sera pas considéré comme une correspondance), ainsi que les opérations logiques and, not(), et nous pouvons également utiliser la virgule ‘,’ pour séparer plusieurs gardes, ce qui signifie que dès que l’une d’entre elles est satisfaite, la condition est considérée comme vraie</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@q</span>)&#123; <span class="comment">// sans gardes</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@q</span>) <span class="keyword">when</span>(<span class="variable">@q</span>&gt;<span class="number">10</span>)&#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@q</span>) <span class="keyword">when</span>(<span class="variable">@q</span>&lt;=<span class="number">10</span>),(<span class="variable">@q</span>&gt;<span class="number">100</span>)&#123;</span><br><span class="line">  <span class="attribute">background-color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">  <span class="selector-class">.mixin</span>(<span class="number">99</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="8">
+<li><strong>interpolation de chaîne de caractères</strong></li>
+<li></li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Avis de copyright： </strong>
+          
+          Le droit d&#39;auteur appartient à l&#39;auteur. Pour les réimpressions commerciales, veuillez contacter l&#39;auteur pour autorisation. Pour les réimpressions non commerciales, veuillez indiquer la source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Connaissances-avancees/" rel="tag">Connaissances avancées</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Less/" rel="tag">Less</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/ES6/" class="article-nav-link">
+        <strong class="article-nav-caption">Article précédent</strong>
+        <div class="article-nav-title">
+          
+            ES6
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/Package_Manager/" class="article-nav-link">
+        <strong class="article-nav-caption">Article suivante</strong>
+        <div class="article-nav-title">Package Manager</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+    
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> LEI
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/homeworkfille.svg" alt="LEI&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Page d&#39;accueil</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Catégories</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Etiquettes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Liens utiles</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2024/about">À propos de moi</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Rechercher">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

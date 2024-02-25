@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+
+<html lang="fr">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="HTML,CSS,JavaScript,React,Programmation,Modules" />
+       
+      <meta name="description" content="Site Personnel Technique" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>ES6 |  LEI&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-ES6"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  ES6
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/ES6/" class="article-date">
+  <time datetime="2024-02-19T20:58:09.390Z" itemprop="datePublished">2024-02-19</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tech/">Tech</a> / <a class="article-category-link" href="/categories/Tech/JavaScript/">JavaScript</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Nombre de mots:</span>
+            <span class="post-count">3.7k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Temps de lecture≈</span>
+            <span class="post-count">23 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><blockquote>
+<p>Info: Cette partie du contenu est remerciée pour l’aide apportée du cyber-ami “chargeur du front-end” (前端充电宝 en chinois), qui est l’ingénieur en développement front-end venant de la Hangzhou ville, en Chine. Son blog en chinois peut être consulté sur rubrique “liens utiles” .</p>
+</blockquote>
+<h3 id="1-Differences-entre-let-const-et-var"><a href="#1-Differences-entre-let-const-et-var" class="headerlink" title="1. Différences entre let, const et var"></a>1. Différences entre <code>let</code>, <code>const</code> et <code>var</code></h3><ol>
+<li><p>Portée du bloc</p>
+<p>La portée de bloc est délimitée par <code>&#123; &#125;</code>, <code>let</code> et <code>const</code> ont une portée de bloc.</p>
+<p><code>var</code> n’a pas de portée de bloc, c’est une portée de fonction. Les variables déclarées avec <code>var</code> dans une fonction seront détruites lorsque la fonction se termine.</p>
+<span id="more"></span>
+
+<p>La portée de bloc résout deux problèmes de l’ES5 :</p>
+<ul>
+<li><p>Le risque de recouvrement des variables externes par des variables internes</p>
+</li>
+<li><p>Les variables de boucle utilisées pour le comptage peuvent fuir et devenir des variables globales</p>
+</li>
+</ul>
+</li>
+<li><p>Hissage des variables (Hoisting variables)</p>
+<p>L’hissage des variables en JavaScript se réfère au déplacement de la déclaration des variables en haut de leur portée avant l’exécution du code. Cela signifie que vous pouvez utiliser une variable avant sa déclaration. Cependant, seul la déclaration est hissée, pas l’assignation.</p>
+<p>Toutes les déclarations de variables sont hissées, mais <code>var</code> est initialisée à <code>undefined</code> lors de l’hissage, tandis que les déclarations avec <code>const</code> et <code>let</code> ne sont pas initialisées, entraînant une zone morte temporaire (temporal dead zone) en cas d’accès avant l’assignation.</p>
+<p>Les variables déclarées avec <code>var</code> ont une portée sur toute la fonction, tandis que celles déclarées avec <code>let</code> et <code>const</code> ont une portée limitée à la zone avant leur déclaration.</p>
+<p>Voici quelques exemples :</p>
+<ul>
+<li><p>Hissage avec <code>var</code> :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">5</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Hissage avec <code>let</code> ou <code>const</code>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// console.log(y); // ReferenceError: y is not defined</span></span><br><span class="line"><span class="keyword">let</span> y = <span class="number">10</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(y); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>En conclusion, comprendre l’hissage des variables aide à éviter les comportements inattendus liés à l’utilisation de variables avant leur déclaration. Dans le code, la meilleure pratique est de déclarer une variable avant de l’utiliser pour assurer un code plus clair et plus maintenable.</p>
+</li>
+<li><p>Ajout d’attributs globaux</p>
+<p>Dans le navigateur, l’objet global est <code>window</code>, tandis que dans Node, l’objet global est <code>global</code></p>
+<p>Les variables déclarées avec <code>var</code> deviennent des variables globales et seront ajoutées comme propriétés de l’objet global. Cependant, cela n’est pas le cas avec <code>let</code> et <code>const</code></p>
+</li>
+<li><p>Redéclaration</p>
+<p>Lorsqu’une variable est déclarée avec <code>var</code>, il est possible de la redéclarer, et la variable du même nom déclarée ultérieurement écrasera la précédente. Cependant, les déclarations avec <code>let</code> et <code>const</code> ne permettent pas la redéclaration</p>
+</li>
+<li><p>Zone morte temporaire</p>
+<p>Avant la déclaration d’une variable avec <code>let</code> ou <code>const</code>, celle-ci n’est pas accessible. Syntaxiquement, cela est appelé “zone morte temporaire”</p>
+<p>Les variables déclarées avec <code>var</code> ne sont pas sujettes à la zone morte temporaire</p>
+</li>
+<li><p>Initialisation des valeurs</p>
+<p>Lors de la déclaration de variables, <code>var</code> et <code>let</code> peuvent ne pas être initialisés immédiatement, mais une variable déclarée avec <code>const</code> doit être initialisée</p>
+</li>
+<li><p>Pointeurs</p>
+<p><code>let</code> et <code>const</code> sont des syntaxes introduites par ES6 pour créer des variables.</p>
+<p>Les variables créées avec <code>let</code> peuvent avoir leur pointeur modifié, c’est-à-dire qu’elles peuvent être réaffectées. En revanche, les variables déclarées avec <code>const</code> ne peuvent pas être réaffectées</p>
+<table>
+<thead>
+<tr>
+<th align="center">Différence</th>
+<th align="center">var</th>
+<th align="center">let</th>
+<th align="center">cont</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Portée de bloc</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+<td align="center">✔</td>
+</tr>
+<tr>
+<td align="center">Hissage des variables</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+</tr>
+<tr>
+<td align="center">Ajout de variables globales</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+</tr>
+<tr>
+<td align="center">Redéclaration des variables</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+</tr>
+<tr>
+<td align="center">Zone morte temporaire</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+<td align="center">✔</td>
+</tr>
+<tr>
+<td align="center">Initialisation des valeurs</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+</tr>
+<tr>
+<td align="center">Changement de pointeur</td>
+<td align="center">✔</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h3 id="2-Les-proprietes-d’un-objet-const-peuvent-elles-etre-modifiees"><a href="#2-Les-proprietes-d’un-objet-const-peuvent-elles-etre-modifiees" class="headerlink" title="2. Les propriétés d’un objet const peuvent-elles être modifiées ?"></a>2. Les propriétés d’un objet const peuvent-elles être modifiées ?</h3><p><code>const</code> ne garantit pas que la valeur d’une variable ne peut pas être modifiée, mais plutôt que l’adresse mémoire pointée par la variable ne peut pas être modifiée.</p>
+<p>Pour les types de données de base (nombres, chaînes de caractères, valeurs booléennes), leur valeur est directement stockée à l’adresse mémoire pointée par la variable, ce qui équivaut à une constante.</p>
+<p>Cependant, pour les types de données par référence (principalement les objets et les array), la variable pointe vers l’adresse mémoire des données. Une fois initialisée, tant que la variable n’est pas réaffectée (modifiant l’adresse mémoire), il est possible d’effectuer des opérations arbitraires sur ce type de référence.</p>
+<h3 id="3-Est-ce-que-les-fonctions-flechees-peuvent-etre-creees-avec-le-mot-cle-‘new’"><a href="#3-Est-ce-que-les-fonctions-flechees-peuvent-etre-creees-avec-le-mot-cle-‘new’" class="headerlink" title="3. Est-ce que les fonctions fléchées peuvent être créées avec le mot-clé ‘new’?"></a>3. Est-ce que les fonctions fléchées peuvent être créées avec le mot-clé ‘new’?</h3><p>Les fonctions fléchées n’ont pas de prototype, n’ont pas leur propre référence <code>this</code>, et ne peuvent pas utiliser le paramètre <code>arguments</code>. Par conséquent, il n’est pas possible d’utiliser ‘new’ pour créer une fonction fléchée.</p>
+<h3 id="4-Differences-entre-les-fonctions-flechees-et-les-fonctions-traditionnelles"><a href="#4-Differences-entre-les-fonctions-flechees-et-les-fonctions-traditionnelles" class="headerlink" title="4. Différences entre les fonctions fléchées et les fonctions traditionnelles"></a>4. Différences entre les fonctions fléchées et les fonctions traditionnelles</h3><ol>
+<li><p>Les fonctions fléchées sont plus concises que les fonctions traditionnelles :</p>
+<ul>
+<li><p>Si aucune argument n’est requis, il suffit d’écrire une paire de parenthèses vides</p>
+</li>
+<li><p>En présence d’un seul argument, les parenthèses autour de l’argument peuvent être omises</p>
+</li>
+<li><p>Pour plusieurs arguments, ils sont séparés par des virgules</p>
+</li>
+<li><p>Si le corps de la fonction renvoie une seule instruction, les accolades peuvent être omises</p>
+</li>
+<li><p>Si la fonction n’a pas besoin de renvoyer de valeur et ne comporte qu’une seule instruction, le mot-clé ‘void’ peut être ajouté devant cette instruction. </p>
+<p>C’est couramment utilisé lors de l’appel d’une fonction, par exemple:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params"></span>) =&gt; <span class="keyword">void</span> <span class="title function_">doesNotReturn</span>();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Les fonctions fléchées n’ont pas de référence <code>this</code> propre</p>
+<p>Les fonctions fléchées ne créent pas leur propre référence <code>this</code>, elles n’ont donc pas de <code>this</code>propre. Elles héritent plutôt du <code>this</code> de leur portée parente. Ainsi, la référence ‘this’ dans une fonction fléchée est déterminée lors de sa définition et ne change pas par la suite.</p>
+</li>
+<li><p>La référence <code>this</code> héritée par une fonction fléchée ne changera jamais: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> id = <span class="string">&#x27;GLOBAL&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="string">&#x27;OBJ&#x27;</span>,</span><br><span class="line">  <span class="attr">a</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">id</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">b</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">id</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">obj.<span class="title function_">a</span>();    <span class="comment">// &#x27;OBJ&#x27;</span></span><br><span class="line">obj.<span class="title function_">b</span>();    <span class="comment">// &#x27;GLOBAL&#x27;</span></span><br><span class="line"><span class="keyword">new</span> obj.<span class="title function_">a</span>()  <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">new</span> obj.<span class="title function_">b</span>()  <span class="comment">// Uncaught TypeError: obj.b is not a constructor</span></span><br></pre></td></tr></table></figure>
+
+<p>La méthode <code>b</code> de l’objet <code>obj</code> est définie à l’aide d’une fonction fléchée. Dans cette fonction, <code>this</code> pointe toujours vers le contexte d’exécution global où elle a été définie, même si la fonction est appelée en tant que méthode de l’objet <code>obj</code>. </p>
+<p>Il est important de noter que les accolades <code>&#123;&#125;</code> définissant l’objet ne créent pas un environnement d’exécution distinct ; elles restent dans le contexte global.</p>
+</li>
+<li><p>Les méthodes telles que <code>call()</code>, <code>apply()</code>, <code>bind()</code> ne peuvent pas modifier la référence <code>this</code> dans une fonction fléchée:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> id = <span class="string">&#x27;Global&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun1</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">id</span>)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">fun1</span>();                     <span class="comment">// &#x27;Global&#x27;</span></span><br><span class="line">fun1.<span class="title function_">call</span>(&#123;<span class="attr">id</span>: <span class="string">&#x27;Obj&#x27;</span>&#125;);     <span class="comment">// &#x27;Global&#x27;</span></span><br><span class="line">fun1.<span class="title function_">apply</span>(&#123;<span class="attr">id</span>: <span class="string">&#x27;Obj&#x27;</span>&#125;);    <span class="comment">// &#x27;Global&#x27;</span></span><br><span class="line">fun1.<span class="title function_">bind</span>(&#123;<span class="attr">id</span>: <span class="string">&#x27;Obj&#x27;</span>&#125;)();   <span class="comment">// &#x27;Global&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Les fonctions fléchées ne peuvent pas être utilisées en tant que constructeurs</p>
+<p>Le processus de l’utilisation du mot-clé <code>new</code> pour les constructeurs a été expliqué précédemment. </p>
+<p>En réalité, la deuxième étape consiste à lier le ‘this’ de la fonction à l’objet nouvellement créé. Cependant, étant donné que les fonctions fléchées n’ont pas de <code>this</code> propre, pointent vers l’environnement d’exécution externe, et ne peuvent pas changer leur référence <code>this</code>, elles ne peuvent donc pas être utilisées en tant que constructeurs.</p>
+</li>
+<li><p>Les fonctions fléchées n’ont pas leur propre parametres <code>arguments</code></p>
+<p>Les fonctions fléchées n’ont pas leur propre objet <code>arguments</code>. </p>
+<p>Lorsqu’on accède à <code>arguments</code> dans une fonction fléchée, on obtient en réalité la valeur de <code>arguments</code> de la fonction externe</p>
+</li>
+<li><p>Les fonctions fléchées n’ont pas de <code>prototype</code></p>
+</li>
+<li><p>Les fonctions fléchées ne peuvent pas être utilisées en tant que fonctions génératrices et ne peuvent pas utiliser le mot-clé <code>yield</code></p>
+</li>
+</ol>
+<h3 id="5-A-quoi-pointe-le-this-des-fonctions-flechees"><a href="#5-A-quoi-pointe-le-this-des-fonctions-flechees" class="headerlink" title="5. À quoi pointe le this des fonctions fléchées ?"></a>5. À quoi pointe le <code>this</code> des fonctions fléchées ?</h3><p>Les fonctions fléchées diffèrent des fonctions traditionnelles en JavaScript, elles n’ont pas de <code>this</code> propre, et leur <code>this</code> est capturé à partir du contexte dans lequel elles sont définies. </p>
+<p>Cela devient leur propre référence <code>this</code>, et étant donné qu’elles n’ont pas de <code>this</code> propre, elles ne peuvent pas être invoquées avec le mot-clé <code>new</code>. De plus, la référence <code>this</code> ainsi capturée ne sera pas modifiée.</p>
+<h3 id="6-Le-role-et-les-scenarios-d’utilisation-de-l’operateur-de-propagation"><a href="#6-Le-role-et-les-scenarios-d’utilisation-de-l’operateur-de-propagation" class="headerlink" title="6. Le rôle et les scénarios d’utilisation de l’opérateur de propagation"></a>6. Le rôle et les scénarios d’utilisation de l’opérateur de propagation</h3><ol>
+<li><p>Opérateur de propagation pour les objets</p>
+<p>L’opérateur de propagation pour les objets (…) est utilisé pour extraire toutes les propriétés énumérables de l’objet paramètre et les copier dans l’objet actuel</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> bar = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> baz = &#123; ...bar &#125;; <span class="comment">// &#123; a: 1, b: 2 &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>La méthode ci-dessus est en réalité équivalente à :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> bar = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> baz = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, bar); <span class="comment">// &#123; a: 1, b: 2 &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>La méthode <code>Object.assign</code> est utilisée pour fusionner les objets en copiant toutes les propriétés énumérables de l’objet source dans l’objet cible. </p>
+<p>Le premier argument de la méthode <code>Object.assign</code> est l’objet cible, et les arguments suivants sont les objets sources. </p>
+<p>Si l’objet cible et l’objet source ont des propriétés de même nom, ou si plusieurs objets sources ont des propriétés de même nom, les propriétés ultérieures écraseront les propriétés précédentes.</p>
+<p>De même, si des propriétés personnalisées de l’utilisateur sont placées après l’opérateur de propagation, les propriétés de même nom à l’intérieur de l’opérateur de propagation seront écrasées:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> bar = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> baz = &#123;...bar, ...&#123;<span class="attr">a</span>:<span class="number">2</span>, <span class="attr">b</span>: <span class="number">4</span>&#125;&#125;;  <span class="comment">// &#123;a: 2, b: 4&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Opérateur de propagation pour les array</p>
+<p>L’opérateur de propagation pour les array permet de convertir un array en une séquence de paramètres séparés par des virgules, et ne peut déplier qu’un seul niveau de array à chaque fois</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(...[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="comment">// 1 2 3</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(...[<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">5</span>])</span><br><span class="line"><span class="comment">// 1 [2, 3, 4] 5</span></span><br></pre></td></tr></table></figure>
+
+<p>Voici quelques exemples d’utilisation de l’opérateur de propagation pour les array:</p>
+<ul>
+<li><p><strong>Convertir un array en une séquence de paramètres</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="title function_">add</span>(...numbers) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Copier un array</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [...arr1];</span><br></pre></td></tr></table></figure>
+
+<p>À retenir : <strong>L’opérateur de propagation (…) est utilisé pour extraire toutes les propriétés énumérables de l’objet de paramètre et les copier dans l’objet actuel</strong>, ici l’objet de paramètre est un array, et tous les objets à l’intérieur du array sont de types de données de base, copiant ainsi tous les types de données de base dans un nouveau array.</p>
+</li>
+<li><p><strong>Fusionner des array</strong></p>
+<p>Si on souhaite fusionner des array à l’intérieur d’un array, vous pouvez le faire de la manière suivante :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="string">&#x27;one&#x27;</span>, ...arr1, <span class="string">&#x27;four&#x27;</span>, <span class="string">&#x27;five&#x27;</span>];</span><br><span class="line"><span class="comment">// [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;, &quot;five&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>L’opérateur de propagation combiné avec la déstructuration est utilisé pour générer des array</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [first, ...rest] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">first <span class="comment">// 1</span></span><br><span class="line">rest  <span class="comment">// [2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<p>À noter: <strong>Si vous utilisez l’opérateur de propagation dans l’affectation d’un array, il doit être placé uniquement en dernière position des paramètres, sinon une erreur sera signalée</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [...rest, last] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];         <span class="comment">// erreur</span></span><br><span class="line"><span class="keyword">const</span> [first, ...rest, last] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];  <span class="comment">// erreur</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Convertir une chaîne de caractères en un array réel</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...<span class="string">&#x27;hello&#x27;</span>] <span class="comment">// [ &quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot; ]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Tout objet implémentant l’interface Iterator peut être converti en un array réel à l’aide de l’opérateur de propagation</strong></p>
+<p>Une application courante est la conversion de certaines structures de données en array : utilisée pour remplacer la syntaxe <code>Array.prototype.slice.call(arguments)</code> de l’ES5</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// l&#x27;objet arguments</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> args = [...<span class="variable language_">arguments</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Utiliser les fonctions <code>Math</code> pour obtenir des valeurs spécifiques dans un array</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">9</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">1</span>];</span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">min</span>(...numbers); <span class="comment">// 1</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">max</span>(...numbers); <span class="comment">// 9  </span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="7-Comprehension-de-la-destructuration-des-objets-et-des-array"><a href="#7-Comprehension-de-la-destructuration-des-objets-et-des-array" class="headerlink" title="7. Compréhension de la déstructuration des objets et des array"></a>7. Compréhension de la déstructuration des objets et des array</h3><p>La déconstruction est un nouveau modèle d’extraction de données proposé par ES6. </p>
+<p>Ce modèle permet d’extraire sélectivement les valeurs souhaitées d’un objet ou d’un array.</p>
+<ol>
+<li><p><strong>Déconstruction des array</strong></p>
+<p>Lors de la déconstruction d’un array, l’extraction des données souhaitées se fait en fonction de la position des éléments :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Finalement, les valeurs des indices 0, 1 et 2 du array sont respectivement assignées aux variables a, b et c, c’est-à-dire <code>1, 2, 3</code>.</p>
+<p>Les valeurs des éléments aux indices 0, 1 et 2 du array sont précisément mappées aux variables de gauche aux indices 0, 1 et 2, c’est le mode de fonctionnement de la déconstruction d’arrays. </p>
+<p>Il est également possible d’effectuer une extraction précise de certains éléments du array en attribuant des espaces réservés vides aux variables de gauche.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a,,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p>En laissant des espaces vides au milieu, il est possible d’assigner facilement les valeurs de la première et de la dernière position du array aux variables a et c, c’est-à-dire <code>a=1 et c=3</code></p>
+</li>
+<li><p>Déconstruction des objets</p>
+<p>La déconstruction des objets est légèrement plus complexe que la déconstruction des array, mais elle est également plus puissante.</p>
+<p>Lors de la déconstruction des objets, c’est le nom des propriétés qui sert de critère de correspondance pour extraire les données souhaitées.</p>
+<p>Définissons maintenant un objet :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> stu = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">24</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Si l’on souhaite déconstruire ses deux propriétés propres, on peut le faire ainsi :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; name, age &#125; = stu</span><br></pre></td></tr></table></figure>
+
+<p>Nous obtenons deux variables de niveau égal à ‘name’ et ‘age’ : <code>name = &#39;Bob&#39;, age = 24</code>.</p>
+<p>Il est important de noter que la déconstruction des objets se base strictement sur le nom des propriétés en tant que critère de localisation. Par conséquent, même si on échange les positions de ‘name’ et ‘age’, le résultat reste le même :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; age, name &#125; = stu <span class="comment">// age = 24 name = &quot;Bob&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="8-Comment-extraire-les-proprietes-specifiques-d’un-objet-fortement-imbrique"><a href="#8-Comment-extraire-les-proprietes-specifiques-d’un-objet-fortement-imbrique" class="headerlink" title="8. Comment extraire les propriétés spécifiques d’un objet fortement imbriqué?"></a>8. Comment extraire les propriétés spécifiques d’un objet fortement imbriqué?</h3><p>Il arrive parfois de rencontrer des objets fortement imbriqués:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> school = &#123;</span><br><span class="line">   <span class="attr">classes</span>: &#123;</span><br><span class="line">      <span class="attr">stu</span>: &#123;</span><br><span class="line">         <span class="attr">name</span>: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">         <span class="attr">age</span>: <span class="number">24</span>,</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Comme dans le cas de la variable ‘name’ ici, qui est imbriquée sur quatre niveaux, il est évident que tenter de l’extraire avec les méthodes traditionnelles ne fonctionnera pas:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; name &#125; = school <span class="comment">// ne marche pas</span></span><br></pre></td></tr></table></figure>
+
+<p>Parce que l’objet ‘school’ lui-même ne possède pas la propriété ‘name’, cette dernière se trouve à l’intérieur de l’objet ‘fils du fils’ de l’objet ‘school’. </p>
+<p>Pour extraire ‘name’, une méthode plutôt laborieuse consiste à déconstruire couche par couche :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; classes &#125; = school</span><br><span class="line"><span class="keyword">const</span> &#123; stu &#125; = classes</span><br><span class="line"><span class="keyword">const</span> &#123; name &#125; = stu</span><br><span class="line">name <span class="comment">// &#x27;Bob&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Mais il existe une méthode plus standard pour résoudre ce problème en une seule ligne de code : l’on peut, du côté droit des noms de variables déconstruites, utiliser la forme <code>deux-points + &#123;nom de la propriété cible&#125;</code> pour poursuivre la déconstruction en continuant ainsi jusqu’à obtenir les données ciblées : </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="attr">classes</span>: &#123; <span class="attr">stu</span>: &#123; name &#125; &#125;&#125; = school</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name)  <span class="comment">// &#x27;Bob&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="9-Comprehension-du-parametre-rest"><a href="#9-Comprehension-du-parametre-rest" class="headerlink" title="9. Compréhension du paramètre rest"></a>9. Compréhension du paramètre <code>rest</code></h3><p>Lorsque l’opérateur de spread est utilisé sur les paramètres d’une fonction, il peut également regrouper une séquence de paramètres distincts en un seul array :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mutiple</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> val <span class="keyword">of</span> args) &#123;</span><br><span class="line">    result *= val;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">mutiple</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>) <span class="comment">// 24</span></span><br></pre></td></tr></table></figure>
+
+<p>Ici, la fonction ‘multiple’ reçoit quatre paramètres distincts, mais si l’on essaie d’afficher la valeur de ‘args’ à l’intérieur de cette fonction, on constatera qu’il s’agit d’un array :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mutiple</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(args)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">mutiple</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>) <span class="comment">// [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+
+<p>C’est là que réside la puissance de l’opérateur <code>...rest</code>. Il peut regrouper plusieurs arguments d’une fonction dans un array. </p>
+<p>Cela est souvent utilisé pour récupérer les paramètres excédentaires d’une fonction, ou pour traiter des situations où le nombre de paramètres de la fonction est incertain, comme dans l’exemple ci-dessus.</p>
+<h3 id="10-Syntaxe-des-modeles-et-le-traitement-des-chaines-de-caracteres-dans-ES6"><a href="#10-Syntaxe-des-modeles-et-le-traitement-des-chaines-de-caracteres-dans-ES6" class="headerlink" title="10. Syntaxe des modèles et le traitement des chaînes de caractères dans ES6"></a>10. Syntaxe des modèles et le traitement des chaînes de caractères dans ES6</h3><p>ES6 a introduit le concept de ‘syntaxe des modèles’. Avant ES6, la concaténation de chaînes de caractères était une tâche laborieuse :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;css&#x27;</span>   </span><br><span class="line"><span class="keyword">var</span> career = <span class="string">&#x27;coder&#x27;</span> </span><br><span class="line"><span class="keyword">var</span> hobby = [<span class="string">&#x27;coding&#x27;</span>, <span class="string">&#x27;writing&#x27;</span>]</span><br><span class="line"><span class="keyword">var</span> finalString = <span class="string">&#x27;my name is &#x27;</span> + name + <span class="string">&#x27;, I work as a &#x27;</span> + career + <span class="string">&#x27;, I love &#x27;</span> + hobby[<span class="number">0</span>] + <span class="string">&#x27; and &#x27;</span> + hobby[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Avec seulement quelques variables, écrire autant de signes plus et être constamment vigilant quant aux espaces et à la ponctuation à l’intérieur pouvait être furieux. </p>
+<p>L’introduction des chaînes de modèles a considérablement simplifié cette tâche : Les chaînes de caractères ne sont pas seulement plus faciles à concaténer, mais aussi plus faciles à lire, améliorant ainsi la qualité globale du code</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;css&#x27;</span>   </span><br><span class="line"><span class="keyword">var</span> career = <span class="string">&#x27;coder&#x27;</span> </span><br><span class="line"><span class="keyword">var</span> hobby = [<span class="string">&#x27;coding&#x27;</span>, <span class="string">&#x27;writing&#x27;</span>]</span><br><span class="line"><span class="keyword">var</span> finalString = <span class="string">`my name is <span class="subst">$&#123;name&#125;</span>, I work as a <span class="subst">$&#123;career&#125;</span> I love <span class="subst">$&#123;hobby[<span class="number">0</span>]&#125;</span> and <span class="subst">$&#123;hobby[<span class="number">1</span>]&#125;</span>`</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Les avantages des chaînes de modèles :</strong></p>
+<ol>
+<li><p>Permet l’incorporation de variables avec la syntaxe <code>$&#123;&#125;</code></p>
+</li>
+<li><p>Dans les chaînes de modèles, les espaces, les indentations et les sauts de ligne sont conservés</p>
+</li>
+<li><p>Les chaînes de modèles prennent en charge entièrement les expressions opérationnelles, permettant d’effectuer des calculs à l’intérieur de <code>$&#123; &#125;</code></p>
+</li>
+</ol>
+<p>En se basant sur le premier point, il est possible d’écrire du code HTML directement et sans obstacles dans les chaînes de modèles :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list = <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;ul&gt;</span></span><br><span class="line"><span class="string">        &lt;li&gt;Élément de liste 1&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;li&gt;Élément de liste 2&lt;/li&gt;</span></span><br><span class="line"><span class="string">    &lt;/ul&gt;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(message); <span class="comment">// Sortie correcte, aucune erreur n&#x27;est générée</span></span><br></pre></td></tr></table></figure>
+
+<p>En se basant sur le deuxième point, il est possible d’insérer des calculs simples et des appels de fonction directement dans <code>$&#123;&#125;</code> :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> finalString = <span class="string">`<span class="subst">$&#123;a&#125;</span> + <span class="subst">$&#123;b&#125;</span> = <span class="subst">$&#123;a+b&#125;</span>`</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(finalString)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">add</span>(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// Sort &#x27;1 + 2 = 3&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>En plus de la syntaxe des modèles, ES6 a également introduit une série de méthodes de chaînes de caractères visant à améliorer l’efficacité du développement :</p>
+<ul>
+<li><p><strong>jugement d’existence</strong></p>
+<p>Par le passé, pour déterminer si un caractère&#x2F;une chaîne de caractères était présent dans une autre chaîne, on utilisait uniquement <code>indexOf &gt; -1</code>. Maintenant, en ES6, trois nouvelles méthodes sont disponibles : <code>includes</code>, <code>startsWith</code>, <code>endsWith</code>. Elles renvoient toutes une valeur booléenne pour indiquer si l’élément recherché existe.</p>
+<ol>
+<li><p><strong>includes</strong>  Vérifie la relation d’inclusion entre une chaîne de caractères et une sous-chaîne :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> son = <span class="string">&#x27;haha&#x27;</span> </span><br><span class="line"><span class="keyword">const</span> father = <span class="string">&#x27;xixi haha hehe&#x27;</span></span><br><span class="line">father.<span class="title function_">includes</span>(son) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>startsWith</strong>  Vérifie si une chaîne de caractères commence par un certain caractère&#x2F;une certaine séquence :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> father = <span class="string">&#x27;xixi haha hehe&#x27;</span></span><br><span class="line">father.<span class="title function_">startsWith</span>(<span class="string">&#x27;haha&#x27;</span>) <span class="comment">// false</span></span><br><span class="line">father.<span class="title function_">startsWith</span>(<span class="string">&#x27;xixi&#x27;</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>endsWith</strong> Vérifie si une chaîne de caractères se termine par un certain caractère&#x2F;une certaine séquence :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> father = <span class="string">&#x27;xixi haha hehe&#x27;</span></span><br><span class="line">father.<span class="title function_">endsWith</span>(<span class="string">&#x27;hehe&#x27;</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p><strong>Répétition automatique</strong> </p>
+<p>On peut utiliser la méthode repeat pour reproduire plusieurs fois la même chaîne de caractères ( soit la copier de manière continue) :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sourceCode = <span class="string">&#x27;repeat for 3 times;&#x27;</span></span><br><span class="line"><span class="keyword">const</span> repeated = sourceCode.<span class="title function_">repeat</span>(<span class="number">3</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(repeated) <span class="comment">// repeat for 3 times;repeat for 3 times;repeat for 3 times;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Avis de copyright： </strong>
+          
+          Le droit d&#39;auteur appartient à l&#39;auteur. Pour les réimpressions commerciales, veuillez contacter l&#39;auteur pour autorisation. Pour les réimpressions non commerciales, veuillez indiquer la source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Connaissances-fondamentales/" rel="tag">Connaissances fondamentales</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2024/Less/" class="article-nav-link">
+        <strong class="article-nav-caption">Article suivante</strong>
+        <div class="article-nav-title">Less</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+    
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> LEI
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/homeworkfille.svg" alt="LEI&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Page d&#39;accueil</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Catégories</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Etiquettes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Liens utiles</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2024/about">À propos de moi</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Rechercher">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

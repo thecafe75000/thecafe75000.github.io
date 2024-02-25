@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+
+<html lang="fr">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="HTML,CSS,JavaScript,React,Programmation,Modules" />
+       
+      <meta name="description" content="Site Personnel Technique" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Package Manager |  LEI&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Package-Manager"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Package Manager
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/Package_Manager/" class="article-date">
+  <time datetime="2024-01-27T21:23:07.000Z" itemprop="datePublished">2024-01-27</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tech/">Tech</a> / <a class="article-category-link" href="/categories/Tech/Package-Manager/">Package Manager</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Nombre de mots:</span>
+            <span class="post-count">1.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Temps de lecture≈</span>
+            <span class="post-count">7 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Package-Manager"><a href="#Package-Manager" class="headerlink" title="Package Manager"></a>Package Manager</h1><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p>Un gestionnaire de paquets est un outil logiciel utilisé pour gérer les bibliothèques ou cadres tiers (appelés communément “paquets”) nécessaires au développement d’un projet. </p>
+<p>Il peut automatiquement installer, mettre à jour, désinstaller et configurer des paquets, tout en gérant les dépendances entre les paquets afin d’assurer la compatibilité entre eux.</p>
+<span id="more"></span>
+
+<h3 id="2-Les-gestionnaires-de-paquets-courants"><a href="#2-Les-gestionnaires-de-paquets-courants" class="headerlink" title="2. Les gestionnaires de paquets courants"></a>2. Les gestionnaires de paquets courants</h3><ul>
+<li><p>npm</p>
+</li>
+<li><p>yarn</p>
+</li>
+<li><p>pnpm</p>
+</li>
+</ul>
+<h3 id="3-npm-Node-Package-Manager"><a href="#3-npm-Node-Package-Manager" class="headerlink" title="3. npm (Node Package Manager)"></a>3. npm (Node Package Manager)</h3><p>npm est le gestionnaire de paquets pour Node.js, il est également une application.</p>
+<p>npm n’a pas besoin d’être installé séparément, il est automatiquement installé lorsque l’on installe Node.js. </p>
+<blockquote>
+<p>Contrairement à d’autres gestionnaires de paquets qui nécessitent une installation distincte</p>
+</blockquote>
+<p><strong>Son utilisation</strong></p>
+<ol>
+<li><p><strong>Initialiser le fichier de description du paquet</strong></p>
+<p>Avant de télécharger un paquet, il est nécessaire d’avoir un fichier <code>package.json</code>, également appelé “ fichier de description du paquet “, qui enregistre des informations sur le projet en cours et des informations sur les dépendances etc.</p>
+<p>On peux utiliser la commande suivante pour créer le fichier de description du paquet :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line"></span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;test&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;author&quot;: &quot;&quot;,</span><br><span class="line">  &quot;license&quot;: &quot;ISC&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>name</code> : nom du paquet</p>
+</li>
+<li><p><code>version</code>:  version du paquet</p>
+</li>
+<li><p><code>description</code>:  description du paquet</p>
+</li>
+<li><p><code>main</code>:  fichier principal du paquet</p>
+</li>
+<li><p><code>scripts</code>: commande pour exécuter le paquet</p>
+</li>
+<li><p>ce qui  peut être exécuté avec <code>npm run xxx</code>, par exemple : <code>npm run test</code></p>
+</li>
+<li><p><code>author</code>: l’auteur du paquet</p>
+</li>
+<li><p><code>license</code>:  la licence open source du paquet</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Télécharger le paquet</strong></p>
+<p>Le site officiel: <a target="_blank" rel="noopener" href="https://www.npmjs.com/">https://www.npmjs.com</a></p>
+<p>Ce site permet de rechercher des paquets</p>
+<ul>
+<li><p><code>npm install [package]</code>:  Installer le paquet en tant que dépendance de production</p>
+</li>
+<li><p><code>npm install [package] -D</code>:  Installer le paquet en tant que dépendance de développement</p>
+<blockquote>
+<ul>
+<li><p>Dépendances de production : Les dépendances nécessaires à la rédaction du code source du projet sont considérées comme des dépendances de production</p>
+</li>
+<li><p>Dépendances de développement : Les dépendances utilisées par les outils de construction et de packaging du projet sont considérées comme des dépendances de développement</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p><code>npm install [package] -g</code></p>
+<ul>
+<li><p>Les packages installés globalement sont utilisés en tant qu’outils, par exemple : nodemon</p>
+</li>
+<li><p>Afficher le chemin d’installation global des packages : <code>npm root -g</code></p>
+</li>
+</ul>
+</li>
+<li><p><code>npm i</code> installe toutes les dépendances du fichier <code>package.json</code> du projet en cours (y compris les dépendances de développement et de production)</p>
+<blockquote>
+<p>Installer un paquet installe par défaut la dernière version. Si vous souhaitez installer une version spécifique, utilisez la commande : <code>npm i vue@2</code> par exemple</p>
+<p>Cela signifie qu’il installera la version majeure 2 de Vue.js, en utilisant les versions mineures et les patchs les plus récents correspondants</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>Supprimer le paquet</strong></p>
+<ul>
+<li><p><code>npm uninstall [package]</code>: désinstaller le paquet</p>
+</li>
+<li><p><code>npm uninstall [package] -g</code>:  désinstaller le paquet installé globalement</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-yarn"><a href="#4-yarn" class="headerlink" title="4. yarn"></a>4. yarn</h3><p><code>yarn</code> est un nouveau gestionnaire de paquets open source développé par Facebook, qui peut être utilisé en remplacement de npm.</p>
+<p>Il est généralement recommandé d’utiliser <code>yarn</code> pour la gestion des paquets dans les projets React.</p>
+<p><strong>Son utilisation</strong></p>
+<ul>
+<li><p>Installation</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yarn</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Initialiser le fichier de description du paquet</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Télécharger le paquet</p>
+<ul>
+<li><p><code>yarn add [package]</code>: Installer le paquet en tant que dépendance de production</p>
+</li>
+<li><p><code>yarn add [package] --dev</code>: Installer le paquet en tant que dépendance de développement</p>
+</li>
+<li><p><code>yarn global add [package]</code>: Installer le paquet globalement</p>
+</li>
+<li><p><code>yarn</code> : Installer toutes les dépendances du fichier <code>package.json</code> du projet en cours, y compris les dépendances de développement et de production</p>
+</li>
+</ul>
+</li>
+<li><p>Supprimer le paquet</p>
+<ul>
+<li><p><code>yarn remove [package]</code> : désinstaller le paquet</p>
+</li>
+<li><p><code>yarn global remove [package]</code>: désinstaller le paquet installé globalement</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-pnpm"><a href="#5-pnpm" class="headerlink" title="5. pnpm"></a>5. pnpm</h3><p>pnpm est un gestionnaire de paquets qui offre une installation plus rapide et une utilisation plus efficace de l’espace disque.</p>
+<p>Site officiel: <a target="_blank" rel="noopener" href="https://pnpm.io/">https://pnpm.io/</a></p>
+<ol>
+<li><p><strong>Pourquoi utiliser pnpm ?</strong></p>
+<ul>
+<li><p>Économiser de l’espace disque</p>
+<p>Lors de l’utilisation de npm, chaque projet réinstalle les dépendances de manière répétée dans différents projets. En revanche, avec pnpm, les dépendances sont stockées dans un référentiel adressable, de sorte que :</p>
+<ul>
+<li>Si différentes versions d’une même dépendance sont utilisées, seuls les fichiers présentant des différences entre les versions sont ajoutés au référentiel. Par exemple, si un paquet comprend 100 fichiers et que sa nouvelle version ne modifie qu’un seul fichier parmi eux, lors de la mise à jour avec pnpm, seul ce nouveau fichier sera ajouté au référentiel, sans avoir à copier l’intégralité du contenu du nouveau paquet.</li>
+<li>Tous les fichiers sont stockés à un emplacement précis sur le disque dur. Lors de l’installation d’un paquet, les fichiers du paquet sont liés en tant que liens durs à cet emplacement, sans occuper d’espace disque supplémentaire. Cela permet de partager la même version de dépendances entre différents projets.</li>
+</ul>
+<p>Ainsi, une quantité importante d’espace disque est économisée, proportionnelle au nombre de projets et de dépendances, et l’installation est considérablement plus rapide !</p>
+</li>
+<li><p>Améliorer la vitesse d’installation</p>
+<ul>
+<li><p>Résolution des dépendances : Toutes les dépendances qui ne sont pas présentes dans le référentiel sont identifiées et récupérées depuis le référentiel.</p>
+</li>
+<li><p>Calcul de la structure du répertoire : La structure du répertoire node_modules est calculée en fonction des dépendances.</p>
+</li>
+<li><p>Liaison des dépendances : Toutes les dépendances précédemment installées sont directement récupérées depuis le référentiel et liées à node_modules.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Cette méthode est beaucoup plus rapide que le processus d’installation traditionnel en trois étapes (résolution, récupération et écriture de toutes les dépendances dans node_modules).</p>
+</li>
+<li><p><strong>Son utilisation</strong></p>
+<ul>
+<li><p>Installation</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install pnpm -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Initialiser le fichier de description du paquet</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Télécharger le paquet</p>
+<ul>
+<li><p><code>pnpm add [package]</code>: Installer le paquet en tant que dépendance de production</p>
+</li>
+<li><p><code>pnpm add -D [package]</code>: Installer le paquet en tant que dépendance de développement</p>
+</li>
+<li><p><code>pnpm add -g [package]</code>: Installer le paquet globalement</p>
+</li>
+<li><p><code>pnpm install</code> : Installer toutes les dépendances du fichier <code>package.json</code> du projet en cours, y compris les dépendances de développement et de production</p>
+</li>
+</ul>
+</li>
+<li><p>Supprimer le paquet</p>
+<ul>
+<li><code>pnpm remove [package]</code>: désinstaller le paquet</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Avis de copyright： </strong>
+          
+          Le droit d&#39;auteur appartient à l&#39;auteur. Pour les réimpressions commerciales, veuillez contacter l&#39;auteur pour autorisation. Pour les réimpressions non commerciales, veuillez indiquer la source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Package-Manager/" rel="tag">Package Manager</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/Less/" class="article-nav-link">
+        <strong class="article-nav-caption">Article précédent</strong>
+        <div class="article-nav-title">
+          
+            Less
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/Git/" class="article-nav-link">
+        <strong class="article-nav-caption">Article suivante</strong>
+        <div class="article-nav-title">Git</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+    
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> LEI
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/homeworkfille.svg" alt="LEI&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Page d&#39;accueil</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Catégories</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Etiquettes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Liens utiles</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2024/about">À propos de moi</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Rechercher">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+
+
+<html lang="fr">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="HTML,CSS,JavaScript,React,Programmation,Modules" />
+       
+      <meta name="description" content="Site Personnel Technique" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Git |  LEI&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Git"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Git
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/Git/" class="article-date">
+  <time datetime="2024-01-21T21:25:29.000Z" itemprop="datePublished">2024-01-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tech/">Tech</a> / <a class="article-category-link" href="/categories/Tech/Git/">Git</a> / <a class="article-category-link" href="/categories/Tech/Git/Linux/">Linux</a> / <a class="article-category-link" href="/categories/Tech/Git/Linux/Github/">Github</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Nombre de mots:</span>
+            <span class="post-count">3.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Temps de lecture≈</span>
+            <span class="post-count">21 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h3 id="1-Installation-de-Git"><a href="#1-Installation-de-Git" class="headerlink" title="1. Installation de Git"></a>1. Installation de Git</h3><ol>
+<li><p>Téléchargement et installation</p>
+<p>Lien de téléchargement:  <a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a></p>
+</li>
+<li><p>Invite de commandes</p>
+<ul>
+<li><p>CMD: <code>CMD</code> est l’abréviation de command, c’est-à-dire l’invite de commandes </p>
+</li>
+<li><p>Powershell: il peut être considéré comme une version améliorée ou une version complémentaire de <code>CMD</code>, et prend en charge la plupart des commandes Linux</p>
+<span id="more"></span>
+</li>
+<li><p>Git Bash: bash est une ligne de commande de style Linux, les chemins sont également de style Linux, et elle peut utiliser des commandes Windows et Linux. Lors de l’installation de Git, un environnement bash léger est également installé, puis en lançant <code>git bash</code>, la fenêtre de commande qui s’ouvre contient les variables d’environnement de cet environnement bash. </p>
+<p>bash est une bibliothèque de commandes basée sur le <code>shell</code> et un script de commande sous <code>unix</code></p>
+</li>
+</ul>
+</li>
+<li><p>Variable d’environnement</p>
+<ul>
+<li><p>Tout simplement, les variables d’environnement sont des moyens rapides d’ouvrir des fichiers</p>
+</li>
+<li><p>Lorsque tu souhaites exécuter un programme, le système le recherchera dans le répertoire actuel. S’il ne le trouve pas, il cherchera dans les variables d’environnement du chemin (PATH). S’il le trouve, il l’exécutera; sinon, cela risque de provoquer une erreur. En configurant les variables d’environnement, nous pouvons optimiser notre efficacité d’utilisation, économiser du temps</p>
+</li>
+<li><p>Configurer les variables d’environnement sur l’ordinateur : </p>
+<p><strong>Panneau de configuration -&gt; Système et sécurité -&gt; Système -&gt; Modifier les paramètres -&gt; Avancé -&gt; Variables d’environnement -&gt; Path</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Configuration-initiale-de-Git"><a href="#2-Configuration-initiale-de-Git" class="headerlink" title="2. Configuration initiale de Git"></a>2. Configuration initiale de Git</h3><p>Maintenant que Git est installé sur ton système, quelques étapes sont nécessaires pour personnaliser ton environnement Git. </p>
+<p>Cette configuration n’a besoin d’être effectuée qu’une fois par machine, car les informations de configuration sont conservées lors des mises à jour du programme. Tu as la possibilité de les modifier à tout moment en exécutant les commandes appropriées.</p>
+<p>La configuration Git est une variable du client Git local et ne change pas avec le dépôt Git.</p>
+<ol>
+<li><p>Configuration du nom d’utilisateur et de l’adresse email</p>
+<p>La première chose à faire après avoir installé Git est de configurer ton nom d’utilisateur et ton adresse email. C’est une étape cruciale car chaque commit Git utilise ces informations et les enregistre dans chaque contribution, de manière permanente et non modifiable</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Configurer le nom d<span class="string">&#x27;utilisateur global</span></span></span><br><span class="line">git config --global user.name &quot;username&quot;   </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">Configurer le mot de passe global</span></span></span><br><span class="line">git config --global user.email &quot;email&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Vérifier la configuration Git</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Vérifier le nom d<span class="string">&#x27;utilisateur et l&#x27;</span>adresse email globaux dans la configuration</span></span><br><span class="line">git config --global user.name</span><br><span class="line">git config --global user.email</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Vérifier toutes les configurations globales de Git</span></span><br><span class="line">git config --global -l  </span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="3-Initialiser-un-depot-Git"><a href="#3-Initialiser-un-depot-Git" class="headerlink" title="3. Initialiser un dépôt Git"></a>3. Initialiser un dépôt Git</h3><p>Nous avons besoin de Git pour gérer le code source, donc nous devons également avoir un référentiel Git en local.</p>
+<p>Il y a deux façons d’obtenir un dépôt avec Git :</p>
+<ol>
+<li><p>Initialiser un dépôt Git et ajouter tous les fichiers du projet au dépôt Git</p>
+<blockquote>
+<p>PS: actuellement, de nombreux générateurs de projet créent automatiquement un dépôt Git lors de la création du projet</p>
+</blockquote>
+<ul>
+<li><p>Créer ou accéder au dossier, faire un clic droit dans la zone vide du dossier, puis cliquer sur <code>Git Bash Here</code> pour ouvrir la ligne de commande </p>
+<blockquote>
+<p>sur système MAC, ouvrez le terminal dans le dossier actuel</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init  # Initialisation du dépôt</span><br></pre></td></tr></table></figure>
+
+<!-- more -->
+
+<ul>
+<li><p>Cette commande créera un sous-répertoire appelé .git, contenant tous les fichiers nécessaires de ton dépôt Git initialisé. Ces fichiers sont au core du dépôt Git</p>
+</li>
+<li><p>Cependant, à ce stade, tu vient seulement d’effectuer une opération d’initialisation, les fichiers de ton projet n’ont pas encore été suivis</p>
+</li>
+<li><p>Créez un dépôt appelé ‘name’ dans le répertoire actuel, utilisez la commande <code>cd name</code> pour accéder au dépôt et effectuer des opérations</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init name  # Créer le dépôt &#x27;name&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Cloner un dépôt Git déjà existant depuis un autre serveur </p>
+<blockquote>
+<p>PS: cette opération est généralement nécessaire le premier jour en arrivant  à l’entreprise</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">exemple</span></span><br><span class="line">git clone https://github.com/thecafe75000/myreactdemos.git</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="4-Trois-zones"><a href="#4-Trois-zones" class="headerlink" title="4. Trois zones"></a>4. Trois zones</h3><p>Git a trois états possibles pour vos fichiers :</p>
+<ol>
+<li><p>Contribué (committed)</p>
+</li>
+<li><p>Modifié (modified)</p>
+</li>
+<li><p>Indexé (staged)</p>
+</li>
+</ol>
+<p>Cela introduit le concept des trois zones de travail dans un projet Git : le référentiel Git, le répertoire de travail et la zone de mise en index</p>
+<ul>
+<li><p>Espace de travail (zone d’édition de code) : représente l’endroit où le code de développement local est situé</p>
+</li>
+<li><p>Zone de mise en index (zone de modifications en attente) : représente l’endroit où le code est temporairement stocké dans le dépôt local</p>
+</li>
+<li><p>Zone du dépôt (zone de sauvegarde de code) : représente l’endroit où le code entre dans le contrôle de version local</p>
+<img src="https://github.com/thecafe75000/ImagesForMyblog/raw/main/Git/stageofgit.png" /></li>
+</ul>
+<h3 id="5-Repertoire-git"><a href="#5-Repertoire-git" class="headerlink" title="5. Répertoire .git"></a>5. Répertoire <code>.git</code></h3><ul>
+<li><p>Le répertoire <code>hooks</code> contient des scripts d’accroche pour le client ou le serveur, qui s’exécutent automatiquement lors d’opérations spécifiques</p>
+</li>
+<li><p>Le répertoire <code>info</code> contient un fichier d’exclusion global, permettant de configurer les fichiers à ignorer.</p>
+</li>
+<li><p>Le répertoire <code>logs</code> enregistre les informations de journal.</p>
+</li>
+<li><p>Le répertoire <code>objects</code> stocke l’ensemble du contenu des données, l’emplacement du référentiel local.</p>
+</li>
+<li><p>Le répertoire <code>refs</code> stocke les pointeurs vers les objets de validation des données (branches).</p>
+</li>
+<li><p>Le fichier <code>config</code> contient des options de configuration spécifiques au projet.</p>
+</li>
+<li><p>Le fichier <code>description</code> est utilisé pour afficher des informations de description sur le référentiel.</p>
+</li>
+<li><p>Le fichier <code>HEAD</code> indique la branche actuellement extraite.</p>
+</li>
+<li><p>Le fichier <code>index</code> contient des données de la zone de transit.</p>
+</li>
+<li><p><strong>N’oubliez pas : ne modifiez jamais manuellement le contenu du dossier <code>.git</code></strong></p>
+</li>
+</ul>
+<h3 id="6-Commandes-courantes-de-Git"><a href="#6-Commandes-courantes-de-Git" class="headerlink" title="6. Commandes courantes de Git"></a>6. Commandes courantes de Git</h3><ol>
+<li><p>Opérations de validation avec Git</p>
+<ul>
+<li><p><code>git status</code> : Consultation de l’état de la version</p>
+<ul>
+<li><p>Rouge: Indique que le fichier est dans la zone de travail (modifié, supprimé ou non suivi)</p>
+</li>
+<li><p>Vert : Indique que le fichier est dans la zone de staging</p>
+</li>
+<li><p>Non indiqué : Signifie que le fichier est dans la zone de version</p>
+</li>
+</ul>
+</li>
+<li><p><code>git add -A</code> ou <code> git add .</code> ou <code>git add *</code> :  Suivre de nouveaux fichiers, mettre en staging les fichiers modifiés, etc</p>
+</li>
+<li><p><code>git commit -m &#39;commentaire&#39;</code> : Valider les modifications et ajouter un commentaire</p>
+</li>
+<li><p>Bien que l’utilisation de la zone de staging permette de préparer soigneusement les détails à soumettre, parfois cela peut sembler un peu lourd. </p>
+<p>Git propose une méthode pour sauter l’utilisation de la zone de staging, il suffit d’ajouter l’option <code>-am</code> à <code>git commit</code> lors de la soumission. </p>
+<p>Git va automatiquement mettre en staging tous les fichiers déjà suivis et les soumettre ensemble, contournant ainsi l’étape <code>git add</code>.</p>
+</li>
+</ul>
+</li>
+<li><p>Opération d’annulation</p>
+<ul>
+<li><p>En utilisant <code>git restore</code>, il est possible d’annuler les modifications dans le répertoire de travail.</p>
+<p>Mais pour les nouveaux fichiers, il est nécessaire d’utiliser <code>rm</code> pour les supprimer</p>
+</li>
+<li><p>En utilisant <code>git restore --staged &lt;fichier&gt;</code>, il est possible d’annuler la mise en staging</p>
+</li>
+</ul>
+</li>
+<li><p>Opération de suppression</p>
+<ul>
+<li>Utilisez <code>git rm fileName</code> pour supprimer le fichier de la zone de staging et du répertoire de travail.</li>
+<li>Utilisez <code>git rm --cached fileName</code> pour supprimer le fichier de la zone de staging sans toucher au répertoire de travail.</li>
+<li>Utilisez <code>git rm -f fileName</code> pour supprimer de force le fichier de la zone de staging et du répertoire de travail (nécessaire en cas de divergence entre les fichiers des deux zones).</li>
+<li><strong>Remarque : La commande <code>git rm</code> ne peut supprimer que les fichiers gérés par le référentiel.</strong></li>
+</ul>
+</li>
+<li><p>Opérations de renommage et de déplacement</p>
+<ul>
+<li><code>git mv 01.txt 02.txt</code>: Renommer le fichier</li>
+<li><code>git mv 01.txt hello/</code>: Modifier le chemin du fichier</li>
+<li><code>git mv 01.txt hello/02.txt</code>: Modifier le chemin du fichier et renommer</li>
+</ul>
+</li>
+<li><p>Comparer les différences</p>
+<ul>
+<li><p>Utiliser <code>git diff</code> pour voir les différences entre la zone de travail et la zone de staging (sans afficher les fichiers supprimés ou ajoutés), affichant les modifications effectuées</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// Interprétation des résultats</span><br><span class="line"><span class="meta prompt_">lipeihuadeMacBook-Pro% </span><span class="language-bash">git diff</span></span><br><span class="line">    //comparaison concerne index.html avant la modification et index.html après la modification)</span><br><span class="line">    diff --git a/index.html b/index.html</span><br><span class="line">    // Représente les valeurs de hachage Git de deux versions</span><br><span class="line">    index 16158b4..61045cd 100644</span><br><span class="line">    //&quot;---&quot; représente la version précédente des modifications</span><br><span class="line">    --- a/index.html</span><br><span class="line">    //&quot;+++&quot; représente la version après des modifications</span><br><span class="line">    +++ b/index.html</span><br><span class="line">    // lignes 1 à 2 du fichier source présentent des différences avec les lignes 1 à 5 du fichier cible,</span><br><span class="line">    // Ci-dessous se trouvent les détails spécifiques des différences</span><br><span class="line">    @@ -1,2 +1,5 @@</span><br><span class="line">    // -partie rouge représente la diminution, +partie verte représente l&#x27;ajout</span><br><span class="line">     index.html </span><br><span class="line">    -no 1</span><br><span class="line">    +</span><br><span class="line">    +</span><br><span class="line">    +</span><br><span class="line">    + modification supplémentaire</span><br><span class="line">    // La dernière ligne n&#x27;a pas de saut de ligne</span><br><span class="line">    \ No newline at end of file</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>git diff --cached</code> : Afficher les différences entre la zone de staging et le référentiel.</p>
+</li>
+<li><p><code>git diff a b</code> : Comparer les différences entre deux versions.</p>
+</li>
+</ul>
+</li>
+<li><p>Versions historiques et annulations dans Git</p>
+<ul>
+<li><p>Voir les versions antérieures</p>
+<ul>
+<li><p><code>git log</code></p>
+<blockquote>
+<p>Par défaut, sans aucun paramètre, <code>git log</code> affiche toutes les mises à jour selon l’ordre chronologique des soumissions, les plus récentes en haut. Chaque soumission est identifiée par une somme de contrôle SHA-1, le nom et l’adresse e-mail de l’auteur, l’heure de la soumission, et enfin, un paragraphe indenté affiche le commentaire de la soumission</p>
+</blockquote>
+</li>
+<li><p>Une option couramment utilisée avec <code>git log</code> est <code>-p</code>, qui affiche les différences de contenu à chaque soumission. Tu peux également ajouter <code>-2</code> pour afficher uniquement les deux dernières soumissions.</p>
+<p>Si le contenu est trop long, utilisez les touches de direction pour faire défiler vers le haut et le bas, appuyez sur <code>q</code> pour quitter</p>
+</li>
+<li><p><code>git log --oneline</code> Informations succinctes</p>
+</li>
+</ul>
+</li>
+<li><p>Revenir à une version spécifique en utilisant le numéro de version</p>
+<p>Régression de version locale, n’affecte que localement, n’influence pas le contenu du dépôt Git</p>
+<ul>
+<li><p><code>git reset --hard/--mixed/--soft b815fd5a6ae655b521a31a9</code></p>
+<ul>
+<li><p><code>--hard</code> : Déplacer le pointeur HEAD de la bibliothèque locale, réinitialiser la zone de staging, réinitialiser la zone de travail</p>
+</li>
+<li><p><code>--mixed</code>: Déplacer le pointeur HEAD de la bibliothèque locale, réinitialiser la zone de staging, le code ajouté à la zone de staging lors de la dernière opération d’add est maintenant affiché en rouge, indiquant qu’aucune opération d’add n’a été effectuée</p>
+</li>
+<li><p><code>--soft</code> : Seulement déplacer le pointeur HEAD de la bibliothèque locale, la zone de staging et ton code local n’ont subi aucun changement</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Lors du retour à une version antérieure, il n’est pas nécessaire d’utiliser la chaîne de hachage complète, les sept premiers caractères suffisent. </p>
+<p><strong>Avant de changer de version, il faut soumettre l’état actuel du code dans le référentiel</strong></p>
+</blockquote>
+<ul>
+<li><code>git reflog</code></li>
+</ul>
+<blockquote>
+<p>Si après un retour en arrière tu souhaites revenir à une version antérieure, <code>git reflog</code> permet de consulter tous les enregistrements d’opérations sur toutes les branches (y compris les opérations commit et reset), y compris les enregistrements de commit déjà supprimés. <code>git log</code>, en revanche, ne permet pas de visualiser les enregistrements de commit supprimés</p>
+</blockquote>
+</li>
+<li><p>Autres annulations</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^     # Revenir à la version précédente</span><br><span class="line">git reset --hard HEAD^^    # Revenir à la version antérieure précédente</span><br><span class="line">git reset --hard HEAD~100  # Revenir aux 100 versions précédente</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="7-Configurer-les-fichiers-ignores-par-Git"><a href="#7-Configurer-les-fichiers-ignores-par-Git" class="headerlink" title="7. Configurer les fichiers ignorés par Git"></a>7. Configurer les fichiers ignorés par Git</h3><p>Dans certains projets, il y a des fichiers qui ne doivent pas être inclus dans le référentiel de versions, tels que les configurations de l’éditeur.</p>
+<p>Dans Git, il est nécessaire de créer un fichier <code>.gitignore</code>, généralement dans le même répertoire que <code>.gitignore</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Ignorer tous les dossiers .idea</span></span><br><span class="line">.idea</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Ignorer tous les fichiers se terminant par .<span class="built_in">test</span></span></span><br><span class="line">*.test  </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Ignorer les fichiers et dossiers node_modules</span></span><br><span class="line">/node_modules</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-Branches-de-Git"><a href="#8-Branches-de-Git" class="headerlink" title="8. Branches de Git"></a>8. Branches de Git</h3><p>Quasiment tous les systèmes de contrôle de version prennent en charge les branches d’une manière ou d’une autre. L’utilisation de branches signifie que tu peux séparer ton travail de la ligne principale de développement, évitant ainsi d’impact sur la ligne principale. </p>
+<p>Dans de nombreux systèmes de contrôle de version, il s’agit d’un processus légèrement inefficace —— souvent, il est nécessaire de créer complètement une copie du répertoire du code source. Pour les projets importants, un tel processus peut prendre beaucoup de temps.</p>
+<p>La gestion des branches par Git est incroyablement légère, la création d’une nouvelle branche peut être réalisée en un instant, et le passage entre différentes branches est tout aussi rapide. </p>
+<p>Contrairement à de nombreux autres systèmes de contrôle de version, Git encourage une utilisation fréquente des branches et des fusions dans le flux de travail, même plusieurs fois par jour.</p>
+<ol>
+<li><p>GitFlow</p>
+<p>GitFlow est une meilleure pratique pour le développement d’équipe, qui divise le code en plusieurs branches :</p>
+<ul>
+<li><p>Branche principale <code>Main</code>: elle ne contient que les versions officiellement publiées</p>
+</li>
+<li><p>Branche de correction des bugs en production (Hotfix): Une fois le développement terminé, il est nécessaire de fusionner avec les branches <code>Main</code> et <code>Develop</code>, tout en créant une balise (tag) sur la branche <code>Main</code></p>
+</li>
+<li><p>Branche de fonctionnalité <code>Feather</code> : Lorsque vous développez une fonctionnalité, créez une branche distincte, puis fusionnez-la avec la branche dev une fois le développement terminé</p>
+</li>
+<li><p>Branche <code>Release</code> : Branche en attente de publication, créée à partir de la branche <code>Develop</code>. Les tests et les corrections de bogues(Bug) sont effectués sur cette branche Release.</p>
+</li>
+<li><p>Branche <code>Develop</code> : Branche de développement où tous les développeurs soumettent leur code</p>
+</li>
+</ul>
+</li>
+<li><p>Opérations de branches</p>
+<ul>
+<li><p>Créer une branche</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch name   //name est le nom de branche</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Voir les branches</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Changer de branche</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout name  //name est le nom de branche</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note : Avant de changer de branche, il faut soumettre les modifications actuelles de la branche en cours</p>
+</blockquote>
+</li>
+<li><p>Créer et basculer sur une branche</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// Crée et bascule sur une nouvelle branche</span><br><span class="line">git checkout -b name </span><br><span class="line"></span><br><span class="line">// Crée et bascule sur une nouvelle branche, force l&#x27;écrasement si la branche actuelle existe déjà</span><br><span class="line">git checkout -B name </span><br><span class="line"></span><br><span class="line">// Crée une nouvelle branche à partir d&#x27;un commit spécifique  </span><br><span class="line">git checkout -b name commitID </span><br><span class="line"></span><br><span class="line">// Crée une branche orpheline</span><br><span class="line">// Une branche orpheline n&#x27;est pas différente des autres branches</span><br><span class="line">// just au début d&#x27;une branche orpheline, elle n&#x27;a pas d&#x27;historique de commits provenant d&#x27;une branche parente</span><br><span class="line">git checkout --orphan name </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- Supprimer une branche</span><br><span class="line">  </span><br><span class="line">  ```shell</span><br><span class="line">  # &quot;name&quot; peut être remplacé par le nom réel de la branche que tu souhaites supprimer</span><br><span class="line">  git branch -d name  // Supprimer une branche locale</span><br><span class="line">  </span><br><span class="line">  git branch -D name  // Supprimer de force une branche locale (en cas de modifications non fusionnées)</span><br><span class="line">  </span><br><span class="line">  git push origin --delete name  // Supprimer une branche distante</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>Merge des branches</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// Fusionne le contenu d&#x27;une branche spécifique dans la branche actuelle</span><br><span class="line">git merge name </span><br><span class="line"></span><br><span class="line">// Fusionne de force des branches avec des historiques non apparentés</span><br><span class="line">git merge --allow-unrelated-histories name </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Conflit</p>
+<p>Lorsque plusieurs branches modifient le même fichier, des conflits peuvent survenir lors de la fusion des branches. </p>
+<p>La résolution des conflits est assez simple : modifier le contenu pour obtenir le résultat final souhaité, puis continuer avec les commandes <code>git add</code> et <code>git commit</code></p>
+</li>
+</ul>
+<h3 id="9-Commandes-couramment-utilisees-sous-Linux"><a href="#9-Commandes-couramment-utilisees-sous-Linux" class="headerlink" title="9. Commandes couramment utilisées sous Linux"></a>9. Commandes couramment utilisées sous Linux</h3><p>Linux est un système d’exploitation open source et gratuit. L’interaction avec le système se fait généralement par des commandes. </p>
+<p>Voici quelques commandes couramment utilisées :</p>
+<ul>
+<li><p><code>ls</code> : Afficher les fichiers dans le répertoire actuel (abrégé de “list”)</p>
+</li>
+<li><p><code>ls -al</code> ou <code>ls -a -l</code> pour afficher les fichiers cachés et les présenter verticalement</p>
+</li>
+<li><p><code>cd</code> : Entrer dans un répertoire (abrégé de “change directory”)</p>
+</li>
+<li><p><code>cd ..</code> Pour remonter d’un niveau </p>
+</li>
+<li><p>La touche <code>tab</code> permet l’autocomplétion du code</p>
+</li>
+<li><p><code>clear</code> : Effacer l’écran</p>
+</li>
+<li><p><code>mkdir</code> : Créer un répertoire</p>
+</li>
+<li><p><code>touch test.html</code> : Créer un fichier</p>
+</li>
+<li><p><code>rm test.html</code> : Supprimer un fichier</p>
+</li>
+<li><p><code>rm -r dir</code> : Supprimer un répertoire</p>
+</li>
+<li><p><code>mv fichier_ou_dossier_origine fichier_ou_dossier_destination</code> : Déplacer un fichier</p>
+</li>
+<li><p><code>cat test.html</code> : Afficher le contenu d’un fichier</p>
+</li>
+<li><p><code>ctrl+c</code> : Annuler une commande</p>
+</li>
+<li><p>Les touches de direction vers le haut et vers le bas du clavier (flèches haut et bas) permettent de consulter l’historique des commandes</p>
+</li>
+</ul>
+<h3 id="10-Utilisation-de-GitHub"><a href="#10-Utilisation-de-GitHub" class="headerlink" title="10. Utilisation de GitHub"></a>10. Utilisation de GitHub</h3><p>GitHub est un site de gestion de dépôts Git. Il permet de créer un référentiel central distant, facilitant ainsi la collaboration entre plusieurs personnes pour le développement.</p>
+<ol>
+<li><p><strong>Son utilisation</strong></p>
+<p>L’utilisation du dépôt distant GitHub est relativement simple, avec principalement les scénarios suivants :</p>
+<ul>
+<li><p><strong>Dépôt local existant</strong></p>
+<ol>
+<li><p>Créer un dépôt distant</p>
+</li>
+<li><p>Obtenir l’adresse du dépôt</p>
+</li>
+<li><p>Associer l’URL du dépôt distant au dépôt local (de cette manière, on sait quel dépôt distant à rechercher sur local)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/xxx/xxx.git</span><br></pre></td></tr></table></figure>
+
+<p>L’association ne peut se faire qu’une seule fois. Si tu souhaites associer un autre dépôt, tu dois supprimer l’association avec le dépôt actuel</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote remove origin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Commit local</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m xxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Tout d’abord, pousser le contenu de la branche principale du dépôt local vers le dépôt distant.</p>
+<p><strong>la première branche poussée est considérée comme la branche principale, indépendamment de son nom</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>push</code> : Pousser la  branche</p>
+</li>
+<li><p><code>-u</code> : Associer avec dépôt distant , une fois ajouté, les futures soumissions peuvent être raccourcies en utilisant directement <code>git push</code></p>
+</li>
+<li><p><code>origin</code> : Alias du dépôt distant</p>
+</li>
+<li><p><code>main</code> : Branche du dépôt local</p>
+</li>
+</ul>
+</li>
+<li><p>Créez ensuite une nouvelle branche de développement appelée <code>dev</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>La branche de développement ajoute ou modifie le code</p>
+</li>
+<li><p>Effectuer des commits locaux sur la branche de développement</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;xxxxxx&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Pousser la branche de développement vers le dépôt distant</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">il faut indiquer le nom de la branche correspondante en cas de soumettre une branche</span></span><br><span class="line">git push origin dev </span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p><strong>Pas de dépôt local</strong></p>
+<ol>
+<li><p>Cloner un dépôt</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/xxxxx/xxxxx.git [name]</span><br><span class="line">//name correspond à la modification du nom du dépôt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Accéder au dépôt</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd xxxxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Si la branche de développement n’existe pas, tu dois la créer. </p>
+<p>Si elle existe, tu dois tirer à nouveau la branche de développement distante et basculer dessus</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">créer une branche nouvelle</span></span><br><span class="line">git checkout -b dev  </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">la branche distante existe,besoin de la tirer</span> </span><br><span class="line">git fetch origin dev:dev</span><br><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>La branche de développement ajoute ou modifie le code</p>
+</li>
+<li><p>Effectuer des validations locales sur la branche de développement</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#x27;message&#x27;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Pousser la branche vers le dépôt distant</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Après le clonage du code, le dépôt local aura une configuration par défaut pour une adresse distante avec le nom <code>origin</code></p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>Le développement du code étant terminé, il est nécessaire de fusionner les branches</strong></p>
+<ul>
+<li><p>Passer à la branche principale <code>main</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout main</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Fusionner le contenu de la branche <code>dev</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Une fois la fusion terminée, pousser la branche <code>main</code> vers le dépôt distant</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>Peut-être qu’une erreur pourrait survenir lors du <code>push</code> sur <code>main</code>, indiquant des messages tels que <code>hint: &quot;git pull&quot; xxx</code></p>
+<p>Cela signifie que la version du code dans le dépôt local est en retard par rapport à la version dans le dépôt distant. Il faut donc tirer la dernière version du code depuis le dépôt distant vers le dépôt local avec la commande : <code>git pull origin main</code></p>
+</blockquote>
+</li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Avis de copyright： </strong>
+          
+          Le droit d&#39;auteur appartient à l&#39;auteur. Pour les réimpressions commerciales, veuillez contacter l&#39;auteur pour autorisation. Pour les réimpressions non commerciales, veuillez indiquer la source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Connaissances-avancees/" rel="tag">Connaissances avancées</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/Package_Manager/" class="article-nav-link">
+        <strong class="article-nav-caption">Article précédent</strong>
+        <div class="article-nav-title">
+          
+            Package Manager
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/CSS/" class="article-nav-link">
+        <strong class="article-nav-caption">Article suivante</strong>
+        <div class="article-nav-title">CSS</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+    
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> LEI
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/homeworkfille.svg" alt="LEI&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Page d&#39;accueil</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Catégories</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Etiquettes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Liens utiles</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2024/about">À propos de moi</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Rechercher">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+
+<html lang="fr">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="HTML,CSS,JavaScript,React,Programmation,Modules" />
+       
+      <meta name="description" content="Site Personnel Technique" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>CSS |  LEI&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-CSS"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  CSS
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/CSS/" class="article-date">
+  <time datetime="2024-01-07T20:42:28.000Z" itemprop="datePublished">2024-01-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tech/">Tech</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Nombre de mots:</span>
+            <span class="post-count">1.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Temps de lecture≈</span>
+            <span class="post-count">7 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h3 id="1-Nouvelles-fonctionnalites-de-CSS3"><a href="#1-Nouvelles-fonctionnalites-de-CSS3" class="headerlink" title="1. Nouvelles fonctionnalités de CSS3"></a>1. Nouvelles fonctionnalités de CSS3</h3><ol>
+<li><p>Nouveaux sélecteurs</p>
+<ul>
+<li><p>:last-child correspond au dernier enfant de l’élément parent.</p>
+</li>
+<li><p>:nth-child(n) correspond au n-ième enfant de l’élément parent.</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<!-- more -->
+</li>
+<li><p>Caractéristiques de la bordure</p>
+<ul>
+<li>border-radius: Bordure arrondie</li>
+</ul>
+</li>
+<li><p>Couleur et opacité</p>
+<ul>
+<li><p>opacity: 0.5;</p>
+</li>
+<li><p>color: rgba(0, 0, 0, 0.5)</p>
+</li>
+</ul>
+</li>
+<li><p>Ombres</p>
+<ul>
+<li><p>text-shadow: Ombre du texte</p>
+</li>
+<li><p>box-shadow: Ombre de la boîte</p>
+</li>
+</ul>
+</li>
+<li><p>Transformation</p>
+<ul>
+<li><p>transform: rotate(9deg): Rotation</p>
+</li>
+<li><p>transform: scale(0.5) : Mise à l’échelle</p>
+</li>
+<li><p>transform: translate(100px, 100px): Déplacement</p>
+</li>
+</ul>
+</li>
+<li><p>Transition et animation</p>
+<ul>
+<li><p>transition: Transition</p>
+</li>
+<li><p>animation: Animation</p>
+</li>
+</ul>
+</li>
+<li><p>Requête multimédia</p>
+<ul>
+<li>@media Utilisé pour créer une mise en page réactive.</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Modele-de-boite"><a href="#2-Modele-de-boite" class="headerlink" title="2. Modèle de boîte"></a>2. Modèle de boîte</h3><ol>
+<li><p>Concept : Modèle de mise en page adopté par les éléments du DOM lors du rendu de la page peut être configuré via box-sizing.</p>
+</li>
+<li><p>Catégories :</p>
+<ul>
+<li><p>content-box (Modèle de boîte standard du W3C)<br>Lorsqu’une largeur (width) et une hauteur (height) sont définies pour un élément, cela modifie uniquement la largeur + hauteur.</p>
+</li>
+<li><p>border-box (Modèle de boîte IE)<br>Lorsqu’une largeur (width) et une hauteur (height) sont définies pour un élément, cela modifie la largeur + hauteur + padding.</p>
+</li>
+<li><p>Autres non implémentés</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-BFC"><a href="#3-BFC" class="headerlink" title="3. BFC"></a>3. BFC</h3><ol>
+<li><p>Concept</p>
+<ul>
+<li>BFC, également connu sous le nom de Contexte de Formatage en Bloc, se réfère à : une zone de rendu indépendante</li>
+</ul>
+</li>
+<li><p>Conditions de déclenchement (Activation du BFC)</p>
+<ul>
+<li><p>Définir overflow, c’est-à-dire <code>hidden</code>, <code>auto</code>, <code>scroll</code></p>
+</li>
+<li><p>Définir float, à l’exclusion <code>none</code></p>
+</li>
+<li><p>Définir le positionnement, absolute ou fixed, etc.</p>
+</li>
+</ul>
+</li>
+<li><p>Règles spécifiques</p>
+<ul>
+<li><p>BFC est un élément bloc, et les éléments blocs sont disposés verticalement</p>
+</li>
+<li><p>BFC est un conteneur indépendant, ses éléments internes n’affectent pas les éléments externes au conteneur</p>
+</li>
+<li><p>Pour deux boîtes appartenant au même BFC, il peut y avoir un chevauchement des marges, et la marge maximale est prise</p>
+</li>
+<li><p>Lors du calcul de la hauteur de BFC, les éléments enfants flottants doivent également être inclus dans le calcul</p>
+</li>
+</ul>
+</li>
+<li><p>Applications</p>
+<ul>
+<li><p>Empêcher le chevauchement des marges</p>
+</li>
+<li><p>Effacer les flottants pour éviter l’effondrement de la hauteur</p>
+</li>
+<li><p>Empêcher que les éléments de flux standard soient recouverts par des éléments flottants</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-La-ponderation-et-la-priorite-des-selecteurs"><a href="#4-La-ponderation-et-la-priorite-des-selecteurs" class="headerlink" title="4. La pondération et la priorité des sélecteurs"></a>4. La pondération et la priorité des sélecteurs</h3><ul>
+<li><p>L’ordre de la pondération et de la priorité des sélecteurs：</p>
+<p><code>!important &gt; Style en ligne &gt; #id &gt; .class &gt; balise &gt; * &gt; Héritage &gt; Par défaut</code></p>
+</li>
+<li><p>Les navigateurs CSS analysent les sélecteurs <strong>de droite à gauche</strong></p>
+</li>
+</ul>
+<h3 id="5-Preprocesseur-CSS"><a href="#5-Preprocesseur-CSS" class="headerlink" title="5. Préprocesseur CSS"></a>5. Préprocesseur CSS</h3><p>Les préprocesseurs CSS définissent un nouveau langage qui permet une maintenance et une gestion plus aisées du code CSS. Ils sont principalement:</p>
+<ul>
+<li><p>Sass</p>
+</li>
+<li><p>Less</p>
+</li>
+<li><p>Stylus</p>
+</li>
+</ul>
+<h3 id="6-Flex"><a href="#6-Flex" class="headerlink" title="6. Flex"></a>6. Flex</h3><ol>
+<li><p><strong>Concept</strong></p>
+<ul>
+<li><p>Flex est l’abréviation de “Flexible Box”, ce qui signifie “layout flexible” et est utilisé pour fournir une flexibilité maximale au modèle de boîte.</p>
+</li>
+<li><p>Les éléments utilisant la mise en page Flex sont appelés conteneurs Flex (conteneur flex), abrégé en “conteneur”. Tous ses sous-éléments deviennent automatiquement des membres du conteneur, appelés éléments Flex (élément flex), abrégé en “élément”.</p>
+</li>
+<li><p>Le conteneur a par défaut deux axes : l’axe principal et l’axe transversal (également appelé axe secondaire). Par défaut, l’axe horizontal est l’axe principal et l’axe vertical est l’axe transversal.</p>
+</li>
+</ul>
+</li>
+<li><p>Propriétés du conteneur (2 à 3)</p>
+<ul>
+<li><p><code>flex-direction</code> définit la direction de l’axe principal.</p>
+</li>
+<li><p><code>flex-wrap</code> définit s’il faut passer à la ligne.</p>
+</li>
+<li><p><code>flex-flow</code> est une forme abrégée des propriétés <code>flex-direction</code> et <code>flex-wrap</code>.</p>
+</li>
+<li><p><code>justify-content</code> définit l’alignement des éléments le long de l’axe principal.</p>
+</li>
+<li><p><code>align-items</code> définit l’alignement des éléments le long de l’axe transversal.</p>
+</li>
+<li><p><code>align-content</code> définit l’alignement des éléments sur l’axe de croisement.</p>
+</li>
+</ul>
+</li>
+<li><p>Propriétés des éléments (2 à 3)</p>
+<ul>
+<li><p><code>order</code> définit l’ordre d’arrangement des éléments. Plus le nombre est petit, plus l’élément est placé en avant. La valeur par défaut est 0.</p>
+</li>
+<li><p><code>flex-grow</code> définit le facteur de croissance de l’élément. La valeur par défaut est 0, ce qui signifie qu’il ne se développera pas même s’il y a de l’espace supplémentaire.</p>
+</li>
+<li><p><code>flex-shrink</code> définit le facteur de rétrécissement de l’élément. La valeur par défaut est 1, ce qui signifie qu’il se rétrécira en cas de manque d’espace.</p>
+</li>
+<li><p><code>flex-basis</code> définit l’espace sur l’axe principal que l’élément occupe avant la distribution de l’espace supplémentaire. Sa valeur par défaut est “auto”, correspondant à la taille originale de l’élément.</p>
+</li>
+<li><p><code>flex</code> est une abréviation de <code>flex-grow</code>, <code>flex-shrink</code> et <code>flex-basis</code>, avec des valeurs par défaut de <code>0 1 auto</code></p>
+</li>
+<li><p><code>align-self</code> permet à un élément individuel d’avoir un alignement différent des autres éléments, pouvant remplacer la propriété <code>align-items</code>.</p>
+</li>
+</ul>
+</li>
+<li><p>Compréhension</p>
+<ul>
+<li><p><code>flex-grow: 1</code> Si de l’espace supplémentaire est disponible, l’élément va se développer</p>
+</li>
+<li><p><code>flex-shrink: 1</code> Si l’espace disponible est insuffisant, l’élément va se réduire</p>
+</li>
+<li><p><code>flex-basis: 0%</code> Lorsque défini à 0%, cela signifie qu’il n’occupe pas d’espace sur l’axe principal. Cependant, en raison des paramètres de <code>flex-grow</code> et <code>flex-shrink</code>, l’élément se développera ou se réduira automatiquement</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="7-Methodes-de-masquage-des-elements-de-la-page"><a href="#7-Methodes-de-masquage-des-elements-de-la-page" class="headerlink" title="7. Méthodes de masquage des éléments de la page"></a>7. Méthodes de masquage des éléments de la page</h3><ol>
+<li><code>display: none</code> Ne prend pas de place. Ne déclenche pas les événements DOM</li>
+<li><code>opacity: 0</code> Occupe de la place, mais n’est pas visible. Déclenche les événements DOM</li>
+<li><code>visibility: hidden</code> Occupe de la place, mais n’est pas visible. Ne déclenche pas les événements DOM</li>
+<li><code>position: absolute; left: -10000px</code> Déplace l’élément hors de l’écran</li>
+<li><code>z-index: -1</code> Masque l’élément actuel derrière d’autres éléments positionnés</li>
+</ol>
+<h3 id="8-Centrer-un-element-horizontalement-et-verticalement"><a href="#8-Centrer-un-element-horizontalement-et-verticalement" class="headerlink" title="8. Centrer un élément horizontalement et verticalement"></a>8. Centrer un élément horizontalement et verticalement</h3><ol>
+<li><p>En utilisant la position absolue, avec les dimensions (largeur et hauteur) inconnues pour les sous-éléments</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"><span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>En utilisant la position absolue, les dimensions des sous-éléments doivent être explicitement définies</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"><span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line"><span class="attribute">margin-left</span>: -<span class="number">100px</span>;</span><br><span class="line"><span class="attribute">margin-top</span>: -<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>En utilisant Flex</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line"><span class="attribute">justify-content</span>: center;</span><br><span class="line"><span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Avis de copyright： </strong>
+          
+          Le droit d&#39;auteur appartient à l&#39;auteur. Pour les réimpressions commerciales, veuillez contacter l&#39;auteur pour autorisation. Pour les réimpressions non commerciales, veuillez indiquer la source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Connaissances-basiques/" rel="tag">Connaissances basiques</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/Git/" class="article-nav-link">
+        <strong class="article-nav-caption">Article précédent</strong>
+        <div class="article-nav-title">
+          
+            Git
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/JavaScript/" class="article-nav-link">
+        <strong class="article-nav-caption">Article suivante</strong>
+        <div class="article-nav-title">JavaScript</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+    
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> LEI
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/homeworkfille.svg" alt="LEI&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Page d&#39;accueil</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Catégories</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Etiquettes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Liens utiles</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2024/about">À propos de moi</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Rechercher">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

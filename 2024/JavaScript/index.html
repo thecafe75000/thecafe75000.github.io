@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+
+<html lang="fr">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="HTML,CSS,JavaScript,React,Programmation,Modules" />
+       
+      <meta name="description" content="Site Personnel Technique" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>JavaScript |  LEI&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-JavaScript"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  JavaScript
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/JavaScript/" class="article-date">
+  <time datetime="2024-01-07T20:15:24.000Z" itemprop="datePublished">2024-01-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tech/">Tech</a> / <a class="article-category-link" href="/categories/Tech/JavaScript/">JavaScript</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Nombre de mots:</span>
+            <span class="post-count">2.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Temps de lecture≈</span>
+            <span class="post-count">14 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h3 id="1-Les-types-de-donnees-en-JavaScript"><a href="#1-Les-types-de-donnees-en-JavaScript" class="headerlink" title="1. Les types de données en JavaScript"></a>1. Les types de données en JavaScript</h3><p>Ils se divisent en types de données fondamentaux et types de données de référence</p>
+<ol>
+<li><p>Types de données fondamentaux:</p>
+<ul>
+<li><p>number (nombre)</p>
+</li>
+<li><p>string (chaîne de caractères)</p>
+</li>
+<li><p>boolean (booléen)</p>
+</li>
+<li><p>null (null)</p>
+</li>
+<li><p>undefined (non défini)</p>
+<span id="more"></span>
+</li>
+<li><p>symbol (symbole)</p>
+<ul>
+<li>Utilisé pour attribuer une valeur unique à une variable</li>
+<li>Utilisé pour attribuer un nom de propriété unique à un objet (le type de nom de propriété d’objet doit être soit string, soit symbol)</li>
+</ul>
+</li>
+<li><p>bigint (entier bigint)</p>
+<ul>
+<li>Lorsque les calculs avec le type number dépassent la valeur maximale (Number.MAX_SAFE_INTEGER) ou tombent en dessous de la valeur minimale, des problèmes de calcul peuvent survenir. Dans ce cas, on peut utiliser bigint (rarement utilisé en développement pratique).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Types de données de référence:</p>
+<ul>
+<li>object (objet)</li>
+<li>function (fonction)</li>
+<li>array</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Comment-detecter-les-types-de-donnees-en-JavaScript"><a href="#2-Comment-detecter-les-types-de-donnees-en-JavaScript" class="headerlink" title="2. Comment détecter les types de données en JavaScript"></a>2. Comment détecter les types de données en JavaScript</h3><ol>
+<li><p>typeof</p>
+<p>La plupart des types peuvent être détectés, mais ne peut pas faire la distinction entre null, object et array</p>
+</li>
+<li><p>A instanceof B</p>
+<p>Compréhension simple : vérifie si A est une instance de B<br>Compréhension approfondie : vérifie si le <code>__proto__</code> de A pointe vers le même objet que B.prototype</p>
+<p>Principalement utilisé pour détecter les types de données référencés</p>
+</li>
+<li><p>Object.prototype.toString.call(xxx).slice(8, -1)</p>
+<p>c’est la solution parfaite, il peut détecter tous les types de données</p>
+<p>En développement, utilisez la méthode <code>toString()</code> pour encapsuler des fonctions utilitaires afin de détecter les types</p>
+</li>
+<li><p>Array.isArray</p>
+<p>Vérifie s’il s’agit d’un type array</p>
+</li>
+<li><p>A &#x3D;&#x3D;&#x3D; B</p>
+<p>Vérifie que les valeurs et les types de A et B sont identiques.</p>
+</li>
+</ol>
+<h3 id="3-Methodes-courantes-pour-les-array"><a href="#3-Methodes-courantes-pour-les-array" class="headerlink" title="3. Méthodes courantes pour les array"></a>3. Méthodes courantes pour les array</h3><ol>
+<li><p>Méthodes de mise à jour d’un array</p>
+<ul>
+<li><code>push()</code>: Ajoute un élément à la fin du array</li>
+<li><code>pop()</code>: Supprime le dernier élément du array</li>
+<li><code>unshift()</code>: Ajoute un élément au début du array</li>
+<li><code>shift()</code>: Supprime le premier élément du array</li>
+<li><code>splice()</code>: Supprime&#x2F;ajoute un élément à un indice spécifique</li>
+<li><code>sort()</code>: Trie le array</li>
+<li><code>reverse()</code>: Inverse l’ordre des éléments dans le array</li>
+</ul>
+</li>
+<li><p>Méthodes de parcours des éléments</p>
+<ul>
+<li><code>forEach()</code>: Parcourt les éléments du array</li>
+<li><code>map()</code>: Retourne un nouveau array avec la même longueur que l’original, mais les valeurs internes changent souvent. (Longueur inchangée, valeurs modifiées)<ul>
+<li>Souvent utilisé pour mettre à jour une valeur dans les données React</li>
+</ul>
+</li>
+<li><code>filter()</code>: Retourne un nouveau array avec une longueur généralement inférieure à celle de l’original, mais les valeurs internes restent les mêmes. (Longueur modifiée, valeurs inchangées)<ul>
+<li>Souvent utilisé pour supprimer une valeur des données React</li>
+</ul>
+</li>
+<li><code>reduce()</code>: Communément utilisé pour des fonctions telles que le calcul statistique, l’accumulation et la sommation<ul>
+<li>Module du panier, calcul du prix total par exemple</li>
+</ul>
+</li>
+<li><code>find()</code>: Recherche un élément, le renvoie s’il est trouvé, sinon renvoie undefined</li>
+<li><code>findIndex()</code>: Recherche l’indice d’un élément, le renvoie s’il est trouvé, sinon renvoie <code>-1</code></li>
+<li><code>every()</code>: Renvoie true seulement si tous les éléments renvoient true, sinon renvoie <code>false</code></li>
+<li><code>some()</code>: Renvoie true dès qu’un élément renvoie true, sinon renvoie <code>false</code></li>
+</ul>
+</li>
+<li><p>Autres méthodes </p>
+<ul>
+<li><code>slice()</code>: Coupe certains éléments du array</li>
+<li><code>concat()</code>: Concatène des array</li>
+<li><code>join()</code>: Joint les éléments du array en une chaîne de caractères d’une certaine manière</li>
+<li><code>includes()</code>: Vérifie si un élément est présent, renvoie true s’il est présent, sinon renvoie <code>false</code></li>
+<li><code>indexOf()</code>: Vérifie si un élément est présent, renvoie son indice s’il est trouvé, sinon renvoie <code>-1</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="4-Operations-courantes-sur-le-DOM"><a href="#4-Operations-courantes-sur-le-DOM" class="headerlink" title="4. Opérations courantes sur le DOM"></a>4. Opérations courantes sur le DOM</h3><ol>
+<li><p>Ajouter des éléments du DOM</p>
+<ul>
+<li><code>document.createElement()</code> crée des éléments DOM</li>
+<li><code>xxxDom.appendChild()</code> insère un élément DOM dans le xxxDom</li>
+</ul>
+</li>
+<li><p>Supprimer des éléments du DOM</p>
+<ul>
+<li><code>xxxDom.removeChild()</code> supprime un sous-élément du xxxDom</li>
+<li><code>xxxDom.remove()</code> supprime xxxDom lui-même</li>
+</ul>
+</li>
+<li><p>Modifier des éléments du DOM</p>
+<ul>
+<li><code>xxxDom.innerText / xxxDom.textContent</code> définissent le contenu texte de l’élément</li>
+<li><code>xxxDom.innerHTML</code> définit le contenu HTML de l’élément</li>
+</ul>
+</li>
+<li><p>Obtenir&#x2F;Rechercher des éléments du DOM</p>
+<ul>
+<li><code>document.getElementById()</code> obtient un élément DOM en fonction de l’identifiant</li>
+<li><code>document.querySelector()</code> obtient le premier élément DOM trouvé en fonction de n’importe quel sélecteur</li>
+<li><code>document.querySelectorAll()</code> obtient tous les éléments DOM trouvés en fonction de n’importe quel sélecteur</li>
+</ul>
+</li>
+</ol>
+<h3 id="5-Comprehension-des-fermetures-en-JavaScript"><a href="#5-Comprehension-des-fermetures-en-JavaScript" class="headerlink" title="5. Compréhension des fermetures en JavaScript"></a>5. Compréhension des fermetures en JavaScript</h3><ol>
+<li><p>Concept</p>
+<p>En utilisant l’outil de développement de Chrome, on comprend que l’essence d’une fermeture (closure) est un conteneur dans une fonction interne (non objet JavaScript), contenant les variables locales référencées.</p>
+</li>
+<li><p>Origine de la fermeture</p>
+<ul>
+<li>Imbrication de fonctions</li>
+<li>La fonction interne fait référence aux variables locales de la fonction externe</li>
+<li>La fermeture est créée lors de l’appel de la fonction externe</li>
+</ul>
+</li>
+<li><p>Cycle de vie d’une fermeture</p>
+<ul>
+<li>Création : Lorsque la fonction interne est créée</li>
+<li>Fin de vie : Lorsque la fonction interne n’a plus de références de variables et devient un objet inutile, elle sera automatiquement récupérée par le ramasse-miettes (GC - Garbage Collection).</li>
+</ul>
+</li>
+<li><p>Rôle des fermetures</p>
+<ul>
+<li>Prolonger la durée de vie des variables locales (les garder en vie un peu plus longtemps)</li>
+<li>Permettre à des fonctions externes de manipuler indirectement les données des variables locales de la fonction interne</li>
+</ul>
+</li>
+<li><p>Application des fermetures dans les projets</p>
+<ul>
+<li>Dans React, elles sont sous forme de fonctions d’ordre supérieur afin de réutiliser des fonctions</li>
+</ul>
+</li>
+</ol>
+<h3 id="6-La-reference-de-“this”"><a href="#6-La-reference-de-“this”" class="headerlink" title="6. La référence de “this”"></a>6. La référence de “this”</h3><p>Dans des situations normales, la référence de <code>this</code> dépend de la manière dont la fonction est appelée :</p>
+<ol>
+<li><p>Appel direct (liaison par défaut) : <code>this</code> pointe vers la fenêtre (window), et dans le mode strict (‘use strict’), <code>this</code> pointe vers <code>undefined</code></p>
+</li>
+<li><p>Appel de fonction par un objet (liaison implicite) : <code>this</code> pointe vers l’objet appelant</p>
+</li>
+<li><p>Appel de fonction avec <code>call()/apply()/bind()</code> (liaison explicite) : <code>this</code> pointe vers le premier argument passé</p>
+<ul>
+<li><p>Différences et liens des <code>call()/apply()/bind()</code> :</p>
+<ul>
+<li><code>call()/apply()</code> exécutent immédiatement la fonction, tandis que <code>bind()</code> renvoie une nouvelle fonction</li>
+<li>Lors de l’exécution avec <code>call()/apply()</code>, <code>this</code> pointe vers le premier argument ; la nouvelle fonction retournée par <code>bind()</code> pointe également vers le premier argument, tandis que la fonction d’origine reste inchangée</li>
+<li>La manière de passer les arguments à <code>call()/bind()</code> est la même et peut prendre plusieurs arguments, tandis qu’<code>apply()</code> ne prend que deux arguments, le second étant un array</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Appel de fonction avec <code>new</code> : <code>this</code> pointe vers l’objet d’instance créé</p>
+</li>
+</ol>
+<p><strong>Cas particuliers :</strong></p>
+<ol>
+<li><p>Fonctions fléchées : <code>this</code> pointe vers le <code>this</code> de la fonction externe la plus proche (elle pointe vers le <code>this</code> de la fonction parente)</p>
+</li>
+<li><p>Fonctions de rappel :</p>
+<ul>
+<li>Fonction de rappel de minuterie : <code>this</code> pointe vers la fenêtre, et dans le mode strict, vers <code>undefined</code></li>
+<li>Fonction de rappel d’événement DOM : <code>this</code> pointe vers l’élément DOM lié à l’événement</li>
+</ul>
+</li>
+</ol>
+<h3 id="7-Prototype-et-Chaine-de-Prototype"><a href="#7-Prototype-et-Chaine-de-Prototype" class="headerlink" title="7. Prototype et Chaîne de Prototype"></a>7. Prototype et Chaîne de Prototype</h3><ol>
+<li><p>Prototype</p>
+<ul>
+<li>Ce que nous appelons prototype se réfère à deux propriétés de prototype : <code>__proto__</code> et <code>prototype</code></li>
+<li><code>prototype</code> est appelé propriété de prototype explicite</li>
+<li><code>__proto__</code> est appelé propriété de prototype implicite</li>
+<li>Chaque fonction a une propriété de prototype explicite, dont la valeur est un objet que nous appelons <code>objet prototype</code></li>
+<li>Par défaut, il y a une méthode constructeur sur cet objet prototype, pointant vers la fonction elle-même, et un attribut <code>__proto__</code>, pointant vers l’objet prototype d’Object.</li>
+<li>Chaque instance a une propriété de prototype implicite, dont la valeur pointe vers l’objet prototype de la fonction constructeur correspondante</li>
+</ul>
+<p><strong>Cas particuliers :</strong></p>
+<ul>
+<li><code>Function.prototype === Function.__proto__</code> ; ils pointent vers le même objet</li>
+<li><code>Object.prototype.__proto__ === null</code> ; c’est la fin de la chaîne de prototype</li>
+</ul>
+</li>
+<li><p>Chaîne de Prototype</p>
+<ul>
+<li><p>Concept : À partir de la propriété <code>__proto__</code> d’un objet, toutes les connexions entre les objets forment une structure appelée chaîne de prototype, également connue sous le nom de “chaîne de prototype implicite”</p>
+</li>
+<li><p>Utilité : Utilisée pour rechercher les propriétés d’un objet</p>
+</li>
+<li><p>Règles : Lors de la recherche de propriétés d’un objet ou de l’appel de méthodes d’un objet, la recherche commence d’abord sur l’objet lui-même</p>
+<p>Si la propriété n’est pas trouvée, la recherche se poursuit le long de la chaîne de prototype</p>
+<p>Si la propriété est trouvée, sa valeur est renvoyée</p>
+<p>Finalement, la recherche aboutit à <code>Object.prototype.__proto__</code> , si la propriété n’est toujours pas trouvée, <code>undefined </code>est renvoyé</p>
+</li>
+<li><p>Application : La chaîne de prototype est utilisée pour mettre en œuvre l’héritage</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="8-Le-mecanisme-de-collecte-des-dechets-de-JavaScript"><a href="#8-Le-mecanisme-de-collecte-des-dechets-de-JavaScript" class="headerlink" title="8. Le mécanisme de collecte des déchets de JavaScript"></a>8. Le mécanisme de collecte des déchets de JavaScript</h3><p>En JavaScript，la libération (collecte) des objets est gérée par le collecteur de déchets du navigateur</p>
+<ol>
+<li><p>Collecteur de déchets</p>
+<ul>
+<li>Le navigateur dispose d’un thread dédié qui s’exécute à intervalles très courts</li>
+<li>Son travail principal consiste à déterminer si un objet est un objet inutile, si oui,  le collecteur de déchets va le nettoyer de ses données en mémoire et marquer la mémoire comme étant en état de disponibilité</li>
+</ul>
+</li>
+<li><p>Stratégies de collecte des déchets</p>
+<ul>
+<li><p>Mécanisme : Algorithme de marquage et d’élagage (Mark-and-Sweep)</p>
+<ul>
+<li><p>Description : </p>
+<p>La phase de marquage consiste à marquer tous les objets actifs, tandis que la phase d’élagage détruit les objets non marqués (c’est-à-dire les objets inactifs)</p>
+</li>
+<li><p>Inconvénients :</p>
+<ul>
+<li>Fragmentation de la mémoire, entraînant des blocs de mémoire non contigus, ce qui peut conduire à de nombreux blocs de mémoire inutilisés et à une difficulté de trouver un bloc adapté lors de l’allocation de mémoire pour de grands objets</li>
+<li>La vitesse d’allocation est lente, même en utilisant la stratégie du meilleur ajustement (First-fit), car l’opération reste une opération O(n), dans le pire des cas, une traversée complète de la mémoire peut être nécessaire</li>
+</ul>
+</li>
+<li><p>Solution : </p>
+<p>On peut utiliser l’algorithme de marquage et de compactage (Mark-Compact). Après la phase de marquage, cet algorithme déplace les objets vivants (c’est-à-dire ceux qui ne nécessitent pas d’être nettoyés) vers une extrémité de la mémoire, puis nettoie la mémoire à la frontière</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Mécanisme de collecte des déchets du moteur V8 de JavaScript</p>
+<ul>
+<li>Il utilise un algorithme basé sur le marquage et l’élagage, mais il a subi certaines optimisations</li>
+<li>Pour la zone des objets récemment créés (nouveaux objets), une collecte parallèle est utilisée</li>
+<li>Pour la zone des objets plus anciens, une approche d’augmentation de marquage et de nettoyage paresseux (incremental marking and lazy sweeping) est adoptée</li>
+</ul>
+</li>
+</ol>
+<h3 id="9-Le-mecanisme-de-la-boucle-d’evenements-en-JavaScript"><a href="#9-Le-mecanisme-de-la-boucle-d’evenements-en-JavaScript" class="headerlink" title="9. Le mécanisme de la boucle d’événements en JavaScript"></a>9. Le mécanisme de la boucle d’événements en JavaScript</h3><ol>
+<li><p>Concept : Mécanisme d’exécution du code asynchrone</p>
+</li>
+<li><p>Processus :</p>
+<ul>
+<li>Le thread principal de JavaScript exécute séquentiellement tout le code. Lorsqu’il rencontre du code synchrone, il l’exécute séquentiellement. En revanche, lorsqu’il rencontre du code asynchrone, il le transmet au module de gestion correspondant (thread secondaire) :<ul>
+<li>Par exemple, en cas de rencontre d’une minuterie, elle est gérée par le module de gestion des minuteries. Ce module compte le temps, et lorsque le temps est écoulé, il ajoute automatiquement la fonction de rappel à la file d’attente des rappels (file d’attente des tâches macros)</li>
+<li>De même, en cas de rencontre d’un événement DOM, il est géré par le module de gestion du DOM. Ce module lie l’événement, et lorsque l’événement se produit, il ajoute automatiquement la fonction de rappel à la file d’attente des rappels (file d’attente des tâches macros)</li>
+<li>Lors de rencontres avec des requêtes ajax, elles sont gérées par le module de gestion des requêtes ajax. Ce module envoie la requête, et lorsqu’une réponse est reçue, il ajoute automatiquement la fonction de rappel à la file d’attente des rappels (file d’attente des tâches macros)</li>
+</ul>
+</li>
+<li>Le thread principal de JavaScript ne s’arrête pas et exécute séquentiellement le code suivant jusqu’à ce que tout le code soit exécuté. Ensuite, le thread principal de JavaScript lance la boucle d’événements</li>
+<li>Le thread principal de JavaScript parcourt la file d’attente des rappels, récupère séquentiellement les fonctions de rappel et les exécute<ul>
+<li>La file d’attente des rappels se divise en deux types : file d’attente des tâches macros (macro-tâches) et file d’attente des microtâches (micro-tâches)</li>
+<li><strong>File d’attente des tâches macros :</strong> Fonctions de rappel pour les minuteries, les rappels ajax, les rappels d’événements DOM</li>
+<li><strong>File d’attente des microtâches :</strong> Promise.then&#x2F;catch&#x2F;finally, MutationObserver (fonctionnement de la méthode nextTick)</li>
+<li>Il donne la priorité à l’exécution des fonctions de rappel de la file d’attente des microtâches jusqu’à ce qu’elles soient toutes exécutées</li>
+<li>Après avoir exécuté la première fonction de rappel de la file d’attente des tâches macros, il exécute à nouveau les fonctions de rappel de la file d’attente des microtâches jusqu’à ce qu’elles soient toutes exécutées</li>
+<li>Ensuite, il passe à l’exécution de la prochaine fonction de rappel de la file d’attente des tâches macros, puis répète le processus, et ainsi de suite</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Avis de copyright： </strong>
+          
+          Le droit d&#39;auteur appartient à l&#39;auteur. Pour les réimpressions commerciales, veuillez contacter l&#39;auteur pour autorisation. Pour les réimpressions non commerciales, veuillez indiquer la source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Connaissances-fondamentales/" rel="tag">Connaissances fondamentales</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/CSS/" class="article-nav-link">
+        <strong class="article-nav-caption">Article précédent</strong>
+        <div class="article-nav-title">
+          
+            CSS
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/about/" class="article-nav-link">
+        <strong class="article-nav-caption">Article suivante</strong>
+        <div class="article-nav-title">About Me</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+    
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> LEI
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/homeworkfille.svg" alt="LEI&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Page d&#39;accueil</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Catégories</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Etiquettes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Liens utiles</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2024/about">À propos de moi</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Rechercher">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

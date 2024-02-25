@@ -1,0 +1,1608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>CSS</title>
+    <url>/2024/CSS/</url>
+    <content><![CDATA[<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h3 id="1-Nouvelles-fonctionnalites-de-CSS3"><a href="#1-Nouvelles-fonctionnalites-de-CSS3" class="headerlink" title="1. Nouvelles fonctionnalités de CSS3"></a>1. Nouvelles fonctionnalités de CSS3</h3><ol>
+<li><p>Nouveaux sélecteurs</p>
+<ul>
+<li><p>:last-child correspond au dernier enfant de l’élément parent.</p>
+</li>
+<li><p>:nth-child(n) correspond au n-ième enfant de l’élément parent.</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<!-- more -->
+</li>
+<li><p>Caractéristiques de la bordure</p>
+<ul>
+<li>border-radius: Bordure arrondie</li>
+</ul>
+</li>
+<li><p>Couleur et opacité</p>
+<ul>
+<li><p>opacity: 0.5;</p>
+</li>
+<li><p>color: rgba(0, 0, 0, 0.5)</p>
+</li>
+</ul>
+</li>
+<li><p>Ombres</p>
+<ul>
+<li><p>text-shadow: Ombre du texte</p>
+</li>
+<li><p>box-shadow: Ombre de la boîte</p>
+</li>
+</ul>
+</li>
+<li><p>Transformation</p>
+<ul>
+<li><p>transform: rotate(9deg): Rotation</p>
+</li>
+<li><p>transform: scale(0.5) : Mise à l’échelle</p>
+</li>
+<li><p>transform: translate(100px, 100px): Déplacement</p>
+</li>
+</ul>
+</li>
+<li><p>Transition et animation</p>
+<ul>
+<li><p>transition: Transition</p>
+</li>
+<li><p>animation: Animation</p>
+</li>
+</ul>
+</li>
+<li><p>Requête multimédia</p>
+<ul>
+<li>@media Utilisé pour créer une mise en page réactive.</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Modele-de-boite"><a href="#2-Modele-de-boite" class="headerlink" title="2. Modèle de boîte"></a>2. Modèle de boîte</h3><ol>
+<li><p>Concept : Modèle de mise en page adopté par les éléments du DOM lors du rendu de la page peut être configuré via box-sizing.</p>
+</li>
+<li><p>Catégories :</p>
+<ul>
+<li><p>content-box (Modèle de boîte standard du W3C)<br>Lorsqu’une largeur (width) et une hauteur (height) sont définies pour un élément, cela modifie uniquement la largeur + hauteur.</p>
+</li>
+<li><p>border-box (Modèle de boîte IE)<br>Lorsqu’une largeur (width) et une hauteur (height) sont définies pour un élément, cela modifie la largeur + hauteur + padding.</p>
+</li>
+<li><p>Autres non implémentés</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-BFC"><a href="#3-BFC" class="headerlink" title="3. BFC"></a>3. BFC</h3><ol>
+<li><p>Concept</p>
+<ul>
+<li>BFC, également connu sous le nom de Contexte de Formatage en Bloc, se réfère à : une zone de rendu indépendante</li>
+</ul>
+</li>
+<li><p>Conditions de déclenchement (Activation du BFC)</p>
+<ul>
+<li><p>Définir overflow, c’est-à-dire <code>hidden</code>, <code>auto</code>, <code>scroll</code></p>
+</li>
+<li><p>Définir float, à l’exclusion <code>none</code></p>
+</li>
+<li><p>Définir le positionnement, absolute ou fixed, etc.</p>
+</li>
+</ul>
+</li>
+<li><p>Règles spécifiques</p>
+<ul>
+<li><p>BFC est un élément bloc, et les éléments blocs sont disposés verticalement</p>
+</li>
+<li><p>BFC est un conteneur indépendant, ses éléments internes n’affectent pas les éléments externes au conteneur</p>
+</li>
+<li><p>Pour deux boîtes appartenant au même BFC, il peut y avoir un chevauchement des marges, et la marge maximale est prise</p>
+</li>
+<li><p>Lors du calcul de la hauteur de BFC, les éléments enfants flottants doivent également être inclus dans le calcul</p>
+</li>
+</ul>
+</li>
+<li><p>Applications</p>
+<ul>
+<li><p>Empêcher le chevauchement des marges</p>
+</li>
+<li><p>Effacer les flottants pour éviter l’effondrement de la hauteur</p>
+</li>
+<li><p>Empêcher que les éléments de flux standard soient recouverts par des éléments flottants</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-La-ponderation-et-la-priorite-des-selecteurs"><a href="#4-La-ponderation-et-la-priorite-des-selecteurs" class="headerlink" title="4. La pondération et la priorité des sélecteurs"></a>4. La pondération et la priorité des sélecteurs</h3><ul>
+<li><p>L’ordre de la pondération et de la priorité des sélecteurs：</p>
+<p><code>!important &gt; Style en ligne &gt; #id &gt; .class &gt; balise &gt; * &gt; Héritage &gt; Par défaut</code></p>
+</li>
+<li><p>Les navigateurs CSS analysent les sélecteurs <strong>de droite à gauche</strong></p>
+</li>
+</ul>
+<h3 id="5-Preprocesseur-CSS"><a href="#5-Preprocesseur-CSS" class="headerlink" title="5. Préprocesseur CSS"></a>5. Préprocesseur CSS</h3><p>Les préprocesseurs CSS définissent un nouveau langage qui permet une maintenance et une gestion plus aisées du code CSS. Ils sont principalement:</p>
+<ul>
+<li><p>Sass</p>
+</li>
+<li><p>Less</p>
+</li>
+<li><p>Stylus</p>
+</li>
+</ul>
+<h3 id="6-Flex"><a href="#6-Flex" class="headerlink" title="6. Flex"></a>6. Flex</h3><ol>
+<li><p><strong>Concept</strong></p>
+<ul>
+<li><p>Flex est l’abréviation de “Flexible Box”, ce qui signifie “layout flexible” et est utilisé pour fournir une flexibilité maximale au modèle de boîte.</p>
+</li>
+<li><p>Les éléments utilisant la mise en page Flex sont appelés conteneurs Flex (conteneur flex), abrégé en “conteneur”. Tous ses sous-éléments deviennent automatiquement des membres du conteneur, appelés éléments Flex (élément flex), abrégé en “élément”.</p>
+</li>
+<li><p>Le conteneur a par défaut deux axes : l’axe principal et l’axe transversal (également appelé axe secondaire). Par défaut, l’axe horizontal est l’axe principal et l’axe vertical est l’axe transversal.</p>
+</li>
+</ul>
+</li>
+<li><p>Propriétés du conteneur (2 à 3)</p>
+<ul>
+<li><p><code>flex-direction</code> définit la direction de l’axe principal.</p>
+</li>
+<li><p><code>flex-wrap</code> définit s’il faut passer à la ligne.</p>
+</li>
+<li><p><code>flex-flow</code> est une forme abrégée des propriétés <code>flex-direction</code> et <code>flex-wrap</code>.</p>
+</li>
+<li><p><code>justify-content</code> définit l’alignement des éléments le long de l’axe principal.</p>
+</li>
+<li><p><code>align-items</code> définit l’alignement des éléments le long de l’axe transversal.</p>
+</li>
+<li><p><code>align-content</code> définit l’alignement des éléments sur l’axe de croisement.</p>
+</li>
+</ul>
+</li>
+<li><p>Propriétés des éléments (2 à 3)</p>
+<ul>
+<li><p><code>order</code> définit l’ordre d’arrangement des éléments. Plus le nombre est petit, plus l’élément est placé en avant. La valeur par défaut est 0.</p>
+</li>
+<li><p><code>flex-grow</code> définit le facteur de croissance de l’élément. La valeur par défaut est 0, ce qui signifie qu’il ne se développera pas même s’il y a de l’espace supplémentaire.</p>
+</li>
+<li><p><code>flex-shrink</code> définit le facteur de rétrécissement de l’élément. La valeur par défaut est 1, ce qui signifie qu’il se rétrécira en cas de manque d’espace.</p>
+</li>
+<li><p><code>flex-basis</code> définit l’espace sur l’axe principal que l’élément occupe avant la distribution de l’espace supplémentaire. Sa valeur par défaut est “auto”, correspondant à la taille originale de l’élément.</p>
+</li>
+<li><p><code>flex</code> est une abréviation de <code>flex-grow</code>, <code>flex-shrink</code> et <code>flex-basis</code>, avec des valeurs par défaut de <code>0 1 auto</code></p>
+</li>
+<li><p><code>align-self</code> permet à un élément individuel d’avoir un alignement différent des autres éléments, pouvant remplacer la propriété <code>align-items</code>.</p>
+</li>
+</ul>
+</li>
+<li><p>Compréhension</p>
+<ul>
+<li><p><code>flex-grow: 1</code> Si de l’espace supplémentaire est disponible, l’élément va se développer</p>
+</li>
+<li><p><code>flex-shrink: 1</code> Si l’espace disponible est insuffisant, l’élément va se réduire</p>
+</li>
+<li><p><code>flex-basis: 0%</code> Lorsque défini à 0%, cela signifie qu’il n’occupe pas d’espace sur l’axe principal. Cependant, en raison des paramètres de <code>flex-grow</code> et <code>flex-shrink</code>, l’élément se développera ou se réduira automatiquement</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="7-Methodes-de-masquage-des-elements-de-la-page"><a href="#7-Methodes-de-masquage-des-elements-de-la-page" class="headerlink" title="7. Méthodes de masquage des éléments de la page"></a>7. Méthodes de masquage des éléments de la page</h3><ol>
+<li><code>display: none</code> Ne prend pas de place. Ne déclenche pas les événements DOM</li>
+<li><code>opacity: 0</code> Occupe de la place, mais n’est pas visible. Déclenche les événements DOM</li>
+<li><code>visibility: hidden</code> Occupe de la place, mais n’est pas visible. Ne déclenche pas les événements DOM</li>
+<li><code>position: absolute; left: -10000px</code> Déplace l’élément hors de l’écran</li>
+<li><code>z-index: -1</code> Masque l’élément actuel derrière d’autres éléments positionnés</li>
+</ol>
+<h3 id="8-Centrer-un-element-horizontalement-et-verticalement"><a href="#8-Centrer-un-element-horizontalement-et-verticalement" class="headerlink" title="8. Centrer un élément horizontalement et verticalement"></a>8. Centrer un élément horizontalement et verticalement</h3><ol>
+<li><p>En utilisant la position absolue, avec les dimensions (largeur et hauteur) inconnues pour les sous-éléments</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"><span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>En utilisant la position absolue, les dimensions des sous-éléments doivent être explicitement définies</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"><span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line"><span class="attribute">margin-left</span>: -<span class="number">100px</span>;</span><br><span class="line"><span class="attribute">margin-top</span>: -<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>En utilisant Flex</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line"><span class="attribute">justify-content</span>: center;</span><br><span class="line"><span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Connaissances basiques</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ES6</title>
+    <url>/2024/ES6/</url>
+    <content><![CDATA[<h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><blockquote>
+<p>Info: Cette partie du contenu est remerciée pour l’aide apportée du cyber-ami “chargeur du front-end” (前端充电宝 en chinois), qui est l’ingénieur en développement front-end venant de la Hangzhou ville, en Chine. Son blog en chinois peut être consulté sur rubrique “liens utiles” .</p>
+</blockquote>
+<h3 id="1-Differences-entre-let-const-et-var"><a href="#1-Differences-entre-let-const-et-var" class="headerlink" title="1. Différences entre let, const et var"></a>1. Différences entre <code>let</code>, <code>const</code> et <code>var</code></h3><ol>
+<li><p>Portée du bloc</p>
+<p>La portée de bloc est délimitée par <code>&#123; &#125;</code>, <code>let</code> et <code>const</code> ont une portée de bloc.</p>
+<p><code>var</code> n’a pas de portée de bloc, c’est une portée de fonction. Les variables déclarées avec <code>var</code> dans une fonction seront détruites lorsque la fonction se termine.</p>
+<span id="more"></span>
+
+<p>La portée de bloc résout deux problèmes de l’ES5 :</p>
+<ul>
+<li><p>Le risque de recouvrement des variables externes par des variables internes</p>
+</li>
+<li><p>Les variables de boucle utilisées pour le comptage peuvent fuir et devenir des variables globales</p>
+</li>
+</ul>
+</li>
+<li><p>Hissage des variables (Hoisting variables)</p>
+<p>L’hissage des variables en JavaScript se réfère au déplacement de la déclaration des variables en haut de leur portée avant l’exécution du code. Cela signifie que vous pouvez utiliser une variable avant sa déclaration. Cependant, seul la déclaration est hissée, pas l’assignation.</p>
+<p>Toutes les déclarations de variables sont hissées, mais <code>var</code> est initialisée à <code>undefined</code> lors de l’hissage, tandis que les déclarations avec <code>const</code> et <code>let</code> ne sont pas initialisées, entraînant une zone morte temporaire (temporal dead zone) en cas d’accès avant l’assignation.</p>
+<p>Les variables déclarées avec <code>var</code> ont une portée sur toute la fonction, tandis que celles déclarées avec <code>let</code> et <code>const</code> ont une portée limitée à la zone avant leur déclaration.</p>
+<p>Voici quelques exemples :</p>
+<ul>
+<li><p>Hissage avec <code>var</code> :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">5</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Hissage avec <code>let</code> ou <code>const</code>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// console.log(y); // ReferenceError: y is not defined</span></span><br><span class="line"><span class="keyword">let</span> y = <span class="number">10</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(y); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>En conclusion, comprendre l’hissage des variables aide à éviter les comportements inattendus liés à l’utilisation de variables avant leur déclaration. Dans le code, la meilleure pratique est de déclarer une variable avant de l’utiliser pour assurer un code plus clair et plus maintenable.</p>
+</li>
+<li><p>Ajout d’attributs globaux</p>
+<p>Dans le navigateur, l’objet global est <code>window</code>, tandis que dans Node, l’objet global est <code>global</code></p>
+<p>Les variables déclarées avec <code>var</code> deviennent des variables globales et seront ajoutées comme propriétés de l’objet global. Cependant, cela n’est pas le cas avec <code>let</code> et <code>const</code></p>
+</li>
+<li><p>Redéclaration</p>
+<p>Lorsqu’une variable est déclarée avec <code>var</code>, il est possible de la redéclarer, et la variable du même nom déclarée ultérieurement écrasera la précédente. Cependant, les déclarations avec <code>let</code> et <code>const</code> ne permettent pas la redéclaration</p>
+</li>
+<li><p>Zone morte temporaire</p>
+<p>Avant la déclaration d’une variable avec <code>let</code> ou <code>const</code>, celle-ci n’est pas accessible. Syntaxiquement, cela est appelé “zone morte temporaire”</p>
+<p>Les variables déclarées avec <code>var</code> ne sont pas sujettes à la zone morte temporaire</p>
+</li>
+<li><p>Initialisation des valeurs</p>
+<p>Lors de la déclaration de variables, <code>var</code> et <code>let</code> peuvent ne pas être initialisés immédiatement, mais une variable déclarée avec <code>const</code> doit être initialisée</p>
+</li>
+<li><p>Pointeurs</p>
+<p><code>let</code> et <code>const</code> sont des syntaxes introduites par ES6 pour créer des variables.</p>
+<p>Les variables créées avec <code>let</code> peuvent avoir leur pointeur modifié, c’est-à-dire qu’elles peuvent être réaffectées. En revanche, les variables déclarées avec <code>const</code> ne peuvent pas être réaffectées</p>
+<table>
+<thead>
+<tr>
+<th align="center">Différence</th>
+<th align="center">var</th>
+<th align="center">let</th>
+<th align="center">cont</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Portée de bloc</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+<td align="center">✔</td>
+</tr>
+<tr>
+<td align="center">Hissage des variables</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+</tr>
+<tr>
+<td align="center">Ajout de variables globales</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+</tr>
+<tr>
+<td align="center">Redéclaration des variables</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+</tr>
+<tr>
+<td align="center">Zone morte temporaire</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+<td align="center">✔</td>
+</tr>
+<tr>
+<td align="center">Initialisation des valeurs</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+</tr>
+<tr>
+<td align="center">Changement de pointeur</td>
+<td align="center">✔</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h3 id="2-Les-proprietes-d’un-objet-const-peuvent-elles-etre-modifiees"><a href="#2-Les-proprietes-d’un-objet-const-peuvent-elles-etre-modifiees" class="headerlink" title="2. Les propriétés d’un objet const peuvent-elles être modifiées ?"></a>2. Les propriétés d’un objet const peuvent-elles être modifiées ?</h3><p><code>const</code> ne garantit pas que la valeur d’une variable ne peut pas être modifiée, mais plutôt que l’adresse mémoire pointée par la variable ne peut pas être modifiée.</p>
+<p>Pour les types de données de base (nombres, chaînes de caractères, valeurs booléennes), leur valeur est directement stockée à l’adresse mémoire pointée par la variable, ce qui équivaut à une constante.</p>
+<p>Cependant, pour les types de données par référence (principalement les objets et les array), la variable pointe vers l’adresse mémoire des données. Une fois initialisée, tant que la variable n’est pas réaffectée (modifiant l’adresse mémoire), il est possible d’effectuer des opérations arbitraires sur ce type de référence.</p>
+<h3 id="3-Est-ce-que-les-fonctions-flechees-peuvent-etre-creees-avec-le-mot-cle-‘new’"><a href="#3-Est-ce-que-les-fonctions-flechees-peuvent-etre-creees-avec-le-mot-cle-‘new’" class="headerlink" title="3. Est-ce que les fonctions fléchées peuvent être créées avec le mot-clé ‘new’?"></a>3. Est-ce que les fonctions fléchées peuvent être créées avec le mot-clé ‘new’?</h3><p>Les fonctions fléchées n’ont pas de prototype, n’ont pas leur propre référence <code>this</code>, et ne peuvent pas utiliser le paramètre <code>arguments</code>. Par conséquent, il n’est pas possible d’utiliser ‘new’ pour créer une fonction fléchée.</p>
+<h3 id="4-Differences-entre-les-fonctions-flechees-et-les-fonctions-traditionnelles"><a href="#4-Differences-entre-les-fonctions-flechees-et-les-fonctions-traditionnelles" class="headerlink" title="4. Différences entre les fonctions fléchées et les fonctions traditionnelles"></a>4. Différences entre les fonctions fléchées et les fonctions traditionnelles</h3><ol>
+<li><p>Les fonctions fléchées sont plus concises que les fonctions traditionnelles :</p>
+<ul>
+<li><p>Si aucune argument n’est requis, il suffit d’écrire une paire de parenthèses vides</p>
+</li>
+<li><p>En présence d’un seul argument, les parenthèses autour de l’argument peuvent être omises</p>
+</li>
+<li><p>Pour plusieurs arguments, ils sont séparés par des virgules</p>
+</li>
+<li><p>Si le corps de la fonction renvoie une seule instruction, les accolades peuvent être omises</p>
+</li>
+<li><p>Si la fonction n’a pas besoin de renvoyer de valeur et ne comporte qu’une seule instruction, le mot-clé ‘void’ peut être ajouté devant cette instruction. </p>
+<p>C’est couramment utilisé lors de l’appel d’une fonction, par exemple:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">fn</span> = (<span class="params"></span>) =&gt; <span class="keyword">void</span> <span class="title function_">doesNotReturn</span>();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Les fonctions fléchées n’ont pas de référence <code>this</code> propre</p>
+<p>Les fonctions fléchées ne créent pas leur propre référence <code>this</code>, elles n’ont donc pas de <code>this</code>propre. Elles héritent plutôt du <code>this</code> de leur portée parente. Ainsi, la référence ‘this’ dans une fonction fléchée est déterminée lors de sa définition et ne change pas par la suite.</p>
+</li>
+<li><p>La référence <code>this</code> héritée par une fonction fléchée ne changera jamais: </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> id = <span class="string">&#x27;GLOBAL&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="string">&#x27;OBJ&#x27;</span>,</span><br><span class="line">  <span class="attr">a</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">id</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">b</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">id</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">obj.<span class="title function_">a</span>();    <span class="comment">// &#x27;OBJ&#x27;</span></span><br><span class="line">obj.<span class="title function_">b</span>();    <span class="comment">// &#x27;GLOBAL&#x27;</span></span><br><span class="line"><span class="keyword">new</span> obj.<span class="title function_">a</span>()  <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">new</span> obj.<span class="title function_">b</span>()  <span class="comment">// Uncaught TypeError: obj.b is not a constructor</span></span><br></pre></td></tr></table></figure>
+
+<p>La méthode <code>b</code> de l’objet <code>obj</code> est définie à l’aide d’une fonction fléchée. Dans cette fonction, <code>this</code> pointe toujours vers le contexte d’exécution global où elle a été définie, même si la fonction est appelée en tant que méthode de l’objet <code>obj</code>. </p>
+<p>Il est important de noter que les accolades <code>&#123;&#125;</code> définissant l’objet ne créent pas un environnement d’exécution distinct ; elles restent dans le contexte global.</p>
+</li>
+<li><p>Les méthodes telles que <code>call()</code>, <code>apply()</code>, <code>bind()</code> ne peuvent pas modifier la référence <code>this</code> dans une fonction fléchée:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> id = <span class="string">&#x27;Global&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun1</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">id</span>)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">fun1</span>();                     <span class="comment">// &#x27;Global&#x27;</span></span><br><span class="line">fun1.<span class="title function_">call</span>(&#123;<span class="attr">id</span>: <span class="string">&#x27;Obj&#x27;</span>&#125;);     <span class="comment">// &#x27;Global&#x27;</span></span><br><span class="line">fun1.<span class="title function_">apply</span>(&#123;<span class="attr">id</span>: <span class="string">&#x27;Obj&#x27;</span>&#125;);    <span class="comment">// &#x27;Global&#x27;</span></span><br><span class="line">fun1.<span class="title function_">bind</span>(&#123;<span class="attr">id</span>: <span class="string">&#x27;Obj&#x27;</span>&#125;)();   <span class="comment">// &#x27;Global&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Les fonctions fléchées ne peuvent pas être utilisées en tant que constructeurs</p>
+<p>Le processus de l’utilisation du mot-clé <code>new</code> pour les constructeurs a été expliqué précédemment. </p>
+<p>En réalité, la deuxième étape consiste à lier le ‘this’ de la fonction à l’objet nouvellement créé. Cependant, étant donné que les fonctions fléchées n’ont pas de <code>this</code> propre, pointent vers l’environnement d’exécution externe, et ne peuvent pas changer leur référence <code>this</code>, elles ne peuvent donc pas être utilisées en tant que constructeurs.</p>
+</li>
+<li><p>Les fonctions fléchées n’ont pas leur propre parametres <code>arguments</code></p>
+<p>Les fonctions fléchées n’ont pas leur propre objet <code>arguments</code>. </p>
+<p>Lorsqu’on accède à <code>arguments</code> dans une fonction fléchée, on obtient en réalité la valeur de <code>arguments</code> de la fonction externe</p>
+</li>
+<li><p>Les fonctions fléchées n’ont pas de <code>prototype</code></p>
+</li>
+<li><p>Les fonctions fléchées ne peuvent pas être utilisées en tant que fonctions génératrices et ne peuvent pas utiliser le mot-clé <code>yield</code></p>
+</li>
+</ol>
+<h3 id="5-A-quoi-pointe-le-this-des-fonctions-flechees"><a href="#5-A-quoi-pointe-le-this-des-fonctions-flechees" class="headerlink" title="5. À quoi pointe le this des fonctions fléchées ?"></a>5. À quoi pointe le <code>this</code> des fonctions fléchées ?</h3><p>Les fonctions fléchées diffèrent des fonctions traditionnelles en JavaScript, elles n’ont pas de <code>this</code> propre, et leur <code>this</code> est capturé à partir du contexte dans lequel elles sont définies. </p>
+<p>Cela devient leur propre référence <code>this</code>, et étant donné qu’elles n’ont pas de <code>this</code> propre, elles ne peuvent pas être invoquées avec le mot-clé <code>new</code>. De plus, la référence <code>this</code> ainsi capturée ne sera pas modifiée.</p>
+<h3 id="6-Le-role-et-les-scenarios-d’utilisation-de-l’operateur-de-propagation"><a href="#6-Le-role-et-les-scenarios-d’utilisation-de-l’operateur-de-propagation" class="headerlink" title="6. Le rôle et les scénarios d’utilisation de l’opérateur de propagation"></a>6. Le rôle et les scénarios d’utilisation de l’opérateur de propagation</h3><ol>
+<li><p>Opérateur de propagation pour les objets</p>
+<p>L’opérateur de propagation pour les objets (…) est utilisé pour extraire toutes les propriétés énumérables de l’objet paramètre et les copier dans l’objet actuel</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> bar = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> baz = &#123; ...bar &#125;; <span class="comment">// &#123; a: 1, b: 2 &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>La méthode ci-dessus est en réalité équivalente à :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> bar = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> baz = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, bar); <span class="comment">// &#123; a: 1, b: 2 &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>La méthode <code>Object.assign</code> est utilisée pour fusionner les objets en copiant toutes les propriétés énumérables de l’objet source dans l’objet cible. </p>
+<p>Le premier argument de la méthode <code>Object.assign</code> est l’objet cible, et les arguments suivants sont les objets sources. </p>
+<p>Si l’objet cible et l’objet source ont des propriétés de même nom, ou si plusieurs objets sources ont des propriétés de même nom, les propriétés ultérieures écraseront les propriétés précédentes.</p>
+<p>De même, si des propriétés personnalisées de l’utilisateur sont placées après l’opérateur de propagation, les propriétés de même nom à l’intérieur de l’opérateur de propagation seront écrasées:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> bar = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> baz = &#123;...bar, ...&#123;<span class="attr">a</span>:<span class="number">2</span>, <span class="attr">b</span>: <span class="number">4</span>&#125;&#125;;  <span class="comment">// &#123;a: 2, b: 4&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Opérateur de propagation pour les array</p>
+<p>L’opérateur de propagation pour les array permet de convertir un array en une séquence de paramètres séparés par des virgules, et ne peut déplier qu’un seul niveau de array à chaque fois</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(...[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="comment">// 1 2 3</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(...[<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">5</span>])</span><br><span class="line"><span class="comment">// 1 [2, 3, 4] 5</span></span><br></pre></td></tr></table></figure>
+
+<p>Voici quelques exemples d’utilisation de l’opérateur de propagation pour les array:</p>
+<ul>
+<li><p><strong>Convertir un array en une séquence de paramètres</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="title function_">add</span>(...numbers) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Copier un array</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [...arr1];</span><br></pre></td></tr></table></figure>
+
+<p>À retenir : <strong>L’opérateur de propagation (…) est utilisé pour extraire toutes les propriétés énumérables de l’objet de paramètre et les copier dans l’objet actuel</strong>, ici l’objet de paramètre est un array, et tous les objets à l’intérieur du array sont de types de données de base, copiant ainsi tous les types de données de base dans un nouveau array.</p>
+</li>
+<li><p><strong>Fusionner des array</strong></p>
+<p>Si on souhaite fusionner des array à l’intérieur d’un array, vous pouvez le faire de la manière suivante :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="string">&#x27;one&#x27;</span>, ...arr1, <span class="string">&#x27;four&#x27;</span>, <span class="string">&#x27;five&#x27;</span>];</span><br><span class="line"><span class="comment">// [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;, &quot;five&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>L’opérateur de propagation combiné avec la déstructuration est utilisé pour générer des array</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [first, ...rest] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">first <span class="comment">// 1</span></span><br><span class="line">rest  <span class="comment">// [2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<p>À noter: <strong>Si vous utilisez l’opérateur de propagation dans l’affectation d’un array, il doit être placé uniquement en dernière position des paramètres, sinon une erreur sera signalée</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [...rest, last] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];         <span class="comment">// erreur</span></span><br><span class="line"><span class="keyword">const</span> [first, ...rest, last] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];  <span class="comment">// erreur</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Convertir une chaîne de caractères en un array réel</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">[...<span class="string">&#x27;hello&#x27;</span>] <span class="comment">// [ &quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot; ]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Tout objet implémentant l’interface Iterator peut être converti en un array réel à l’aide de l’opérateur de propagation</strong></p>
+<p>Une application courante est la conversion de certaines structures de données en array : utilisée pour remplacer la syntaxe <code>Array.prototype.slice.call(arguments)</code> de l’ES5</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// l&#x27;objet arguments</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> args = [...<span class="variable language_">arguments</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Utiliser les fonctions <code>Math</code> pour obtenir des valeurs spécifiques dans un array</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">9</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">1</span>];</span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">min</span>(...numbers); <span class="comment">// 1</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">max</span>(...numbers); <span class="comment">// 9  </span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="7-Comprehension-de-la-destructuration-des-objets-et-des-array"><a href="#7-Comprehension-de-la-destructuration-des-objets-et-des-array" class="headerlink" title="7. Compréhension de la déstructuration des objets et des array"></a>7. Compréhension de la déstructuration des objets et des array</h3><p>La déconstruction est un nouveau modèle d’extraction de données proposé par ES6. </p>
+<p>Ce modèle permet d’extraire sélectivement les valeurs souhaitées d’un objet ou d’un array.</p>
+<ol>
+<li><p><strong>Déconstruction des array</strong></p>
+<p>Lors de la déconstruction d’un array, l’extraction des données souhaitées se fait en fonction de la position des éléments :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Finalement, les valeurs des indices 0, 1 et 2 du array sont respectivement assignées aux variables a, b et c, c’est-à-dire <code>1, 2, 3</code>.</p>
+<p>Les valeurs des éléments aux indices 0, 1 et 2 du array sont précisément mappées aux variables de gauche aux indices 0, 1 et 2, c’est le mode de fonctionnement de la déconstruction d’arrays. </p>
+<p>Il est également possible d’effectuer une extraction précise de certains éléments du array en attribuant des espaces réservés vides aux variables de gauche.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [a,,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p>En laissant des espaces vides au milieu, il est possible d’assigner facilement les valeurs de la première et de la dernière position du array aux variables a et c, c’est-à-dire <code>a=1 et c=3</code></p>
+</li>
+<li><p>Déconstruction des objets</p>
+<p>La déconstruction des objets est légèrement plus complexe que la déconstruction des array, mais elle est également plus puissante.</p>
+<p>Lors de la déconstruction des objets, c’est le nom des propriétés qui sert de critère de correspondance pour extraire les données souhaitées.</p>
+<p>Définissons maintenant un objet :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> stu = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">24</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Si l’on souhaite déconstruire ses deux propriétés propres, on peut le faire ainsi :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; name, age &#125; = stu</span><br></pre></td></tr></table></figure>
+
+<p>Nous obtenons deux variables de niveau égal à ‘name’ et ‘age’ : <code>name = &#39;Bob&#39;, age = 24</code>.</p>
+<p>Il est important de noter que la déconstruction des objets se base strictement sur le nom des propriétés en tant que critère de localisation. Par conséquent, même si on échange les positions de ‘name’ et ‘age’, le résultat reste le même :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; age, name &#125; = stu <span class="comment">// age = 24 name = &quot;Bob&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="8-Comment-extraire-les-proprietes-specifiques-d’un-objet-fortement-imbrique"><a href="#8-Comment-extraire-les-proprietes-specifiques-d’un-objet-fortement-imbrique" class="headerlink" title="8. Comment extraire les propriétés spécifiques d’un objet fortement imbriqué?"></a>8. Comment extraire les propriétés spécifiques d’un objet fortement imbriqué?</h3><p>Il arrive parfois de rencontrer des objets fortement imbriqués:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> school = &#123;</span><br><span class="line">   <span class="attr">classes</span>: &#123;</span><br><span class="line">      <span class="attr">stu</span>: &#123;</span><br><span class="line">         <span class="attr">name</span>: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">         <span class="attr">age</span>: <span class="number">24</span>,</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Comme dans le cas de la variable ‘name’ ici, qui est imbriquée sur quatre niveaux, il est évident que tenter de l’extraire avec les méthodes traditionnelles ne fonctionnera pas:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; name &#125; = school <span class="comment">// ne marche pas</span></span><br></pre></td></tr></table></figure>
+
+<p>Parce que l’objet ‘school’ lui-même ne possède pas la propriété ‘name’, cette dernière se trouve à l’intérieur de l’objet ‘fils du fils’ de l’objet ‘school’. </p>
+<p>Pour extraire ‘name’, une méthode plutôt laborieuse consiste à déconstruire couche par couche :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; classes &#125; = school</span><br><span class="line"><span class="keyword">const</span> &#123; stu &#125; = classes</span><br><span class="line"><span class="keyword">const</span> &#123; name &#125; = stu</span><br><span class="line">name <span class="comment">// &#x27;Bob&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Mais il existe une méthode plus standard pour résoudre ce problème en une seule ligne de code : l’on peut, du côté droit des noms de variables déconstruites, utiliser la forme <code>deux-points + &#123;nom de la propriété cible&#125;</code> pour poursuivre la déconstruction en continuant ainsi jusqu’à obtenir les données ciblées : </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="attr">classes</span>: &#123; <span class="attr">stu</span>: &#123; name &#125; &#125;&#125; = school</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name)  <span class="comment">// &#x27;Bob&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="9-Comprehension-du-parametre-rest"><a href="#9-Comprehension-du-parametre-rest" class="headerlink" title="9. Compréhension du paramètre rest"></a>9. Compréhension du paramètre <code>rest</code></h3><p>Lorsque l’opérateur de spread est utilisé sur les paramètres d’une fonction, il peut également regrouper une séquence de paramètres distincts en un seul array :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mutiple</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> val <span class="keyword">of</span> args) &#123;</span><br><span class="line">    result *= val;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">mutiple</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>) <span class="comment">// 24</span></span><br></pre></td></tr></table></figure>
+
+<p>Ici, la fonction ‘multiple’ reçoit quatre paramètres distincts, mais si l’on essaie d’afficher la valeur de ‘args’ à l’intérieur de cette fonction, on constatera qu’il s’agit d’un array :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mutiple</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(args)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">mutiple</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>) <span class="comment">// [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+
+<p>C’est là que réside la puissance de l’opérateur <code>...rest</code>. Il peut regrouper plusieurs arguments d’une fonction dans un array. </p>
+<p>Cela est souvent utilisé pour récupérer les paramètres excédentaires d’une fonction, ou pour traiter des situations où le nombre de paramètres de la fonction est incertain, comme dans l’exemple ci-dessus.</p>
+<h3 id="10-Syntaxe-des-modeles-et-le-traitement-des-chaines-de-caracteres-dans-ES6"><a href="#10-Syntaxe-des-modeles-et-le-traitement-des-chaines-de-caracteres-dans-ES6" class="headerlink" title="10. Syntaxe des modèles et le traitement des chaînes de caractères dans ES6"></a>10. Syntaxe des modèles et le traitement des chaînes de caractères dans ES6</h3><p>ES6 a introduit le concept de ‘syntaxe des modèles’. Avant ES6, la concaténation de chaînes de caractères était une tâche laborieuse :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;css&#x27;</span>   </span><br><span class="line"><span class="keyword">var</span> career = <span class="string">&#x27;coder&#x27;</span> </span><br><span class="line"><span class="keyword">var</span> hobby = [<span class="string">&#x27;coding&#x27;</span>, <span class="string">&#x27;writing&#x27;</span>]</span><br><span class="line"><span class="keyword">var</span> finalString = <span class="string">&#x27;my name is &#x27;</span> + name + <span class="string">&#x27;, I work as a &#x27;</span> + career + <span class="string">&#x27;, I love &#x27;</span> + hobby[<span class="number">0</span>] + <span class="string">&#x27; and &#x27;</span> + hobby[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Avec seulement quelques variables, écrire autant de signes plus et être constamment vigilant quant aux espaces et à la ponctuation à l’intérieur pouvait être furieux. </p>
+<p>L’introduction des chaînes de modèles a considérablement simplifié cette tâche : Les chaînes de caractères ne sont pas seulement plus faciles à concaténer, mais aussi plus faciles à lire, améliorant ainsi la qualité globale du code</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;css&#x27;</span>   </span><br><span class="line"><span class="keyword">var</span> career = <span class="string">&#x27;coder&#x27;</span> </span><br><span class="line"><span class="keyword">var</span> hobby = [<span class="string">&#x27;coding&#x27;</span>, <span class="string">&#x27;writing&#x27;</span>]</span><br><span class="line"><span class="keyword">var</span> finalString = <span class="string">`my name is <span class="subst">$&#123;name&#125;</span>, I work as a <span class="subst">$&#123;career&#125;</span> I love <span class="subst">$&#123;hobby[<span class="number">0</span>]&#125;</span> and <span class="subst">$&#123;hobby[<span class="number">1</span>]&#125;</span>`</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Les avantages des chaînes de modèles :</strong></p>
+<ol>
+<li><p>Permet l’incorporation de variables avec la syntaxe <code>$&#123;&#125;</code></p>
+</li>
+<li><p>Dans les chaînes de modèles, les espaces, les indentations et les sauts de ligne sont conservés</p>
+</li>
+<li><p>Les chaînes de modèles prennent en charge entièrement les expressions opérationnelles, permettant d’effectuer des calculs à l’intérieur de <code>$&#123; &#125;</code></p>
+</li>
+</ol>
+<p>En se basant sur le premier point, il est possible d’écrire du code HTML directement et sans obstacles dans les chaînes de modèles :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> list = <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;ul&gt;</span></span><br><span class="line"><span class="string">        &lt;li&gt;Élément de liste 1&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;li&gt;Élément de liste 2&lt;/li&gt;</span></span><br><span class="line"><span class="string">    &lt;/ul&gt;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(message); <span class="comment">// Sortie correcte, aucune erreur n&#x27;est générée</span></span><br></pre></td></tr></table></figure>
+
+<p>En se basant sur le deuxième point, il est possible d’insérer des calculs simples et des appels de fonction directement dans <code>$&#123;&#125;</code> :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> finalString = <span class="string">`<span class="subst">$&#123;a&#125;</span> + <span class="subst">$&#123;b&#125;</span> = <span class="subst">$&#123;a+b&#125;</span>`</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(finalString)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">add</span>(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// Sort &#x27;1 + 2 = 3&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>En plus de la syntaxe des modèles, ES6 a également introduit une série de méthodes de chaînes de caractères visant à améliorer l’efficacité du développement :</p>
+<ul>
+<li><p><strong>jugement d’existence</strong></p>
+<p>Par le passé, pour déterminer si un caractère&#x2F;une chaîne de caractères était présent dans une autre chaîne, on utilisait uniquement <code>indexOf &gt; -1</code>. Maintenant, en ES6, trois nouvelles méthodes sont disponibles : <code>includes</code>, <code>startsWith</code>, <code>endsWith</code>. Elles renvoient toutes une valeur booléenne pour indiquer si l’élément recherché existe.</p>
+<ol>
+<li><p><strong>includes</strong>  Vérifie la relation d’inclusion entre une chaîne de caractères et une sous-chaîne :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> son = <span class="string">&#x27;haha&#x27;</span> </span><br><span class="line"><span class="keyword">const</span> father = <span class="string">&#x27;xixi haha hehe&#x27;</span></span><br><span class="line">father.<span class="title function_">includes</span>(son) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>startsWith</strong>  Vérifie si une chaîne de caractères commence par un certain caractère&#x2F;une certaine séquence :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> father = <span class="string">&#x27;xixi haha hehe&#x27;</span></span><br><span class="line">father.<span class="title function_">startsWith</span>(<span class="string">&#x27;haha&#x27;</span>) <span class="comment">// false</span></span><br><span class="line">father.<span class="title function_">startsWith</span>(<span class="string">&#x27;xixi&#x27;</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>endsWith</strong> Vérifie si une chaîne de caractères se termine par un certain caractère&#x2F;une certaine séquence :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> father = <span class="string">&#x27;xixi haha hehe&#x27;</span></span><br><span class="line">father.<span class="title function_">endsWith</span>(<span class="string">&#x27;hehe&#x27;</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p><strong>Répétition automatique</strong> </p>
+<p>On peut utiliser la méthode repeat pour reproduire plusieurs fois la même chaîne de caractères ( soit la copier de manière continue) :</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> sourceCode = <span class="string">&#x27;repeat for 3 times;&#x27;</span></span><br><span class="line"><span class="keyword">const</span> repeated = sourceCode.<span class="title function_">repeat</span>(<span class="number">3</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(repeated) <span class="comment">// repeat for 3 times;repeat for 3 times;repeat for 3 times;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tech</category>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>Connaissances fondamentales</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>/2024/Git/</url>
+    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h3 id="1-Installation-de-Git"><a href="#1-Installation-de-Git" class="headerlink" title="1. Installation de Git"></a>1. Installation de Git</h3><ol>
+<li><p>Téléchargement et installation</p>
+<p>Lien de téléchargement:  <a href="https://git-scm.com/">https://git-scm.com/</a></p>
+</li>
+<li><p>Invite de commandes</p>
+<ul>
+<li><p>CMD: <code>CMD</code> est l’abréviation de command, c’est-à-dire l’invite de commandes </p>
+</li>
+<li><p>Powershell: il peut être considéré comme une version améliorée ou une version complémentaire de <code>CMD</code>, et prend en charge la plupart des commandes Linux</p>
+<span id="more"></span>
+</li>
+<li><p>Git Bash: bash est une ligne de commande de style Linux, les chemins sont également de style Linux, et elle peut utiliser des commandes Windows et Linux. Lors de l’installation de Git, un environnement bash léger est également installé, puis en lançant <code>git bash</code>, la fenêtre de commande qui s’ouvre contient les variables d’environnement de cet environnement bash. </p>
+<p>bash est une bibliothèque de commandes basée sur le <code>shell</code> et un script de commande sous <code>unix</code></p>
+</li>
+</ul>
+</li>
+<li><p>Variable d’environnement</p>
+<ul>
+<li><p>Tout simplement, les variables d’environnement sont des moyens rapides d’ouvrir des fichiers</p>
+</li>
+<li><p>Lorsque tu souhaites exécuter un programme, le système le recherchera dans le répertoire actuel. S’il ne le trouve pas, il cherchera dans les variables d’environnement du chemin (PATH). S’il le trouve, il l’exécutera; sinon, cela risque de provoquer une erreur. En configurant les variables d’environnement, nous pouvons optimiser notre efficacité d’utilisation, économiser du temps</p>
+</li>
+<li><p>Configurer les variables d’environnement sur l’ordinateur : </p>
+<p><strong>Panneau de configuration -&gt; Système et sécurité -&gt; Système -&gt; Modifier les paramètres -&gt; Avancé -&gt; Variables d’environnement -&gt; Path</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Configuration-initiale-de-Git"><a href="#2-Configuration-initiale-de-Git" class="headerlink" title="2. Configuration initiale de Git"></a>2. Configuration initiale de Git</h3><p>Maintenant que Git est installé sur ton système, quelques étapes sont nécessaires pour personnaliser ton environnement Git. </p>
+<p>Cette configuration n’a besoin d’être effectuée qu’une fois par machine, car les informations de configuration sont conservées lors des mises à jour du programme. Tu as la possibilité de les modifier à tout moment en exécutant les commandes appropriées.</p>
+<p>La configuration Git est une variable du client Git local et ne change pas avec le dépôt Git.</p>
+<ol>
+<li><p>Configuration du nom d’utilisateur et de l’adresse email</p>
+<p>La première chose à faire après avoir installé Git est de configurer ton nom d’utilisateur et ton adresse email. C’est une étape cruciale car chaque commit Git utilise ces informations et les enregistre dans chaque contribution, de manière permanente et non modifiable</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Configurer le nom d<span class="string">&#x27;utilisateur global</span></span></span><br><span class="line">git config --global user.name &quot;username&quot;   </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">Configurer le mot de passe global</span></span></span><br><span class="line">git config --global user.email &quot;email&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Vérifier la configuration Git</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Vérifier le nom d<span class="string">&#x27;utilisateur et l&#x27;</span>adresse email globaux dans la configuration</span></span><br><span class="line">git config --global user.name</span><br><span class="line">git config --global user.email</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Vérifier toutes les configurations globales de Git</span></span><br><span class="line">git config --global -l  </span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="3-Initialiser-un-depot-Git"><a href="#3-Initialiser-un-depot-Git" class="headerlink" title="3. Initialiser un dépôt Git"></a>3. Initialiser un dépôt Git</h3><p>Nous avons besoin de Git pour gérer le code source, donc nous devons également avoir un référentiel Git en local.</p>
+<p>Il y a deux façons d’obtenir un dépôt avec Git :</p>
+<ol>
+<li><p>Initialiser un dépôt Git et ajouter tous les fichiers du projet au dépôt Git</p>
+<blockquote>
+<p>PS: actuellement, de nombreux générateurs de projet créent automatiquement un dépôt Git lors de la création du projet</p>
+</blockquote>
+<ul>
+<li><p>Créer ou accéder au dossier, faire un clic droit dans la zone vide du dossier, puis cliquer sur <code>Git Bash Here</code> pour ouvrir la ligne de commande </p>
+<blockquote>
+<p>sur système MAC, ouvrez le terminal dans le dossier actuel</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git init  # Initialisation du dépôt</span><br></pre></td></tr></table></figure>
+
+<!-- more -->
+
+<ul>
+<li><p>Cette commande créera un sous-répertoire appelé .git, contenant tous les fichiers nécessaires de ton dépôt Git initialisé. Ces fichiers sont au core du dépôt Git</p>
+</li>
+<li><p>Cependant, à ce stade, tu vient seulement d’effectuer une opération d’initialisation, les fichiers de ton projet n’ont pas encore été suivis</p>
+</li>
+<li><p>Créez un dépôt appelé ‘name’ dans le répertoire actuel, utilisez la commande <code>cd name</code> pour accéder au dépôt et effectuer des opérations</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git init name  # Créer le dépôt &#x27;name&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Cloner un dépôt Git déjà existant depuis un autre serveur </p>
+<blockquote>
+<p>PS: cette opération est généralement nécessaire le premier jour en arrivant  à l’entreprise</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">exemple</span></span><br><span class="line">git clone https://github.com/thecafe75000/myreactdemos.git</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="4-Trois-zones"><a href="#4-Trois-zones" class="headerlink" title="4. Trois zones"></a>4. Trois zones</h3><p>Git a trois états possibles pour vos fichiers :</p>
+<ol>
+<li><p>Contribué (committed)</p>
+</li>
+<li><p>Modifié (modified)</p>
+</li>
+<li><p>Indexé (staged)</p>
+</li>
+</ol>
+<p>Cela introduit le concept des trois zones de travail dans un projet Git : le référentiel Git, le répertoire de travail et la zone de mise en index</p>
+<ul>
+<li><p>Espace de travail (zone d’édition de code) : représente l’endroit où le code de développement local est situé</p>
+</li>
+<li><p>Zone de mise en index (zone de modifications en attente) : représente l’endroit où le code est temporairement stocké dans le dépôt local</p>
+</li>
+<li><p>Zone du dépôt (zone de sauvegarde de code) : représente l’endroit où le code entre dans le contrôle de version local</p>
+<img src="https://github.com/thecafe75000/ImagesForMyblog/raw/main/Git/stageofgit.png" /></li>
+</ul>
+<h3 id="5-Repertoire-git"><a href="#5-Repertoire-git" class="headerlink" title="5. Répertoire .git"></a>5. Répertoire <code>.git</code></h3><ul>
+<li><p>Le répertoire <code>hooks</code> contient des scripts d’accroche pour le client ou le serveur, qui s’exécutent automatiquement lors d’opérations spécifiques</p>
+</li>
+<li><p>Le répertoire <code>info</code> contient un fichier d’exclusion global, permettant de configurer les fichiers à ignorer.</p>
+</li>
+<li><p>Le répertoire <code>logs</code> enregistre les informations de journal.</p>
+</li>
+<li><p>Le répertoire <code>objects</code> stocke l’ensemble du contenu des données, l’emplacement du référentiel local.</p>
+</li>
+<li><p>Le répertoire <code>refs</code> stocke les pointeurs vers les objets de validation des données (branches).</p>
+</li>
+<li><p>Le fichier <code>config</code> contient des options de configuration spécifiques au projet.</p>
+</li>
+<li><p>Le fichier <code>description</code> est utilisé pour afficher des informations de description sur le référentiel.</p>
+</li>
+<li><p>Le fichier <code>HEAD</code> indique la branche actuellement extraite.</p>
+</li>
+<li><p>Le fichier <code>index</code> contient des données de la zone de transit.</p>
+</li>
+<li><p><strong>N’oubliez pas : ne modifiez jamais manuellement le contenu du dossier <code>.git</code></strong></p>
+</li>
+</ul>
+<h3 id="6-Commandes-courantes-de-Git"><a href="#6-Commandes-courantes-de-Git" class="headerlink" title="6. Commandes courantes de Git"></a>6. Commandes courantes de Git</h3><ol>
+<li><p>Opérations de validation avec Git</p>
+<ul>
+<li><p><code>git status</code> : Consultation de l’état de la version</p>
+<ul>
+<li><p>Rouge: Indique que le fichier est dans la zone de travail (modifié, supprimé ou non suivi)</p>
+</li>
+<li><p>Vert : Indique que le fichier est dans la zone de staging</p>
+</li>
+<li><p>Non indiqué : Signifie que le fichier est dans la zone de version</p>
+</li>
+</ul>
+</li>
+<li><p><code>git add -A</code> ou <code> git add .</code> ou <code>git add *</code> :  Suivre de nouveaux fichiers, mettre en staging les fichiers modifiés, etc</p>
+</li>
+<li><p><code>git commit -m &#39;commentaire&#39;</code> : Valider les modifications et ajouter un commentaire</p>
+</li>
+<li><p>Bien que l’utilisation de la zone de staging permette de préparer soigneusement les détails à soumettre, parfois cela peut sembler un peu lourd. </p>
+<p>Git propose une méthode pour sauter l’utilisation de la zone de staging, il suffit d’ajouter l’option <code>-am</code> à <code>git commit</code> lors de la soumission. </p>
+<p>Git va automatiquement mettre en staging tous les fichiers déjà suivis et les soumettre ensemble, contournant ainsi l’étape <code>git add</code>.</p>
+</li>
+</ul>
+</li>
+<li><p>Opération d’annulation</p>
+<ul>
+<li><p>En utilisant <code>git restore</code>, il est possible d’annuler les modifications dans le répertoire de travail.</p>
+<p>Mais pour les nouveaux fichiers, il est nécessaire d’utiliser <code>rm</code> pour les supprimer</p>
+</li>
+<li><p>En utilisant <code>git restore --staged &lt;fichier&gt;</code>, il est possible d’annuler la mise en staging</p>
+</li>
+</ul>
+</li>
+<li><p>Opération de suppression</p>
+<ul>
+<li>Utilisez <code>git rm fileName</code> pour supprimer le fichier de la zone de staging et du répertoire de travail.</li>
+<li>Utilisez <code>git rm --cached fileName</code> pour supprimer le fichier de la zone de staging sans toucher au répertoire de travail.</li>
+<li>Utilisez <code>git rm -f fileName</code> pour supprimer de force le fichier de la zone de staging et du répertoire de travail (nécessaire en cas de divergence entre les fichiers des deux zones).</li>
+<li><strong>Remarque : La commande <code>git rm</code> ne peut supprimer que les fichiers gérés par le référentiel.</strong></li>
+</ul>
+</li>
+<li><p>Opérations de renommage et de déplacement</p>
+<ul>
+<li><code>git mv 01.txt 02.txt</code>: Renommer le fichier</li>
+<li><code>git mv 01.txt hello/</code>: Modifier le chemin du fichier</li>
+<li><code>git mv 01.txt hello/02.txt</code>: Modifier le chemin du fichier et renommer</li>
+</ul>
+</li>
+<li><p>Comparer les différences</p>
+<ul>
+<li><p>Utiliser <code>git diff</code> pour voir les différences entre la zone de travail et la zone de staging (sans afficher les fichiers supprimés ou ajoutés), affichant les modifications effectuées</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">// Interprétation des résultats</span><br><span class="line"><span class="meta prompt_">lipeihuadeMacBook-Pro% </span><span class="language-bash">git diff</span></span><br><span class="line">    //comparaison concerne index.html avant la modification et index.html après la modification)</span><br><span class="line">    diff --git a/index.html b/index.html</span><br><span class="line">    // Représente les valeurs de hachage Git de deux versions</span><br><span class="line">    index 16158b4..61045cd 100644</span><br><span class="line">    //&quot;---&quot; représente la version précédente des modifications</span><br><span class="line">    --- a/index.html</span><br><span class="line">    //&quot;+++&quot; représente la version après des modifications</span><br><span class="line">    +++ b/index.html</span><br><span class="line">    // lignes 1 à 2 du fichier source présentent des différences avec les lignes 1 à 5 du fichier cible,</span><br><span class="line">    // Ci-dessous se trouvent les détails spécifiques des différences</span><br><span class="line">    @@ -1,2 +1,5 @@</span><br><span class="line">    // -partie rouge représente la diminution, +partie verte représente l&#x27;ajout</span><br><span class="line">     index.html </span><br><span class="line">    -no 1</span><br><span class="line">    +</span><br><span class="line">    +</span><br><span class="line">    +</span><br><span class="line">    + modification supplémentaire</span><br><span class="line">    // La dernière ligne n&#x27;a pas de saut de ligne</span><br><span class="line">    \ No newline at end of file</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>git diff --cached</code> : Afficher les différences entre la zone de staging et le référentiel.</p>
+</li>
+<li><p><code>git diff a b</code> : Comparer les différences entre deux versions.</p>
+</li>
+</ul>
+</li>
+<li><p>Versions historiques et annulations dans Git</p>
+<ul>
+<li><p>Voir les versions antérieures</p>
+<ul>
+<li><p><code>git log</code></p>
+<blockquote>
+<p>Par défaut, sans aucun paramètre, <code>git log</code> affiche toutes les mises à jour selon l’ordre chronologique des soumissions, les plus récentes en haut. Chaque soumission est identifiée par une somme de contrôle SHA-1, le nom et l’adresse e-mail de l’auteur, l’heure de la soumission, et enfin, un paragraphe indenté affiche le commentaire de la soumission</p>
+</blockquote>
+</li>
+<li><p>Une option couramment utilisée avec <code>git log</code> est <code>-p</code>, qui affiche les différences de contenu à chaque soumission. Tu peux également ajouter <code>-2</code> pour afficher uniquement les deux dernières soumissions.</p>
+<p>Si le contenu est trop long, utilisez les touches de direction pour faire défiler vers le haut et le bas, appuyez sur <code>q</code> pour quitter</p>
+</li>
+<li><p><code>git log --oneline</code> Informations succinctes</p>
+</li>
+</ul>
+</li>
+<li><p>Revenir à une version spécifique en utilisant le numéro de version</p>
+<p>Régression de version locale, n’affecte que localement, n’influence pas le contenu du dépôt Git</p>
+<ul>
+<li><p><code>git reset --hard/--mixed/--soft b815fd5a6ae655b521a31a9</code></p>
+<ul>
+<li><p><code>--hard</code> : Déplacer le pointeur HEAD de la bibliothèque locale, réinitialiser la zone de staging, réinitialiser la zone de travail</p>
+</li>
+<li><p><code>--mixed</code>: Déplacer le pointeur HEAD de la bibliothèque locale, réinitialiser la zone de staging, le code ajouté à la zone de staging lors de la dernière opération d’add est maintenant affiché en rouge, indiquant qu’aucune opération d’add n’a été effectuée</p>
+</li>
+<li><p><code>--soft</code> : Seulement déplacer le pointeur HEAD de la bibliothèque locale, la zone de staging et ton code local n’ont subi aucun changement</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Lors du retour à une version antérieure, il n’est pas nécessaire d’utiliser la chaîne de hachage complète, les sept premiers caractères suffisent. </p>
+<p><strong>Avant de changer de version, il faut soumettre l’état actuel du code dans le référentiel</strong></p>
+</blockquote>
+<ul>
+<li><code>git reflog</code></li>
+</ul>
+<blockquote>
+<p>Si après un retour en arrière tu souhaites revenir à une version antérieure, <code>git reflog</code> permet de consulter tous les enregistrements d’opérations sur toutes les branches (y compris les opérations commit et reset), y compris les enregistrements de commit déjà supprimés. <code>git log</code>, en revanche, ne permet pas de visualiser les enregistrements de commit supprimés</p>
+</blockquote>
+</li>
+<li><p>Autres annulations</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git reset --hard HEAD^     # Revenir à la version précédente</span><br><span class="line">git reset --hard HEAD^^    # Revenir à la version antérieure précédente</span><br><span class="line">git reset --hard HEAD~100  # Revenir aux 100 versions précédente</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="7-Configurer-les-fichiers-ignores-par-Git"><a href="#7-Configurer-les-fichiers-ignores-par-Git" class="headerlink" title="7. Configurer les fichiers ignorés par Git"></a>7. Configurer les fichiers ignorés par Git</h3><p>Dans certains projets, il y a des fichiers qui ne doivent pas être inclus dans le référentiel de versions, tels que les configurations de l’éditeur.</p>
+<p>Dans Git, il est nécessaire de créer un fichier <code>.gitignore</code>, généralement dans le même répertoire que <code>.gitignore</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Ignorer tous les dossiers .idea</span></span><br><span class="line">.idea</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Ignorer tous les fichiers se terminant par .<span class="built_in">test</span></span></span><br><span class="line">*.test  </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Ignorer les fichiers et dossiers node_modules</span></span><br><span class="line">/node_modules</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-Branches-de-Git"><a href="#8-Branches-de-Git" class="headerlink" title="8. Branches de Git"></a>8. Branches de Git</h3><p>Quasiment tous les systèmes de contrôle de version prennent en charge les branches d’une manière ou d’une autre. L’utilisation de branches signifie que tu peux séparer ton travail de la ligne principale de développement, évitant ainsi d’impact sur la ligne principale. </p>
+<p>Dans de nombreux systèmes de contrôle de version, il s’agit d’un processus légèrement inefficace —— souvent, il est nécessaire de créer complètement une copie du répertoire du code source. Pour les projets importants, un tel processus peut prendre beaucoup de temps.</p>
+<p>La gestion des branches par Git est incroyablement légère, la création d’une nouvelle branche peut être réalisée en un instant, et le passage entre différentes branches est tout aussi rapide. </p>
+<p>Contrairement à de nombreux autres systèmes de contrôle de version, Git encourage une utilisation fréquente des branches et des fusions dans le flux de travail, même plusieurs fois par jour.</p>
+<ol>
+<li><p>GitFlow</p>
+<p>GitFlow est une meilleure pratique pour le développement d’équipe, qui divise le code en plusieurs branches :</p>
+<ul>
+<li><p>Branche principale <code>Main</code>: elle ne contient que les versions officiellement publiées</p>
+</li>
+<li><p>Branche de correction des bugs en production (Hotfix): Une fois le développement terminé, il est nécessaire de fusionner avec les branches <code>Main</code> et <code>Develop</code>, tout en créant une balise (tag) sur la branche <code>Main</code></p>
+</li>
+<li><p>Branche de fonctionnalité <code>Feather</code> : Lorsque vous développez une fonctionnalité, créez une branche distincte, puis fusionnez-la avec la branche dev une fois le développement terminé</p>
+</li>
+<li><p>Branche <code>Release</code> : Branche en attente de publication, créée à partir de la branche <code>Develop</code>. Les tests et les corrections de bogues(Bug) sont effectués sur cette branche Release.</p>
+</li>
+<li><p>Branche <code>Develop</code> : Branche de développement où tous les développeurs soumettent leur code</p>
+</li>
+</ul>
+</li>
+<li><p>Opérations de branches</p>
+<ul>
+<li><p>Créer une branche</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git branch name   //name est le nom de branche</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Voir les branches</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Changer de branche</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git checkout name  //name est le nom de branche</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note : Avant de changer de branche, il faut soumettre les modifications actuelles de la branche en cours</p>
+</blockquote>
+</li>
+<li><p>Créer et basculer sur une branche</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">// Crée et bascule sur une nouvelle branche</span><br><span class="line">git checkout -b name </span><br><span class="line"></span><br><span class="line">// Crée et bascule sur une nouvelle branche, force l&#x27;écrasement si la branche actuelle existe déjà</span><br><span class="line">git checkout -B name </span><br><span class="line"></span><br><span class="line">// Crée une nouvelle branche à partir d&#x27;un commit spécifique  </span><br><span class="line">git checkout -b name commitID </span><br><span class="line"></span><br><span class="line">// Crée une branche orpheline</span><br><span class="line">// Une branche orpheline n&#x27;est pas différente des autres branches</span><br><span class="line">// just au début d&#x27;une branche orpheline, elle n&#x27;a pas d&#x27;historique de commits provenant d&#x27;une branche parente</span><br><span class="line">git checkout --orphan name </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Supprimer une branche</span><br><span class="line">  </span><br><span class="line">  ```shell</span><br><span class="line">  # &quot;name&quot; peut être remplacé par le nom réel de la branche que tu souhaites supprimer</span><br><span class="line">  git branch -d name  // Supprimer une branche locale</span><br><span class="line">  </span><br><span class="line">  git branch -D name  // Supprimer de force une branche locale (en cas de modifications non fusionnées)</span><br><span class="line">  </span><br><span class="line">  git push origin --delete name  // Supprimer une branche distante</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>Merge des branches</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">// Fusionne le contenu d&#x27;une branche spécifique dans la branche actuelle</span><br><span class="line">git merge name </span><br><span class="line"></span><br><span class="line">// Fusionne de force des branches avec des historiques non apparentés</span><br><span class="line">git merge --allow-unrelated-histories name </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Conflit</p>
+<p>Lorsque plusieurs branches modifient le même fichier, des conflits peuvent survenir lors de la fusion des branches. </p>
+<p>La résolution des conflits est assez simple : modifier le contenu pour obtenir le résultat final souhaité, puis continuer avec les commandes <code>git add</code> et <code>git commit</code></p>
+</li>
+</ul>
+<h3 id="9-Commandes-couramment-utilisees-sous-Linux"><a href="#9-Commandes-couramment-utilisees-sous-Linux" class="headerlink" title="9. Commandes couramment utilisées sous Linux"></a>9. Commandes couramment utilisées sous Linux</h3><p>Linux est un système d’exploitation open source et gratuit. L’interaction avec le système se fait généralement par des commandes. </p>
+<p>Voici quelques commandes couramment utilisées :</p>
+<ul>
+<li><p><code>ls</code> : Afficher les fichiers dans le répertoire actuel (abrégé de “list”)</p>
+</li>
+<li><p><code>ls -al</code> ou <code>ls -a -l</code> pour afficher les fichiers cachés et les présenter verticalement</p>
+</li>
+<li><p><code>cd</code> : Entrer dans un répertoire (abrégé de “change directory”)</p>
+</li>
+<li><p><code>cd ..</code> Pour remonter d’un niveau </p>
+</li>
+<li><p>La touche <code>tab</code> permet l’autocomplétion du code</p>
+</li>
+<li><p><code>clear</code> : Effacer l’écran</p>
+</li>
+<li><p><code>mkdir</code> : Créer un répertoire</p>
+</li>
+<li><p><code>touch test.html</code> : Créer un fichier</p>
+</li>
+<li><p><code>rm test.html</code> : Supprimer un fichier</p>
+</li>
+<li><p><code>rm -r dir</code> : Supprimer un répertoire</p>
+</li>
+<li><p><code>mv fichier_ou_dossier_origine fichier_ou_dossier_destination</code> : Déplacer un fichier</p>
+</li>
+<li><p><code>cat test.html</code> : Afficher le contenu d’un fichier</p>
+</li>
+<li><p><code>ctrl+c</code> : Annuler une commande</p>
+</li>
+<li><p>Les touches de direction vers le haut et vers le bas du clavier (flèches haut et bas) permettent de consulter l’historique des commandes</p>
+</li>
+</ul>
+<h3 id="10-Utilisation-de-GitHub"><a href="#10-Utilisation-de-GitHub" class="headerlink" title="10. Utilisation de GitHub"></a>10. Utilisation de GitHub</h3><p>GitHub est un site de gestion de dépôts Git. Il permet de créer un référentiel central distant, facilitant ainsi la collaboration entre plusieurs personnes pour le développement.</p>
+<ol>
+<li><p><strong>Son utilisation</strong></p>
+<p>L’utilisation du dépôt distant GitHub est relativement simple, avec principalement les scénarios suivants :</p>
+<ul>
+<li><p><strong>Dépôt local existant</strong></p>
+<ol>
+<li><p>Créer un dépôt distant</p>
+</li>
+<li><p>Obtenir l’adresse du dépôt</p>
+</li>
+<li><p>Associer l’URL du dépôt distant au dépôt local (de cette manière, on sait quel dépôt distant à rechercher sur local)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/xxx/xxx.git</span><br></pre></td></tr></table></figure>
+
+<p>L’association ne peut se faire qu’une seule fois. Si tu souhaites associer un autre dépôt, tu dois supprimer l’association avec le dépôt actuel</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote remove origin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Commit local</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m xxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Tout d’abord, pousser le contenu de la branche principale du dépôt local vers le dépôt distant.</p>
+<p><strong>la première branche poussée est considérée comme la branche principale, indépendamment de son nom</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>push</code> : Pousser la  branche</p>
+</li>
+<li><p><code>-u</code> : Associer avec dépôt distant , une fois ajouté, les futures soumissions peuvent être raccourcies en utilisant directement <code>git push</code></p>
+</li>
+<li><p><code>origin</code> : Alias du dépôt distant</p>
+</li>
+<li><p><code>main</code> : Branche du dépôt local</p>
+</li>
+</ul>
+</li>
+<li><p>Créez ensuite une nouvelle branche de développement appelée <code>dev</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>La branche de développement ajoute ou modifie le code</p>
+</li>
+<li><p>Effectuer des commits locaux sur la branche de développement</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;xxxxxx&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Pousser la branche de développement vers le dépôt distant</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">il faut indiquer le nom de la branche correspondante en cas de soumettre une branche</span></span><br><span class="line">git push origin dev </span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p><strong>Pas de dépôt local</strong></p>
+<ol>
+<li><p>Cloner un dépôt</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/xxxxx/xxxxx.git [name]</span><br><span class="line">//name correspond à la modification du nom du dépôt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Accéder au dépôt</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd xxxxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Si la branche de développement n’existe pas, tu dois la créer. </p>
+<p>Si elle existe, tu dois tirer à nouveau la branche de développement distante et basculer dessus</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">créer une branche nouvelle</span></span><br><span class="line">git checkout -b dev  </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">la branche distante existe,besoin de la tirer</span> </span><br><span class="line">git fetch origin dev:dev</span><br><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>La branche de développement ajoute ou modifie le code</p>
+</li>
+<li><p>Effectuer des validations locales sur la branche de développement</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#x27;message&#x27;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Pousser la branche vers le dépôt distant</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Après le clonage du code, le dépôt local aura une configuration par défaut pour une adresse distante avec le nom <code>origin</code></p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>Le développement du code étant terminé, il est nécessaire de fusionner les branches</strong></p>
+<ul>
+<li><p>Passer à la branche principale <code>main</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git checkout main</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Fusionner le contenu de la branche <code>dev</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Une fois la fusion terminée, pousser la branche <code>main</code> vers le dépôt distant</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>Peut-être qu’une erreur pourrait survenir lors du <code>push</code> sur <code>main</code>, indiquant des messages tels que <code>hint: &quot;git pull&quot; xxx</code></p>
+<p>Cela signifie que la version du code dans le dépôt local est en retard par rapport à la version dans le dépôt distant. Il faut donc tirer la dernière version du code depuis le dépôt distant vers le dépôt local avec la commande : <code>git pull origin main</code></p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Tech</category>
+        <category>Git</category>
+        <category>Linux</category>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>Connaissances avancées</tag>
+        <tag>Git</tag>
+        <tag>Linux</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Package Manager</title>
+    <url>/2024/Package_Manager/</url>
+    <content><![CDATA[<h1 id="Package-Manager"><a href="#Package-Manager" class="headerlink" title="Package Manager"></a>Package Manager</h1><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p>Un gestionnaire de paquets est un outil logiciel utilisé pour gérer les bibliothèques ou cadres tiers (appelés communément “paquets”) nécessaires au développement d’un projet. </p>
+<p>Il peut automatiquement installer, mettre à jour, désinstaller et configurer des paquets, tout en gérant les dépendances entre les paquets afin d’assurer la compatibilité entre eux.</p>
+<span id="more"></span>
+
+<h3 id="2-Les-gestionnaires-de-paquets-courants"><a href="#2-Les-gestionnaires-de-paquets-courants" class="headerlink" title="2. Les gestionnaires de paquets courants"></a>2. Les gestionnaires de paquets courants</h3><ul>
+<li><p>npm</p>
+</li>
+<li><p>yarn</p>
+</li>
+<li><p>pnpm</p>
+</li>
+</ul>
+<h3 id="3-npm-Node-Package-Manager"><a href="#3-npm-Node-Package-Manager" class="headerlink" title="3. npm (Node Package Manager)"></a>3. npm (Node Package Manager)</h3><p>npm est le gestionnaire de paquets pour Node.js, il est également une application.</p>
+<p>npm n’a pas besoin d’être installé séparément, il est automatiquement installé lorsque l’on installe Node.js. </p>
+<blockquote>
+<p>Contrairement à d’autres gestionnaires de paquets qui nécessitent une installation distincte</p>
+</blockquote>
+<p><strong>Son utilisation</strong></p>
+<ol>
+<li><p><strong>Initialiser le fichier de description du paquet</strong></p>
+<p>Avant de télécharger un paquet, il est nécessaire d’avoir un fichier <code>package.json</code>, également appelé “ fichier de description du paquet “, qui enregistre des informations sur le projet en cours et des informations sur les dépendances etc.</p>
+<p>On peux utiliser la commande suivante pour créer le fichier de description du paquet :</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm init</span><br><span class="line"></span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">// package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;test&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;author&quot;: &quot;&quot;,</span><br><span class="line">  &quot;license&quot;: &quot;ISC&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>name</code> : nom du paquet</p>
+</li>
+<li><p><code>version</code>:  version du paquet</p>
+</li>
+<li><p><code>description</code>:  description du paquet</p>
+</li>
+<li><p><code>main</code>:  fichier principal du paquet</p>
+</li>
+<li><p><code>scripts</code>: commande pour exécuter le paquet</p>
+</li>
+<li><p>ce qui  peut être exécuté avec <code>npm run xxx</code>, par exemple : <code>npm run test</code></p>
+</li>
+<li><p><code>author</code>: l’auteur du paquet</p>
+</li>
+<li><p><code>license</code>:  la licence open source du paquet</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Télécharger le paquet</strong></p>
+<p>Le site officiel: <a href="https://www.npmjs.com/">https://www.npmjs.com</a></p>
+<p>Ce site permet de rechercher des paquets</p>
+<ul>
+<li><p><code>npm install [package]</code>:  Installer le paquet en tant que dépendance de production</p>
+</li>
+<li><p><code>npm install [package] -D</code>:  Installer le paquet en tant que dépendance de développement</p>
+<blockquote>
+<ul>
+<li><p>Dépendances de production : Les dépendances nécessaires à la rédaction du code source du projet sont considérées comme des dépendances de production</p>
+</li>
+<li><p>Dépendances de développement : Les dépendances utilisées par les outils de construction et de packaging du projet sont considérées comme des dépendances de développement</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p><code>npm install [package] -g</code></p>
+<ul>
+<li><p>Les packages installés globalement sont utilisés en tant qu’outils, par exemple : nodemon</p>
+</li>
+<li><p>Afficher le chemin d’installation global des packages : <code>npm root -g</code></p>
+</li>
+</ul>
+</li>
+<li><p><code>npm i</code> installe toutes les dépendances du fichier <code>package.json</code> du projet en cours (y compris les dépendances de développement et de production)</p>
+<blockquote>
+<p>Installer un paquet installe par défaut la dernière version. Si vous souhaitez installer une version spécifique, utilisez la commande : <code>npm i vue@2</code> par exemple</p>
+<p>Cela signifie qu’il installera la version majeure 2 de Vue.js, en utilisant les versions mineures et les patchs les plus récents correspondants</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>Supprimer le paquet</strong></p>
+<ul>
+<li><p><code>npm uninstall [package]</code>: désinstaller le paquet</p>
+</li>
+<li><p><code>npm uninstall [package] -g</code>:  désinstaller le paquet installé globalement</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-yarn"><a href="#4-yarn" class="headerlink" title="4. yarn"></a>4. yarn</h3><p><code>yarn</code> est un nouveau gestionnaire de paquets open source développé par Facebook, qui peut être utilisé en remplacement de npm.</p>
+<p>Il est généralement recommandé d’utiliser <code>yarn</code> pour la gestion des paquets dans les projets React.</p>
+<p><strong>Son utilisation</strong></p>
+<ul>
+<li><p>Installation</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g yarn</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Initialiser le fichier de description du paquet</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Télécharger le paquet</p>
+<ul>
+<li><p><code>yarn add [package]</code>: Installer le paquet en tant que dépendance de production</p>
+</li>
+<li><p><code>yarn add [package] --dev</code>: Installer le paquet en tant que dépendance de développement</p>
+</li>
+<li><p><code>yarn global add [package]</code>: Installer le paquet globalement</p>
+</li>
+<li><p><code>yarn</code> : Installer toutes les dépendances du fichier <code>package.json</code> du projet en cours, y compris les dépendances de développement et de production</p>
+</li>
+</ul>
+</li>
+<li><p>Supprimer le paquet</p>
+<ul>
+<li><p><code>yarn remove [package]</code> : désinstaller le paquet</p>
+</li>
+<li><p><code>yarn global remove [package]</code>: désinstaller le paquet installé globalement</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-pnpm"><a href="#5-pnpm" class="headerlink" title="5. pnpm"></a>5. pnpm</h3><p>pnpm est un gestionnaire de paquets qui offre une installation plus rapide et une utilisation plus efficace de l’espace disque.</p>
+<p>Site officiel: <a href="https://pnpm.io/">https://pnpm.io/</a></p>
+<ol>
+<li><p><strong>Pourquoi utiliser pnpm ?</strong></p>
+<ul>
+<li><p>Économiser de l’espace disque</p>
+<p>Lors de l’utilisation de npm, chaque projet réinstalle les dépendances de manière répétée dans différents projets. En revanche, avec pnpm, les dépendances sont stockées dans un référentiel adressable, de sorte que :</p>
+<ul>
+<li>Si différentes versions d’une même dépendance sont utilisées, seuls les fichiers présentant des différences entre les versions sont ajoutés au référentiel. Par exemple, si un paquet comprend 100 fichiers et que sa nouvelle version ne modifie qu’un seul fichier parmi eux, lors de la mise à jour avec pnpm, seul ce nouveau fichier sera ajouté au référentiel, sans avoir à copier l’intégralité du contenu du nouveau paquet.</li>
+<li>Tous les fichiers sont stockés à un emplacement précis sur le disque dur. Lors de l’installation d’un paquet, les fichiers du paquet sont liés en tant que liens durs à cet emplacement, sans occuper d’espace disque supplémentaire. Cela permet de partager la même version de dépendances entre différents projets.</li>
+</ul>
+<p>Ainsi, une quantité importante d’espace disque est économisée, proportionnelle au nombre de projets et de dépendances, et l’installation est considérablement plus rapide !</p>
+</li>
+<li><p>Améliorer la vitesse d’installation</p>
+<ul>
+<li><p>Résolution des dépendances : Toutes les dépendances qui ne sont pas présentes dans le référentiel sont identifiées et récupérées depuis le référentiel.</p>
+</li>
+<li><p>Calcul de la structure du répertoire : La structure du répertoire node_modules est calculée en fonction des dépendances.</p>
+</li>
+<li><p>Liaison des dépendances : Toutes les dépendances précédemment installées sont directement récupérées depuis le référentiel et liées à node_modules.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Cette méthode est beaucoup plus rapide que le processus d’installation traditionnel en trois étapes (résolution, récupération et écriture de toutes les dépendances dans node_modules).</p>
+</li>
+<li><p><strong>Son utilisation</strong></p>
+<ul>
+<li><p>Installation</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install pnpm -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Initialiser le fichier de description du paquet</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Télécharger le paquet</p>
+<ul>
+<li><p><code>pnpm add [package]</code>: Installer le paquet en tant que dépendance de production</p>
+</li>
+<li><p><code>pnpm add -D [package]</code>: Installer le paquet en tant que dépendance de développement</p>
+</li>
+<li><p><code>pnpm add -g [package]</code>: Installer le paquet globalement</p>
+</li>
+<li><p><code>pnpm install</code> : Installer toutes les dépendances du fichier <code>package.json</code> du projet en cours, y compris les dépendances de développement et de production</p>
+</li>
+</ul>
+</li>
+<li><p>Supprimer le paquet</p>
+<ul>
+<li><code>pnpm remove [package]</code>: désinstaller le paquet</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Tech</category>
+        <category>Package Manager</category>
+      </categories>
+      <tags>
+        <tag>Package Manager</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Less</title>
+    <url>/2024/Less/</url>
+    <content><![CDATA[<h1 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h1><h3 id="1-Qu’est-ce-que-Less"><a href="#1-Qu’est-ce-que-Less" class="headerlink" title="1. Qu’est-ce que Less ?"></a>1. Qu’est-ce que Less ?</h3><p>Less est un langage de style dynamique appartenant à la catégorie des préprocesseurs CSS. </p>
+<p>Il étend les fonctionnalités du langage CSS en ajoutant des caractéristiques telles que les variables, les mixins, les fonctions, etc., facilitant ainsi la maintenance et l’extension des feuilles de style. </p>
+<p>Less peut être exécuté côté client et également côté serveur en utilisant Node.js.</p>
+<span id="more"></span>
+
+<ul>
+<li><p>Styles dynamiques : Le CSS est un langage non programmable nécessitant la rédaction de nombreuses lignes de code sans logique, ce qui le rend difficile à entretenir, à étendre et peu propice à la réutilisation. </p>
+<p>C’est pourquoi des outils et des frameworks ont été développés pour traiter le CSS.</p>
+</li>
+<li><p>Préprocesseur : Un programme de traitement d’une syntaxe donnée avant la génération du CSS.</p>
+</li>
+</ul>
+<blockquote>
+<p>Depuis sa création, le CSS n’a pas subi de changements fondamentaux au niveau de sa syntaxe de base et de son mécanisme central. Son développement s’est principalement concentré sur l’amélioration de son expressivité. À ses débuts, le rôle du CSS sur les pages web était simplement décoratif et accessoire, avec une demande majeure pour la simplicité et la facilité d’apprentissage. Cependant, avec la complexité croissante des sites web d’aujourd’hui, le CSS natif a atteint ses limites, laissant les développeurs parfois dépassés.</p>
+<p>Lorsqu’une langue n’a pas les capacités nécessaires et que l’environnement d’exécution des utilisateurs ne prend pas en charge d’autres choix, cette langue devient une “langue cible de compilation”. Les développeurs optent alors pour une langue plus avancée pour le développement, puis la compilent vers le langage de base pour une exécution réelle.</p>
+<p>Ainsi, dans le domaine du développement frontal, les préprocesseurs CSS ont vu le jour. Cette vieille langue qu’est le CSS a “réadapté” les besoins du développement web d’une autre manière</p>
+</blockquote>
+<ul>
+<li><p>Site officiel: <a href="http://lesscss.org/">http://lesscss.org</a></p>
+</li>
+<li><p>Code source de Less:  <a href="https://github.com/cloudhead/less.js">https://github.com/cloudhead/less.js</a></p>
+</li>
+</ul>
+<p><strong>Utilisation de Less</strong>:</p>
+<ul>
+<li><p>Utilisation basique</p>
+<ul>
+<li><p><code>&lt;style type=&quot;text/less&quot;&gt;</code> : Le type de balise style doit être modifié en <code>less</code></p>
+</li>
+<li><p>Selon le site officiel, nous avons besoin d’un fichier <code>less.js</code> pour la compilation Less, et il doit être  importé en bas de la page. Cela est nécessaire car il doit lire tous les fichiers Less liés à la page pour effectuer la compilation.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet/less&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;styles.less&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/less&quot;</span>&gt;</span></span><br><span class="line">        @num:200px;</span><br><span class="line">        .box&#123;</span><br><span class="line">            border: 1px solid #000;</span><br><span class="line">            .content&#123;</span><br><span class="line">                width: @num;</span><br><span class="line">                height: @num;</span><br><span class="line">                background:red;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./less.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Compilation personnalisée de Less dans VSCode</p>
+<ul>
+<li><p>Ouvrez l’éditeur VSCode, et installer l’extension <code>Easy LESS</code>.</p>
+</li>
+<li><p>Créer un nouveau fichier Less dans le dossier, puis enregistrer-le. Cela permettra de compiler le fichier CSS correspondant dans le même dossier.</p>
+</li>
+</ul>
+</li>
+<li><p>Installation globale de Less pour la compilation</p>
+<ul>
+<li><p>Utiliser <code>npm i less -g</code> pour installer l’environnement Less global (il est nécessaire d’installer l’environnement Node, qui inclut automatiquement l’outil npm)</p>
+</li>
+<li><p>Utiliser la commande <code>lessc</code> pour effectuer la compilation</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="selector-class">.content</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: pink;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-La-syntaxe-de-Less"><a href="#2-La-syntaxe-de-Less" class="headerlink" title="2. La syntaxe de Less"></a>2. La syntaxe de Less</h3><ol>
+<li><p><strong>Les commentaires en Less</strong></p>
+<ul>
+<li><p>Les commentaires commençant par <code>//</code> ne seront pas inclus dans le fichier CSS généré</p>
+</li>
+<li><p>Les commentaires enveloppés par <code>/* */</code> seront inclus dans le fichier CSS généré</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Il existe 2 types de commentaires, le 1er type de commentaires ne peut être vu que dans le fichier Less</span></span><br><span class="line"><span class="comment">//Le deuxième type de commentaires sera compilé dans le fichier CSS</span></span><br><span class="line"><span class="selector-class">.tab</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="comment">/* Voici comment définir la couleur de fond */</span></span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Les variables en Less</strong></p>
+<p>Less nous permet de définir des variables pour gérer le CSS </p>
+<blockquote>
+<p>les variables doivent commencer par @</p>
+</blockquote>
+<p>Il est important de noter que dans Less, les variables sont considérées comme des <code>constantes</code> et ne peuvent être définies qu’une seule fois. Leur portée est locale et elles sont recherchées dans l’objet parent.</p>
+<ul>
+<li><p>Les variables en tant que valeurs d’attributs normaux</p>
+<p>Utilisation comme valeur d’attribut normal : utiliser directement <code>@pink</code></p>
+</li>
+<li><p>Utilisation en tant que sélecteur et nom de propriété</p>
+<ul>
+<li><p>La forme du sélecteur <code>#@&#123;valeur of the selector&#125;</code></p>
+</li>
+<li><p><code>@&#123;valeur of the selector&#125; Nom de propriété</code></p>
+</li>
+</ul>
+</li>
+<li><p>Utilisation en tant qu’URL</p>
+<ul>
+<li><code>@url</code></li>
+</ul>
+</li>
+<li><p>Chargement différé des variables</p>
+<p>Il charge la variable avant le chargement du style dans la portée actuelle, de l’intérieur vers l’extérieur. Il recherche d’abord les variables dans la portée actuelle, puis à l’extérieur de la portée si elles ne sont pas trouvées.</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Déclarer une variable représentant la couleur globale</span></span><br><span class="line"><span class="variable">@mainColor:</span>red;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable représentant une valeur</span></span><br><span class="line"><span class="variable">@zero:</span><span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable représentant le nom du sélecteur</span></span><br><span class="line"><span class="variable">@a:</span>outer;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable représentant le nom de l&#x27;attribut</span></span><br><span class="line"><span class="variable">@p:</span>position;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable pour enregistrer l&#x27;image</span></span><br><span class="line"><span class="variable">@url1:</span><span class="string">&quot;http://www.google.com/images/pic_new/logo.png&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Déclarer une variable pour sauvegarder l&#x27;image</span></span><br><span class="line"><span class="variable">@url2:</span>url(<span class="string">&quot;http://www.google.com/images/pic_new/logo.png&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// variables peuvent contenir d&#x27;autres variables, mais elles doivent être précédées du symbole &#x27;@&#x27; complet</span></span><br><span class="line"><span class="variable">@z:</span><span class="variable">@zero</span>;</span><br><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="variable">@z</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="variable">@z</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 2.Utilisation d&#x27;une variable en tant que sélecteur nécessite l&#x27;ajout de crochets</span></span><br><span class="line"><span class="selector-class">.@&#123;a&#125;</span>&#123;</span><br><span class="line">    <span class="comment">//1.Utilisation d&#x27;une variable en tant que valeur d&#x27;attribut ordinaire nécessite l&#x27;ajout du symbole &#x27;@&#x27;</span></span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="variable">@mainColor</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="comment">//3.Utilisation d&#x27;une variable en tant que nom d&#x27;attribut nécessite l&#x27;ajout de crochets</span></span><br><span class="line">    @&#123;p&#125;: <span class="selector-tag">relative</span>;</span><br><span class="line">    <span class="selector-class">.box</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">        @&#123;p&#125;: <span class="selector-tag">absolute</span>;</span><br><span class="line">        <span class="attribute">left</span>: <span class="variable">@zero</span>;</span><br><span class="line">        <span class="attribute">top</span>: <span class="variable">@zero</span>;</span><br><span class="line">        <span class="attribute">right</span>: <span class="variable">@zero</span>;</span><br><span class="line">        <span class="attribute">bottom</span>: <span class="variable">@zero</span>;</span><br><span class="line">        <span class="attribute">margin</span>: auto;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="variable">@mainColor</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.logo</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="comment">//4.Utilisation d&#x27;une variable en tant qu&#x27;adresse URL</span></span><br><span class="line">        <span class="comment">// background: url(@url1) 0 0 no-repeat;</span></span><br><span class="line">        <span class="attribute">background</span>: <span class="variable">@url2</span> <span class="number">0</span> <span class="number">0</span> no-repeat;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">@var:</span> <span class="number">0</span>;</span><br><span class="line"><span class="selector-class">.class</span> &#123;</span><br><span class="line"><span class="variable">@var:</span> <span class="number">1</span>;</span><br><span class="line">    <span class="selector-class">.brass</span> &#123;</span><br><span class="line">      <span class="variable">@var:</span> <span class="number">2</span>;</span><br><span class="line">      three: @var;</span><br><span class="line">      <span class="variable">@var:</span> <span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  one: @var;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>Les règles de nesting en Less</strong></p>
+<ul>
+<li><p>Nesting de base</p>
+<p>Lors de l’utilisation du CSS standard, il est nécessaire de définir les styles pour des éléments imbriqués sur plusieurs niveaux en utilisant soit des sélecteurs descendants pour définir l’imbrication de l’extérieur vers l’intérieur, soit en attribuant une classe ou un identifiant à cet élément. </p>
+<p>Bien que cette méthode soit facile à comprendre, elle est peu pratique à maintenir, car elle ne permet pas de comprendre clairement les relations entre les styles.</p>
+<p>Dans Less, les règles d’imbrication résolvent ce problème. </p>
+<p>Les règles d’imbrication permettent de nester un sélecteur dans un autre, facilitant la conception de code concis, avec une relation claire entre les styles.</p>
+</li>
+<li><p>Référence parentale</p>
+<p>L’utilisation de <code>&amp;</code>: représente tous les éléments parents précédents, souvent utilisé dans les besoins de pseudo-éléments, pseudo-classes, structures CSS, etc.</p>
+<p>Le symbole <code>&amp;</code> placé avant un sélecteur interne représente une référence au sélecteur parent. </p>
+<p>Si aucun symbole <code>&amp;</code> n’est présent avant un sélecteur interne, il est interprété comme un descendant du sélecteur parent ; s’il y a un symbole <code>&amp;</code>, il est alors interprété comme un élément parent</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#outer</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="selector-class">.content</span>&#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">        <span class="selector-class">.nav</span>&#123;</span><br><span class="line">            <span class="attribute">background-color</span>: pink;</span><br><span class="line">            <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">            <span class="attribute">list-style</span>: none;</span><br><span class="line">            <span class="selector-tag">li</span>&#123;</span><br><span class="line">                <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">                <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">                <span class="attribute">font-size</span>: <span class="number">28px</span>;</span><br><span class="line">                <span class="attribute">color</span>: royalblue;</span><br><span class="line">                <span class="comment">// symbole &amp; placé devant un sélecteur représente une référence au sélecteur parent</span></span><br><span class="line">                <span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>)&#123;</span><br><span class="line">                    <span class="attribute">color</span>:yellow;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">                    <span class="attribute">color</span>: green;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="selector-class">.active</span>&#123;</span><br><span class="line">                <span class="attribute">color</span>:red;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.box</span>&#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: yellowgreen;</span><br><span class="line">        <span class="selector-tag">h2</span>&#123;</span><br><span class="line">            <span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">p</span>&#123;</span><br><span class="line">            <span class="attribute">color</span>: <span class="number">#ccc</span>;</span><br><span class="line">            <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">            <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.clearFix</span>&#123;</span><br><span class="line">        <span class="comment">// css Hack</span></span><br><span class="line">        *zoom:1;<span class="comment">// Activer hasLayout dans les anciennes versions d&#x27;IE</span></span><br><span class="line">        <span class="selector-tag">div</span>&#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: red;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">&amp;</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">            <span class="attribute">content</span>:<span class="string">&quot;\200B&quot;</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">            <span class="attribute">display</span>: block;</span><br><span class="line">            <span class="attribute">clear</span>:both;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Opération en Less</strong></p>
+<ul>
+<li><p>Toute valeur, couleur ou variable peut être opérée</p>
+</li>
+<li><p>Less calculera automatiquement l’unité pour vous, donc tu n’as pas besoin d’ajouter une unité à chaque élément, mais assurez-vous qu’au moins un élément a une unité</p>
+</li>
+<li><p>Les opérateurs doivent être séparés des valeurs par un espace, et lorsqu’il s’agit de priorités, utilisez des parenthèses () pour les calculs de priorité</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@num1 :</span> <span class="number">30</span>;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">30px</span> * <span class="variable">@num1</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1000px</span> / <span class="number">3</span>;</span><br><span class="line">    <span class="selector-class">.con</span>&#123;</span><br><span class="line">        <span class="comment">// l&#x27;addition et la soustraction des valeurs </span></span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span> - <span class="number">30%</span>;</span><br><span class="line">        <span class="attribute">height</span>: (<span class="number">100px</span> + <span class="number">10</span>) * <span class="number">20</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.inner</span>&#123;</span><br><span class="line">        <span class="comment">// manipulation des couleurs consiste à les convertir en valeurs rgba décimales, </span></span><br><span class="line">        <span class="comment">// puis à effectuer le calcul, avant de les reconvertir en valeurs hexadécimales</span></span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#fff</span>-<span class="number">55</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>L’héritage dans Less (Extend)</strong></p>
+<p>Il permet à un sélecteur d’hériter du style d’un autre sélecteur. </p>
+<p>L’héritage a deux formats de syntaxe :</p>
+<ul>
+<li><p><code>Sélecteur actuel:extend(sélecteur à hériter) &#123;styles du sélecteur actuel&#125;</code></p>
+</li>
+<li><p><code>Sélecteur actuel &#123;&amp;:extend(sélecteur à hériter);&#125;</code></p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Sachant que .public est le sélecteur hérité, #box est le sélecteur actuel</span></span><br><span class="line"><span class="comment">// Mode d&#x27;héritage N°1</span></span><br><span class="line"><span class="selector-id">#box</span>:<span class="selector-tag">extend</span>(.public)&#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Mode d&#x27;héritage N°2</span></span><br><span class="line"><span class="selector-id">#box</span>&#123;</span><br><span class="line">    <span class="selector-tag">&amp;</span>:<span class="selector-tag">extend</span>(.public);</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Mixin de Less</strong></p>
+<p>En LESS, nous pouvons définir un ensemble de propriétés génériques comme une classe, puis l’appeler dans une autre classe. </p>
+<p>Le mélange consiste à introduire une série de propriétés d’une règle à une autre.</p>
+<ul>
+<li><p>Mixin ordinaire</p>
+<ul>
+<li><p>Définition du mixin : utilisez <code>.+nom_du_mixin+()+&#123;ensemble_de_propriétés&#125;</code></p>
+</li>
+<li><p>Utilisation du mixin : <code>.+nom_du_mixin+();</code></p>
+</li>
+<li><p>Lors de la définition et de l’appel d’un mixin, il est possible de ne pas ajouter des parenthèses (), mais pour faciliter la distinction entre le mixin et le style ordinaire, et aussi pour faciliter la transmission de paramètres, il est généralement conseillé d’ajouter des parenthèses ()</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Si une classe utilisée comme mixin n&#x27;a pas de parenthèses, elle peut être compilée</span></span><br><span class="line"><span class="comment">// Si des parenthèses sont ajoutées, elle ne peut pas être compilée et peut seulement être appelée</span></span><br><span class="line"><span class="selector-class">.mine</span>()&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="comment">// </span></span><br><span class="line">    <span class="selector-class">.mine</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.con</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="selector-class">.mine</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Mixin avec des paramètres</p>
+<p>Lors de la déclaration d’un mixin, il est possible de déclarer des paramètres formels entre parenthèses.</p>
+<p>Les paramètres sont définis par <code>@+nom_variable</code>.  </p>
+<p>Les arguments concrets peuvent être transmis lors de l’appel</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Les paramètres sont déclarés de la même manière que les variables lors de leur définition</span></span><br><span class="line"><span class="selector-class">.center</span>(<span class="variable">@w</span>,<span class="variable">@h</span>,<span class="variable">@bg</span>)&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">@w</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="variable">@h</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="variable">@bg</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.outer</span>&#123;</span><br><span class="line">    <span class="comment">// Transmettre les arguments</span></span><br><span class="line">    <span class="selector-class">.center</span>(<span class="number">500px</span>,<span class="number">500px</span>,red);</span><br><span class="line">    <span class="selector-class">.inner</span>&#123;</span><br><span class="line">       <span class="selector-class">.center</span>(<span class="number">300px</span>,<span class="number">300px</span>,green);</span><br><span class="line">        <span class="selector-class">.content</span>&#123;</span><br><span class="line">            <span class="selector-class">.center</span>(<span class="number">100px</span>,<span class="number">100px</span>,pink);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Mixin de paramètres avec des valeurs par défaut</p>
+<p>Il est possible de définir directement des paramètres avec des valeurs par défaut lors de la déclaration d’un mixin, par exemple (@color: rouge).</p>
+<p>Lors de l’utilisation du mixin, si des arguments concrets sont transmis, les valeurs des arguments sont utilisées, sinon les valeurs par défaut des paramètres sont utilisées.</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Si l&#x27;utilisateur ne spécifie pas la largeur et la hauteur, </span></span><br><span class="line"><span class="comment">// les valeurs par défaut seront de 500 pixels. </span></span><br><span class="line"><span class="comment">// Cependant, en fournissant des arguments, les valeurs par défaut seront remplacées</span></span><br><span class="line"><span class="selector-class">.center</span>(<span class="variable">@w</span>:<span class="number">500px</span>,<span class="variable">@h</span>:<span class="number">500px</span>,<span class="variable">@bg</span>)&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">@w</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="variable">@h</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="variable">@bg</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.border</span>(<span class="variable">@w</span>,<span class="variable">@s</span>,<span class="variable">@c</span>)&#123;</span><br><span class="line">    <span class="comment">// border:@w @s @c;</span></span><br><span class="line">    <span class="comment">// Dans un mixin, il est possible d&#x27;utiliser @arguments pour représenter les arguments fournis</span></span><br><span class="line">    <span class="attribute">border</span>:<span class="variable">@arguments</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.outer</span>&#123;</span><br><span class="line">    <span class="comment">// Paramètres nommés : lors de la transmission des arguments, </span></span><br><span class="line">    <span class="comment">// il est possible de spécifier des valeurs pour les paramètres correspondants</span></span><br><span class="line">    <span class="selector-class">.center</span>(<span class="variable">@bg</span>:yellow,<span class="variable">@h</span>:<span class="number">600px</span>);</span><br><span class="line">    <span class="selector-class">.inner</span>&#123;</span><br><span class="line">       <span class="selector-class">.center</span>(<span class="number">300px</span>,<span class="number">300px</span>,green);</span><br><span class="line">        <span class="selector-class">.con</span>&#123;</span><br><span class="line">            <span class="selector-class">.center</span>(<span class="number">100px</span>,<span class="number">100px</span>,pink);</span><br><span class="line">            <span class="selector-class">.border</span>(<span class="number">10px</span>,dotted,yellow)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Paramètres nommés</p>
+<p>Lors de l’utilisation d’un mixin, si tu souhaites spécifier à quel paramètre formel correspond un argument donné, tu peux nommer les arguments</p>
+</li>
+<li><p>La variable <code>arguments</code></p>
+<p>La variable <code>@arguments</code> représente l’ensemble de tous les paramètres. </p>
+<p>Si tu ne souhaites pas traiter chaque paramètre individuellement, tu peux utiliser <code>@arguments</code> en remplacement. </p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.border</span>(<span class="variable">@w</span>:<span class="number">1px</span>,<span class="variable">@t</span>:solid,<span class="variable">@c</span>:<span class="number">#333</span>)&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="variable">@arguments</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>Correspondance de motifs, surcharge et gardes</strong></p>
+<ul>
+<li><p>correspondance de motif</p>
+<p>Dans Less, essayer d’utiliser la correspondance de motif à la place de if&#x2F;else, dont le fonctionnement est similaire à switch&#x2F;case. </p>
+<p>Étant donné qu’un mixin peut avoir plusieurs formes, Less offre un mécanisme permettant de changer le comportement du mixin en fonction de la valeur des paramètres. </p>
+<p>Lorsque les paramètres commencent par @_ , cela est obligatoire lors de l’appel de ce mixin.</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Lors de la correspondance de motifs, les mixins avec des paramètres commençant par @_ sont obligatoires</span></span><br><span class="line"><span class="selector-class">.mine</span>(<span class="variable">@_</span>)&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Autoriser à changer le comportement du mixin en fonction de la valeur des paramètres</span></span><br><span class="line"><span class="comment">// Ce paramètre n&#x27;est pas utilisé pour transmettre des informations à l&#x27;intérieur du mixin, mais plutôt pour identifier les correspondances</span></span><br><span class="line"><span class="selector-class">.mine</span>(color1)&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mine</span>(color2)&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="comment">// La relation de correspondance est similaire à une déclaration switch</span></span><br><span class="line">    <span class="selector-class">.mine</span>(color1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>surcharge </p>
+<p>Le même mixin, des comportements différents, peuvent être sélectionnés en fonction du nombre d’arguments réels passés lors de l’appel</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@a</span>,<span class="variable">@b</span>)&#123;</span><br><span class="line">  <span class="attribute">background-color</span>:<span class="variable">@a</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1000px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@a</span>)&#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="variable">@a</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="selector-class">.mixin</span>(pink,red);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>gardes</p>
+<p>Sélectionner le comportement d’un mixin en fonction des conditions, similaire à if&#x2F;else en JavaScript, en utilisant la syntaxe when. Les gardes (Guards) nous permettent d’utiliser les opérateurs &gt;, &gt;&#x3D;, &lt;, &lt;&#x3D;, &#x3D;, le mot clé true (qui correspond uniquement au mot clé true, tout ce qui n’est pas true ne sera pas considéré comme une correspondance), ainsi que les opérations logiques and, not(), et nous pouvons également utiliser la virgule ‘,’ pour séparer plusieurs gardes, ce qui signifie que dès que l’une d’entre elles est satisfaite, la condition est considérée comme vraie</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@q</span>)&#123; <span class="comment">// sans gardes</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@q</span>) <span class="keyword">when</span>(<span class="variable">@q</span>&gt;<span class="number">10</span>)&#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@q</span>) <span class="keyword">when</span>(<span class="variable">@q</span>&lt;=<span class="number">10</span>),(<span class="variable">@q</span>&gt;<span class="number">100</span>)&#123;</span><br><span class="line">  <span class="attribute">background-color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">  <span class="selector-class">.mixin</span>(<span class="number">99</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="8">
+<li><strong>interpolation de chaîne de caractères</strong></li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Tech</category>
+        <category>Less</category>
+      </categories>
+      <tags>
+        <tag>Connaissances avancées</tag>
+        <tag>Less</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Me</title>
+    <url>/2024/about/</url>
+    <content><![CDATA[<blockquote>
+<p>Je suis une developpeuse front-end</p>
+<p>Je suis actuellement à la recherche d’un emploi en tant qu’ingénieur front-end</p>
+</blockquote>
+<p>Lieu de résidence: Paris, France</p>
+<p>Github: <a href="https://github.com/thecafe75000">https://github.com/thecafe75000</a></p>
+<p>Email: <a href="mailto:&#104;&#99;&#x6e;&#46;&#108;&#101;&#x69;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#104;&#99;&#x6e;&#46;&#108;&#101;&#x69;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
+]]></content>
+      <tags>
+        <tag>Auto-présentation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript</title>
+    <url>/2024/JavaScript/</url>
+    <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h3 id="1-Les-types-de-donnees-en-JavaScript"><a href="#1-Les-types-de-donnees-en-JavaScript" class="headerlink" title="1. Les types de données en JavaScript"></a>1. Les types de données en JavaScript</h3><p>Ils se divisent en types de données fondamentaux et types de données de référence</p>
+<ol>
+<li><p>Types de données fondamentaux:</p>
+<ul>
+<li><p>number (nombre)</p>
+</li>
+<li><p>string (chaîne de caractères)</p>
+</li>
+<li><p>boolean (booléen)</p>
+</li>
+<li><p>null (null)</p>
+</li>
+<li><p>undefined (non défini)</p>
+<span id="more"></span>
+</li>
+<li><p>symbol (symbole)</p>
+<ul>
+<li>Utilisé pour attribuer une valeur unique à une variable</li>
+<li>Utilisé pour attribuer un nom de propriété unique à un objet (le type de nom de propriété d’objet doit être soit string, soit symbol)</li>
+</ul>
+</li>
+<li><p>bigint (entier bigint)</p>
+<ul>
+<li>Lorsque les calculs avec le type number dépassent la valeur maximale (Number.MAX_SAFE_INTEGER) ou tombent en dessous de la valeur minimale, des problèmes de calcul peuvent survenir. Dans ce cas, on peut utiliser bigint (rarement utilisé en développement pratique).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Types de données de référence:</p>
+<ul>
+<li>object (objet)</li>
+<li>function (fonction)</li>
+<li>array</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Comment-detecter-les-types-de-donnees-en-JavaScript"><a href="#2-Comment-detecter-les-types-de-donnees-en-JavaScript" class="headerlink" title="2. Comment détecter les types de données en JavaScript"></a>2. Comment détecter les types de données en JavaScript</h3><ol>
+<li><p>typeof</p>
+<p>La plupart des types peuvent être détectés, mais ne peut pas faire la distinction entre null, object et array</p>
+</li>
+<li><p>A instanceof B</p>
+<p>Compréhension simple : vérifie si A est une instance de B<br>Compréhension approfondie : vérifie si le <code>__proto__</code> de A pointe vers le même objet que B.prototype</p>
+<p>Principalement utilisé pour détecter les types de données référencés</p>
+</li>
+<li><p>Object.prototype.toString.call(xxx).slice(8, -1)</p>
+<p>c’est la solution parfaite, il peut détecter tous les types de données</p>
+<p>En développement, utilisez la méthode <code>toString()</code> pour encapsuler des fonctions utilitaires afin de détecter les types</p>
+</li>
+<li><p>Array.isArray</p>
+<p>Vérifie s’il s’agit d’un type array</p>
+</li>
+<li><p>A &#x3D;&#x3D;&#x3D; B</p>
+<p>Vérifie que les valeurs et les types de A et B sont identiques.</p>
+</li>
+</ol>
+<h3 id="3-Methodes-courantes-pour-les-array"><a href="#3-Methodes-courantes-pour-les-array" class="headerlink" title="3. Méthodes courantes pour les array"></a>3. Méthodes courantes pour les array</h3><ol>
+<li><p>Méthodes de mise à jour d’un array</p>
+<ul>
+<li><code>push()</code>: Ajoute un élément à la fin du array</li>
+<li><code>pop()</code>: Supprime le dernier élément du array</li>
+<li><code>unshift()</code>: Ajoute un élément au début du array</li>
+<li><code>shift()</code>: Supprime le premier élément du array</li>
+<li><code>splice()</code>: Supprime&#x2F;ajoute un élément à un indice spécifique</li>
+<li><code>sort()</code>: Trie le array</li>
+<li><code>reverse()</code>: Inverse l’ordre des éléments dans le array</li>
+</ul>
+</li>
+<li><p>Méthodes de parcours des éléments</p>
+<ul>
+<li><code>forEach()</code>: Parcourt les éléments du array</li>
+<li><code>map()</code>: Retourne un nouveau array avec la même longueur que l’original, mais les valeurs internes changent souvent. (Longueur inchangée, valeurs modifiées)<ul>
+<li>Souvent utilisé pour mettre à jour une valeur dans les données React</li>
+</ul>
+</li>
+<li><code>filter()</code>: Retourne un nouveau array avec une longueur généralement inférieure à celle de l’original, mais les valeurs internes restent les mêmes. (Longueur modifiée, valeurs inchangées)<ul>
+<li>Souvent utilisé pour supprimer une valeur des données React</li>
+</ul>
+</li>
+<li><code>reduce()</code>: Communément utilisé pour des fonctions telles que le calcul statistique, l’accumulation et la sommation<ul>
+<li>Module du panier, calcul du prix total par exemple</li>
+</ul>
+</li>
+<li><code>find()</code>: Recherche un élément, le renvoie s’il est trouvé, sinon renvoie undefined</li>
+<li><code>findIndex()</code>: Recherche l’indice d’un élément, le renvoie s’il est trouvé, sinon renvoie <code>-1</code></li>
+<li><code>every()</code>: Renvoie true seulement si tous les éléments renvoient true, sinon renvoie <code>false</code></li>
+<li><code>some()</code>: Renvoie true dès qu’un élément renvoie true, sinon renvoie <code>false</code></li>
+</ul>
+</li>
+<li><p>Autres méthodes </p>
+<ul>
+<li><code>slice()</code>: Coupe certains éléments du array</li>
+<li><code>concat()</code>: Concatène des array</li>
+<li><code>join()</code>: Joint les éléments du array en une chaîne de caractères d’une certaine manière</li>
+<li><code>includes()</code>: Vérifie si un élément est présent, renvoie true s’il est présent, sinon renvoie <code>false</code></li>
+<li><code>indexOf()</code>: Vérifie si un élément est présent, renvoie son indice s’il est trouvé, sinon renvoie <code>-1</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="4-Operations-courantes-sur-le-DOM"><a href="#4-Operations-courantes-sur-le-DOM" class="headerlink" title="4. Opérations courantes sur le DOM"></a>4. Opérations courantes sur le DOM</h3><ol>
+<li><p>Ajouter des éléments du DOM</p>
+<ul>
+<li><code>document.createElement()</code> crée des éléments DOM</li>
+<li><code>xxxDom.appendChild()</code> insère un élément DOM dans le xxxDom</li>
+</ul>
+</li>
+<li><p>Supprimer des éléments du DOM</p>
+<ul>
+<li><code>xxxDom.removeChild()</code> supprime un sous-élément du xxxDom</li>
+<li><code>xxxDom.remove()</code> supprime xxxDom lui-même</li>
+</ul>
+</li>
+<li><p>Modifier des éléments du DOM</p>
+<ul>
+<li><code>xxxDom.innerText / xxxDom.textContent</code> définissent le contenu texte de l’élément</li>
+<li><code>xxxDom.innerHTML</code> définit le contenu HTML de l’élément</li>
+</ul>
+</li>
+<li><p>Obtenir&#x2F;Rechercher des éléments du DOM</p>
+<ul>
+<li><code>document.getElementById()</code> obtient un élément DOM en fonction de l’identifiant</li>
+<li><code>document.querySelector()</code> obtient le premier élément DOM trouvé en fonction de n’importe quel sélecteur</li>
+<li><code>document.querySelectorAll()</code> obtient tous les éléments DOM trouvés en fonction de n’importe quel sélecteur</li>
+</ul>
+</li>
+</ol>
+<h3 id="5-Comprehension-des-fermetures-en-JavaScript"><a href="#5-Comprehension-des-fermetures-en-JavaScript" class="headerlink" title="5. Compréhension des fermetures en JavaScript"></a>5. Compréhension des fermetures en JavaScript</h3><ol>
+<li><p>Concept</p>
+<p>En utilisant l’outil de développement de Chrome, on comprend que l’essence d’une fermeture (closure) est un conteneur dans une fonction interne (non objet JavaScript), contenant les variables locales référencées.</p>
+</li>
+<li><p>Origine de la fermeture</p>
+<ul>
+<li>Imbrication de fonctions</li>
+<li>La fonction interne fait référence aux variables locales de la fonction externe</li>
+<li>La fermeture est créée lors de l’appel de la fonction externe</li>
+</ul>
+</li>
+<li><p>Cycle de vie d’une fermeture</p>
+<ul>
+<li>Création : Lorsque la fonction interne est créée</li>
+<li>Fin de vie : Lorsque la fonction interne n’a plus de références de variables et devient un objet inutile, elle sera automatiquement récupérée par le ramasse-miettes (GC - Garbage Collection).</li>
+</ul>
+</li>
+<li><p>Rôle des fermetures</p>
+<ul>
+<li>Prolonger la durée de vie des variables locales (les garder en vie un peu plus longtemps)</li>
+<li>Permettre à des fonctions externes de manipuler indirectement les données des variables locales de la fonction interne</li>
+</ul>
+</li>
+<li><p>Application des fermetures dans les projets</p>
+<ul>
+<li>Dans React, elles sont sous forme de fonctions d’ordre supérieur afin de réutiliser des fonctions</li>
+</ul>
+</li>
+</ol>
+<h3 id="6-La-reference-de-“this”"><a href="#6-La-reference-de-“this”" class="headerlink" title="6. La référence de “this”"></a>6. La référence de “this”</h3><p>Dans des situations normales, la référence de <code>this</code> dépend de la manière dont la fonction est appelée :</p>
+<ol>
+<li><p>Appel direct (liaison par défaut) : <code>this</code> pointe vers la fenêtre (window), et dans le mode strict (‘use strict’), <code>this</code> pointe vers <code>undefined</code></p>
+</li>
+<li><p>Appel de fonction par un objet (liaison implicite) : <code>this</code> pointe vers l’objet appelant</p>
+</li>
+<li><p>Appel de fonction avec <code>call()/apply()/bind()</code> (liaison explicite) : <code>this</code> pointe vers le premier argument passé</p>
+<ul>
+<li><p>Différences et liens des <code>call()/apply()/bind()</code> :</p>
+<ul>
+<li><code>call()/apply()</code> exécutent immédiatement la fonction, tandis que <code>bind()</code> renvoie une nouvelle fonction</li>
+<li>Lors de l’exécution avec <code>call()/apply()</code>, <code>this</code> pointe vers le premier argument ; la nouvelle fonction retournée par <code>bind()</code> pointe également vers le premier argument, tandis que la fonction d’origine reste inchangée</li>
+<li>La manière de passer les arguments à <code>call()/bind()</code> est la même et peut prendre plusieurs arguments, tandis qu’<code>apply()</code> ne prend que deux arguments, le second étant un array</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Appel de fonction avec <code>new</code> : <code>this</code> pointe vers l’objet d’instance créé</p>
+</li>
+</ol>
+<p><strong>Cas particuliers :</strong></p>
+<ol>
+<li><p>Fonctions fléchées : <code>this</code> pointe vers le <code>this</code> de la fonction externe la plus proche (elle pointe vers le <code>this</code> de la fonction parente)</p>
+</li>
+<li><p>Fonctions de rappel :</p>
+<ul>
+<li>Fonction de rappel de minuterie : <code>this</code> pointe vers la fenêtre, et dans le mode strict, vers <code>undefined</code></li>
+<li>Fonction de rappel d’événement DOM : <code>this</code> pointe vers l’élément DOM lié à l’événement</li>
+</ul>
+</li>
+</ol>
+<h3 id="7-Prototype-et-Chaine-de-Prototype"><a href="#7-Prototype-et-Chaine-de-Prototype" class="headerlink" title="7. Prototype et Chaîne de Prototype"></a>7. Prototype et Chaîne de Prototype</h3><ol>
+<li><p>Prototype</p>
+<ul>
+<li>Ce que nous appelons prototype se réfère à deux propriétés de prototype : <code>__proto__</code> et <code>prototype</code></li>
+<li><code>prototype</code> est appelé propriété de prototype explicite</li>
+<li><code>__proto__</code> est appelé propriété de prototype implicite</li>
+<li>Chaque fonction a une propriété de prototype explicite, dont la valeur est un objet que nous appelons <code>objet prototype</code></li>
+<li>Par défaut, il y a une méthode constructeur sur cet objet prototype, pointant vers la fonction elle-même, et un attribut <code>__proto__</code>, pointant vers l’objet prototype d’Object.</li>
+<li>Chaque instance a une propriété de prototype implicite, dont la valeur pointe vers l’objet prototype de la fonction constructeur correspondante</li>
+</ul>
+<p><strong>Cas particuliers :</strong></p>
+<ul>
+<li><code>Function.prototype === Function.__proto__</code> ; ils pointent vers le même objet</li>
+<li><code>Object.prototype.__proto__ === null</code> ; c’est la fin de la chaîne de prototype</li>
+</ul>
+</li>
+<li><p>Chaîne de Prototype</p>
+<ul>
+<li><p>Concept : À partir de la propriété <code>__proto__</code> d’un objet, toutes les connexions entre les objets forment une structure appelée chaîne de prototype, également connue sous le nom de “chaîne de prototype implicite”</p>
+</li>
+<li><p>Utilité : Utilisée pour rechercher les propriétés d’un objet</p>
+</li>
+<li><p>Règles : Lors de la recherche de propriétés d’un objet ou de l’appel de méthodes d’un objet, la recherche commence d’abord sur l’objet lui-même</p>
+<p>Si la propriété n’est pas trouvée, la recherche se poursuit le long de la chaîne de prototype</p>
+<p>Si la propriété est trouvée, sa valeur est renvoyée</p>
+<p>Finalement, la recherche aboutit à <code>Object.prototype.__proto__</code> , si la propriété n’est toujours pas trouvée, <code>undefined </code>est renvoyé</p>
+</li>
+<li><p>Application : La chaîne de prototype est utilisée pour mettre en œuvre l’héritage</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="8-Le-mecanisme-de-collecte-des-dechets-de-JavaScript"><a href="#8-Le-mecanisme-de-collecte-des-dechets-de-JavaScript" class="headerlink" title="8. Le mécanisme de collecte des déchets de JavaScript"></a>8. Le mécanisme de collecte des déchets de JavaScript</h3><p>En JavaScript，la libération (collecte) des objets est gérée par le collecteur de déchets du navigateur</p>
+<ol>
+<li><p>Collecteur de déchets</p>
+<ul>
+<li>Le navigateur dispose d’un thread dédié qui s’exécute à intervalles très courts</li>
+<li>Son travail principal consiste à déterminer si un objet est un objet inutile, si oui,  le collecteur de déchets va le nettoyer de ses données en mémoire et marquer la mémoire comme étant en état de disponibilité</li>
+</ul>
+</li>
+<li><p>Stratégies de collecte des déchets</p>
+<ul>
+<li><p>Mécanisme : Algorithme de marquage et d’élagage (Mark-and-Sweep)</p>
+<ul>
+<li><p>Description : </p>
+<p>La phase de marquage consiste à marquer tous les objets actifs, tandis que la phase d’élagage détruit les objets non marqués (c’est-à-dire les objets inactifs)</p>
+</li>
+<li><p>Inconvénients :</p>
+<ul>
+<li>Fragmentation de la mémoire, entraînant des blocs de mémoire non contigus, ce qui peut conduire à de nombreux blocs de mémoire inutilisés et à une difficulté de trouver un bloc adapté lors de l’allocation de mémoire pour de grands objets</li>
+<li>La vitesse d’allocation est lente, même en utilisant la stratégie du meilleur ajustement (First-fit), car l’opération reste une opération O(n), dans le pire des cas, une traversée complète de la mémoire peut être nécessaire</li>
+</ul>
+</li>
+<li><p>Solution : </p>
+<p>On peut utiliser l’algorithme de marquage et de compactage (Mark-Compact). Après la phase de marquage, cet algorithme déplace les objets vivants (c’est-à-dire ceux qui ne nécessitent pas d’être nettoyés) vers une extrémité de la mémoire, puis nettoie la mémoire à la frontière</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Mécanisme de collecte des déchets du moteur V8 de JavaScript</p>
+<ul>
+<li>Il utilise un algorithme basé sur le marquage et l’élagage, mais il a subi certaines optimisations</li>
+<li>Pour la zone des objets récemment créés (nouveaux objets), une collecte parallèle est utilisée</li>
+<li>Pour la zone des objets plus anciens, une approche d’augmentation de marquage et de nettoyage paresseux (incremental marking and lazy sweeping) est adoptée</li>
+</ul>
+</li>
+</ol>
+<h3 id="9-Le-mecanisme-de-la-boucle-d’evenements-en-JavaScript"><a href="#9-Le-mecanisme-de-la-boucle-d’evenements-en-JavaScript" class="headerlink" title="9. Le mécanisme de la boucle d’événements en JavaScript"></a>9. Le mécanisme de la boucle d’événements en JavaScript</h3><ol>
+<li><p>Concept : Mécanisme d’exécution du code asynchrone</p>
+</li>
+<li><p>Processus :</p>
+<ul>
+<li>Le thread principal de JavaScript exécute séquentiellement tout le code. Lorsqu’il rencontre du code synchrone, il l’exécute séquentiellement. En revanche, lorsqu’il rencontre du code asynchrone, il le transmet au module de gestion correspondant (thread secondaire) :<ul>
+<li>Par exemple, en cas de rencontre d’une minuterie, elle est gérée par le module de gestion des minuteries. Ce module compte le temps, et lorsque le temps est écoulé, il ajoute automatiquement la fonction de rappel à la file d’attente des rappels (file d’attente des tâches macros)</li>
+<li>De même, en cas de rencontre d’un événement DOM, il est géré par le module de gestion du DOM. Ce module lie l’événement, et lorsque l’événement se produit, il ajoute automatiquement la fonction de rappel à la file d’attente des rappels (file d’attente des tâches macros)</li>
+<li>Lors de rencontres avec des requêtes ajax, elles sont gérées par le module de gestion des requêtes ajax. Ce module envoie la requête, et lorsqu’une réponse est reçue, il ajoute automatiquement la fonction de rappel à la file d’attente des rappels (file d’attente des tâches macros)</li>
+</ul>
+</li>
+<li>Le thread principal de JavaScript ne s’arrête pas et exécute séquentiellement le code suivant jusqu’à ce que tout le code soit exécuté. Ensuite, le thread principal de JavaScript lance la boucle d’événements</li>
+<li>Le thread principal de JavaScript parcourt la file d’attente des rappels, récupère séquentiellement les fonctions de rappel et les exécute<ul>
+<li>La file d’attente des rappels se divise en deux types : file d’attente des tâches macros (macro-tâches) et file d’attente des microtâches (micro-tâches)</li>
+<li><strong>File d’attente des tâches macros :</strong> Fonctions de rappel pour les minuteries, les rappels ajax, les rappels d’événements DOM</li>
+<li><strong>File d’attente des microtâches :</strong> Promise.then&#x2F;catch&#x2F;finally, MutationObserver (fonctionnement de la méthode nextTick)</li>
+<li>Il donne la priorité à l’exécution des fonctions de rappel de la file d’attente des microtâches jusqu’à ce qu’elles soient toutes exécutées</li>
+<li>Après avoir exécuté la première fonction de rappel de la file d’attente des tâches macros, il exécute à nouveau les fonctions de rappel de la file d’attente des microtâches jusqu’à ce qu’elles soient toutes exécutées</li>
+<li>Ensuite, il passe à l’exécution de la prochaine fonction de rappel de la file d’attente des tâches macros, puis répète le processus, et ainsi de suite</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Tech</category>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>Connaissances fondamentales</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+</search>
