@@ -11,7 +11,7 @@ no_word_count: true
 > 
 > Je suis actuellement à la recherche d'un emploi en tant qu'ingénieur front-end
 
-Lieu de résidence: Paris, France EUROPE
+Lieu de résidence: Paris, France 
 
 Github: https://github.com/thecafe75000
 
